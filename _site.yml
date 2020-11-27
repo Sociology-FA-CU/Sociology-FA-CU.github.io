@@ -1,9 +1,12 @@
-name: "my-website"
+name: "sociology-quant"
 output_dir: "."
 navbar:
-  title: "My Website"
+  title: "Department of Sociology FA CU, Quantitative Methods Cluster"
   left:
     - text: "Home"
       href: index.html
-    - text: "About"
-      href: about.html
+    - text: "Courses"
+      href: courses.html
+output:
+  html_document:
+    theme: united

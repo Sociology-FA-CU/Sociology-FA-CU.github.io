@@ -1,0 +1,8 @@
+---
+title: "Courses"
+output: html_document
+---
+
+We offer following courses:
+
+- Applied Regression in R

@@ -1,5 +1,5 @@
 ---
-title: "My Website"
+title: "Home to Quantitative Methods"
 ---
     
-Hello, Website! Welcome to the world.
+This website is dedicated to courses on quantitative methods at the Department of Sociology, Faculty of Arts, Charles University.
