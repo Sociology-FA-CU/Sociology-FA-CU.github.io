@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+
+
+<title>Samostudium</title>
+
+<script src="site_libs/header-attrs-2.11/header-attrs.js"></script>
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+<link href="site_libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script>
+<link href="site_libs/_Fira Sans-0.4.0/font.css" rel="stylesheet" />
+<link href="site_libs/_Fira Code-0.4.0/font.css" rel="stylesheet" />
+<script src="site_libs/bs3compat-0.3.1/transition.js"></script>
+<script src="site_libs/bs3compat-0.3.1/tabs.js"></script>
+<script src="site_libs/bs3compat-0.3.1/bs3compat.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
+
+<style type="text/css">code{white-space: pre;}</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+
+
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+pre code {
+  padding: 0;
+}
+</style>
+
+
+<style type="text/css">
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #adb5bd;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script type="text/javascript">
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.tab('show');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+
+  // Navbar adjustments
+  var navHeight = $(".navbar").first().height() + 15;
+  var style = document.createElement('style');
+  var pt = "padding-top: " + navHeight + "px; ";
+  var mt = "margin-top: -" + navHeight + "px; ";
+  var css = "";
+  // offset scroll position for anchor links (for fixed navbar)
+  for (var i = 1; i <= 6; i++) {
+    css += ".section h" + i + "{ " + pt + mt + "}\n";
+  }
+  style.innerHTML = "body {" + pt + "padding-bottom: 40px; }\n" + css;
+  document.head.appendChild(style);
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">Kvantitativní výzkum v sociologii</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="index.html">Úvod</a>
+</li>
+<li>
+  <a href="courses.html">Vyučované kurzy</a>
+</li>
+<li>
+  <a href="resources.html">Samostudium</a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+  <a href="https://ksoc.ff.cuni.cz/">
+    <span class="fa fa-graduation-cap"></span>
+     
+  </a>
+</li>
+<li>
+  <a href="https://github.com/Sociology-FA-CU">
+    <span class="fa fa-github"></span>
+     
+  </a>
+</li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div id="header">
+
+
+
+
+</div>
+
+
+<p><br></p>
+<p>Na této stránce nabízíme seznam zdrojů vhodných pro samostudium témat, se kterými se v praxi často setkají kvantitativně orientovaní výzkumníci v sociálních vědách. Vybrané zdroje jsou zaměřeny primárně pro studenty a začínající výzkumníky.</p>
+<div id="section" class="section level2 tabset tabset-fade tabset-pills">
+<h2 class="tabset tabset-fade tabset-pills"></h2>
+<div id="základy-matematiky" class="section level3">
+<h3>Základy matematiky</h3>
+<p><br> Přestože dnes výzkumníci mohou velkou část svých výpočtů abstrahovat díky specializovanému softwaru, vyplatí se i tak mít alespoň konceptuální znalost matematiky, na kterých běžné statistické modely stojí. A to zejména v oblastech lineární algebry a kalkulu.</p>
+<div id="učebnice" class="section level4">
+<h4>Učebnice</h4>
+<p><br> <strong>A Mathematics Course for Political and Social Research (W. Moore &amp; D. Siegel, 2013)</strong></p>
+<p>Obsáhlá a zároveň stravitelná učebnice, která čtenáře provede všemi důležitými aspekty matematiky. Napsaná se zaměřením na sociální vědce, každá kapitola knihy obsahuje intuitivní uvedení tématu, detailní popis a praktický příklad. Kniha je dostupná v knihovně Fakulty sociálních věd UK.</p>
+<p><strong>Essential Mathematics for Political and Social Research (J. Gill, 2006)</strong></p>
+<p>Kratší učebnice zaměřená na konceptuální výklad pojmů nezbytných pro pochopení vnitřního fungování statistických modelů. Každá kapitola obsahuje praktický příklad ušitý na míru politologům a sociologům, který osvětluje, jak je daný koncept využíván v praxi. Kniha je dostupná v knihovně Fakulty sociálních věd UK.</p>
+<p><strong>Linear Algebra: Step by Step (K. Singh, 2014)</strong></p>
+<p>Učebnice zaměřená srozumitelný výklad lineární algebry, která je mimo jiné základním pilířem všech lineárních modelů. Kniha přináší jednoduše pochopitelný výklad, který nepředpokládá žádné předchozí zkušenosti s matematikou. Elektronická verze učebnice je pro studenty Univerzity Karlovy dostupná v rámci kolekce <em>eBook Academic Collection</em>, přístupná skrze vyhledávač <a href="https://cuni.primo.exlibrisgroup.com/discovery/search?vid=420CKIS_INST:UKAZ&amp;lang=cs">Ukaž</a>.</p>
+</div>
+<div id="videa" class="section level4">
+<h4>Videa</h4>
+<p><br> <strong>Essence of Linear Algebra (3blue1brown)</strong></p>
+<p>Série krátkých videí zaměřených představení lineární algebry. Místo matematických vzorců jsou videa zaměřená na vizuální a intuitivní pochopení matematiky. Jsou proto vhodná jako jemné uvedení do tématu před tím, než se studenti ponoří do detailnějších počtů. Videa jsou k dispozici na <a href="https://www.youtube.com/watch?v=fNk_zzaMoSs&amp;list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab">Youtube</a>.</p>
+<p><strong>Essence of Calculus (3blue1brown)</strong></p>
+<p>Série navazující na <em>Essence of Linear Algebra</em>. Stejné jako ta předchozí, i tato série videí klade velký důraz na intuitivní pochopení problematiky pomocí vizualizací. Videa jsou k dispozici na <a href="https://www.youtube.com/watch?v=WUvTyaaNkzM&amp;list=PL0-GT3co4r2wlh6UHTUeQsrf3mlS2lk6x">Youtube</a>.</p>
+</div>
+</div>
+<div id="statistika-a-pravděpodobnost" class="section level3">
+<h3>Statistika a pravděpodobnost</h3>
+<p><br> Teorie pravděpodobnosti, a na ní stojící statistika, představuje denní chléb každého kvantitativního sociologa. Od jednoduchých deskriptivních statistik po komplikované nelineární modely, aplikaci statistiky najdeme ve většině kvantitativně orientovaných sociologických článků. Její znalost jde proto jen stěží přecenit a jejímu studiu se vyplatí věnovat dostatek času.</p>
+<div id="učebnice-1" class="section level5">
+<h5>Učebnice</h5>
+<p><br> <strong>Introduction to Probability (J. Blitzstein &amp; J. Hwang, 2019)</strong></p>
+<p>Učebnice srozumitelně pokrývající základy teorie pravděpodobnosti, od definice pravděpodobnosti po distribuční funkce. Prvních šest kapitol pokrývá většinu témat, se kterými se studenti setkají během studia na katedrách sociologie a psychologie. Zájemci ovšem mohou pokračovat ve studiu zbytku knihy, a to zejména kapitol o conditional expectations (důležitý pojem pro pochopení regresních modelů) a o Markovových řetězcích (které hrají důležitou roli v bayesiánských modelech). Učebnice je dostupná v knihovně Fakulty sociálních věd Uk, případně elektronicky v rámci kolekce ProQuest Ebook Central skrze <a href="https://cuni.primo.exlibrisgroup.com/discovery/search?vid=420CKIS_INST:UKAZ&amp;lang=cs">Ukaž</a>.</p>
+<p><strong>Learning Statistics with R: A tutorial for psychology students and other beginners (D. Navarro, 2018)</strong></p>
+<p>Volně šiřitelná učebnice statistické inference, která pokrývá všechna témata, se kterými se běžně setkají studenti psychologie, sociologie a příbuzných oborů. Kniha je zaměřená primárně na frekventistickou inferenci a testování nulových hypotéz, obsahuje ale také kapitoly zaměřené na deskriptivní analýzu a bayesiánskou statistiku. Učebnice je zdarma dostupná na <a href="https://open.umn.edu/opentextbooks/textbooks/559">Open Textbook Library</a> a existuji pro ni R balíček <a href="https://github.com/svannoy/lsr-package">lst</a>.</p>
+<p><strong>Statistical Rethinking: a Bayesian Course with Examples in R and Stan (R. McElreath, 2016)</strong></p>
+<p>Učebnice zaměřená na takzvaný bayesiánský přístup ke statistice, který představuje čím dál více populární alternativu k frekventistické inferenci. Tato kniha je známá (a populární) mimo jiné svou atypickou strukturou, která může být atraktivní pro čtenáře znuděné klasickými učebnicemi. Učebnice je dostupná v knihovně Filozofické fakulty UK a využívá svůj vlastní R balíček, zvaný <a href="https://github.com/rmcelreath/rethinking">rethinking</a>.</p>
+<p><strong>Doing Bayesian Data Analysis: A Tutorial with R, Jags, and Stan (J. Krushke, 2015)</strong></p>
+<p>Učebnice bayesiánské statistiky s klasičtější strukturou, než je výše zmíněná <em>Statistical Rethinking</em>. Stejně jako ta předchozí, tato kniha přináší přátelský úvod do bayesiánské inference, včetně implementace v několika programovacích jazycích. Kniha je dostupná v knihovně Filozofické fakulty Uk.</p>
+<p><strong>Regression and Other Stories (A. Gelman, J. Hill &amp; A. Vehtari, 2021)</strong></p>
+<p>Učebnice zaměřená na uvedení čtenáře do teorie a praxe lineárních regresních modelů. Kniha se zaměřuje primárně na konceptuální výklad témat, spíše než matematickou teorii, a obsahuje řadu praktických příkladů. Výklad vychází primárně z bayesiánské statistiky, většina kapitol je ale stejně relevantní i pro příznivce frekventistického přístupu. Učebnice je dostupná v knihovně Filozofické fakulty UK.</p>
+<p><strong>Applied Regression Analysis and Generalized Linear Models (J. Fox, 2016)</strong></p>
+<p>Matematicky rigoróznější uvedení do tématu regresních modelů, které pokrývá vše od jednoduché lineární regrese, až po zobecnělé lineární modely. Učebnice obsahuje řadu praktických příkladů v R. Kniha je dostupná v knihovně Vysoké školy ekonomické.</p>
+<p><strong>Data Analysis Using Regression and Multilevel/Hierarchical Models (A. Gelman &amp; J. Hill, 2006)</strong></p>
+<p>Tato kniha je dnes již klasickým zdrojem pro studium víceúrovňových modelů. Učebnice je psaná srozumitelným jazykem a obsahuje řadu praktických rad a příkladů. Nevýhodou je zastaralý kód. Autoři přistupují k problematice z bayesiánské perspektivy, většina obsahu je ale platná také pro frekventistický přístup. Kniha je dostupná v knihovně Filozofické fakulty UK.</p>
+<p><strong>Multilevel Analysis: An Introduction To Basic And Advanced Multilevel Modeling (T. Snijder, 2012)</strong></p>
+<p>Detailnější učebnice víceúrovňových modelů, která dává větší prostor matematickým vzorcům. Přesto představuje praktické uvedení do tématu, a to včetně složitějších modelů. Kniha je dostupná v knihovně Pedagogické fakulty UK.</p>
+</div>
+<div id="články" class="section level4">
+<h4>Články</h4>
+<p><br> <strong>To Explain or To Predict? (G. Shmueli, 2010)</strong></p>
+<p>Článek vysvětlující rozdíly mezi analýzami zaměřenými na predikci a těmi zaměřenými na testování hypotéz, a proč je k nim třeba přistup rozdílně. Článek je dostupný <a href="https://www.stat.berkeley.edu/~aldous/157/Papers/shmueli.pdf">zde</a>.</p>
+<p><strong>The ASA Statement on p-Values: Context, Process, and Purpose (R. Wasserstein &amp; N. Lazar, 2016)</strong></p>
+<p>Článek Americké statistické asociace stručně objasňující podstatu p hodnot a jejich roli ve výzkumu. Článek je dostupný <a href="https://amstat.tandfonline.com/doi/pdf/10.1080/00031305.2016.1154108">zde</a>.</p>
+<p><strong>Statistical tests, P values, confidence intervals, and power: a guide to misinterpretations (S. Greenland &amp; et., 2016)</strong></p>
+<p>Doplněk k výše zmíněnému prohlášení Americké statistické asociace, obsahující výčet nejčastějších chyb vyskytujících se při použití statistických testů. Text je dostupný <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4877414/">zde</a>.</p>
+<p><strong>Bad statistical practice in pharmacology (and other basic biomedical disciplines): you probably don’t know P (M. Lew, 2012)</strong></p>
+<p>Přestože si to dnes jen málo výzkumníků uvědomuje, způsobů jak interpretovat p hodnoty je více než jeden. Tento Článek osvětlující dva základní přístupy aplikace statistických testů, a to Fisherův přístup na jedné straně a Neyman-Pearsonův přístup na straně druhé. Text je užitečný zejména pro ty, kdo si chtějí udělat jasno, jak s p hodnotami pracovat. Dostupné <a href="https://bpspubs.onlinelibrary.wiley.com/doi/10.1111/j.1476-5381.2012.01931.x">zde</a>.</p>
+<p><strong>Analyzing ordinal data with metric models: What could possibly go wrong? (T. Lidell &amp; J. Kruschke, 2018)</strong></p>
+<p>Článek popisující úskalí modelování ordinálních dat jako metrických (kardinálních) a jeho alternativy.</p>
+<p><strong>Alternatives to randomisation in the evaluation of public-health interventions: statistical analysis and causal inference (S. Cousen et al., 2011)</strong></p>
+<p>Krátký přehled možností kauzální inference bez nutnosti využívat klasický experimentální design.</p>
+</div>
+</div>
+<div id="psychometrie" class="section level3">
+<h3>Psychometrie</h3>
+<p><br> Sociální vědci se často zabývají studiem jevů, které nelze pozorovat přímo, jako jsou například postoje, hodnotové orientace nebo kognitivní schopnosti. Problematikou měření nepozorovatelných, takzvaně latentních, proměnných se zabývá vědní obor zvaný psychometrie. Základy této psychometrie by měl ovládat každý kvantitativně orientovaný sociolog.</p>
+<div id="učebnice-2" class="section level4">
+<h4>Učebnice</h4>
+<p><br> <strong>Psychometrika: Měření v psychologii (T. Urbánek, D. Denglerová &amp; J. Širúček, 2011)</strong></p>
+<p>Krátká učebnice uvádějící čtenáře do oboru psychometrie. Obsahuje výčet základních pojmů, a dále přehled a srovnání nejvýznamnějších psychometrických teorií. Vhodná zejména pro začínající studenty. Kniha je dostupná v knihovně Filozofické fakulty Uk a studenti Filozofické fakulty si také mohou stáhnout elektronickou verzi v rámci služby EBSCOhost eBooks skrze prohlížeč <a href="https://cuni.primo.exlibrisgroup.com/discovery/search?vid=420CKIS_INST:UKAZ&amp;lang=cs">Ukaž</a>.</p>
+<p><strong>Measurement Theory and Applications for the Social Sciences (D. Banadlos, 2018)</strong></p>
+<p>Obsáhlejší učebnice obsahující výklad nejpopulárnějších teorií měření, včetně klasické testové teorie, teorie odpovědi na položku a teorie latentních tříd. Kniha také obsahuje obecné rady vytváření dotazníků, formulaci otázek a podobně. Učebnice je dostupná v knihovně Filozofické fakulty Uk a pro studenty fakulty je také dostupná v elektronické verzi v rámci kolekce ProQuest Ebook Central skrze vyhledávač <a href="https://cuni.primo.exlibrisgroup.com/discovery/search?vid=420CKIS_INST:UKAZ&amp;lang=cs">Ukaž</a>.</p>
+<div id="články-1" class="section level5">
+<h5>Články</h5>
+<p><br> <strong>On the Use, the Misuse, and the Very Limited Usefulness of Cronbach’s Alpha (Sijtsma, 2009)</strong></p>
+<p>Článek upozorňující na praktické problémy spojené s používáním Cronbachova alfa, v současné době nejpopulárnějšího indexu reliability. Text popisuje předpoklady alfa koeficientu, důsledky jejich porušení a alternativní řešení. Článek je zdarma dostupný <a href="https://link.springer.com/article/10.1007%2Fs11336-008-9101-0">zde</a>.</p>
+<p><strong>Comparison of Classical Test Theory and Item Response Theory in Individual Change Assessment (R. Jabrayilov, W. Emons, K. Sijtsma, 2016)</strong></p>
+<p>Článek popisující aplikaci dvou nejpopulárnějších psychometrických teorií, klasické testové teorie a teorie odpovědi na položku, v aplikovaném výzkumu.</p>
+<p><strong>Evaluating the use of exploratory factor analysis in psychological research (L. Fabrigar et al., 1990)</strong></p>
+<p>Text obsahující praktické rady pro aplikaci explorační faktorové analýzy, jednoho ze stavebních kamenů klasické testové teorie.</p>
+</div>
+</div>
+</div>
+<div id="programování" class="section level3">
+<h3>Programování</h3>
+<p><br> Kvantitativní analýza dat v dnešní době vyžaduje rostoucí míru znalosti programování. To není dáno pouze zvyšující se komplexitou analýz samotných, ale také rostoucím důrazem na reprodukovatelný výzkum a automatizovaný reporting. Přestože programovacích jazyků dnes existují stovky, pro analýzy dat většina výzkumníků využívá jazyk R, Python nebo Julia.</p>
+<div id="učebnice-3" class="section level5">
+<h5>Učebnice</h5>
+<p><br> <strong>R for Data Science (H. Wickham &amp; G. Grolemund, 2017)</strong></p>
+<p>Kniha pro úplné začátečníky, uvádějící své čtenáře do programovacího jazyka R, který je v dnešní době v sociálních vědách pravděpodobně nejrozšířenější. Kniha je založená na takzvaném <a href="https://www.tidyverse.org/">Tidyverse</a>, souborů balíků populárních pro svou uživatelskou přívětivost a gramatickou konzistenci. Čtenáři se dozví vše od instalace R, přes čištění dat, až po jejich vizualizaci. Kniha je zdarma dostupná <a href="https://r4ds.had.co.nz/index.html">zde</a>.</p>
+<p><strong>ggplot2: elegant graphics for data analysis (H. Wickham, D. Navarro &amp; T. Pedersen)</strong></p>
+<p>Kniha detailně popisující balíček ggplot2, jeden z nejpopulárnější R balíčků pro vizualizaci. Text je vhodný zejména pro čtenáře, kteří už znají základy práce s R a chtějí se zlepšit ve vytváření komplexnějších grafů. Kniha je zdarma dostupná <a href="https://ggplot2-book.org/">zde</a>.</p>
+<p><strong>R Markdown Cookbook (Yihui Xie, C. Dervieux &amp; E Riederer, 2021)</strong></p>
+<p>Učebnice R balíčku Rmarkdown, umožňující psaní a export textových reportů přimo v R. Čtenáři se naučí kombinovat datovou analýzu a text pro vytváření článků, knih, reportů, prezentací i webových stránek. Kniha je zdarma dostupná <a href="https://bookdown.org/yihui/rmarkdown-cookbook/">zde</a>.</p>
+<p><strong>Advanced R (H. Wickham, 2019)</strong></p>
+<p>Kniha detailněji popisující fungovování jazyka R jako takového. Vhodná zejména pro čtenáře se zájmem o programování a vývoj vlastních aplikací či balíků. Kniha je zdarma dostupná <a href="https://adv-r.hadley.nz/">zde</a>.</p>
+<p><strong>Reproducible Research with R and RStudio (C. Gandrud, 2020)</strong></p>
+<p>Prakticky orientovaná kniha popisující dobrou praxi organizace analytických projektů pro zajištění přehlednosti a reprodukovatelnosti. Kniha obsahuje tipy pro organizaci složek, využívání Rmarkdownu pro reprodukovatelné analýzy a zálohování dat pomoci programu git a stránky Github. Kniha je dostupná v knihovně Filozofické fakulty UK.</p>
+</div>
+<div id="užitečné-r-balíky" class="section level4">
+<h4>Užitečné R balíky</h4>
+<p><br> <strong>rstanarm</strong> - balíček pro výpočet základních bayesiánských modelů. Vhodný pro začátečníky, jelikož ve svých výstupech obsahuje řadu rad pro interpretaci. <a href="https://mc-stan.org/rstanarm/">Stránky balíčku</a>.</p>
+<p><strong>brms</strong> - balíček pro pokročilejší bayesiánské modely. Flexibelnější, ale možná méně přívětivější pro začátečníky, než rstanarm. <a href="https://www.rdocumentation.org/packages/brms/versions/2.16.3">Stránky balíčku</a>.</p>
+<p><strong>lme4</strong> - pravděpodobně nejpopulárnější balíček pro výpočet víceúrovňových/hierarchických modelů. <a href="https://github.com/lme4/lme4/">Github stránky balíčku</a></p>
+<p><strong>DHARMa</strong> - balíček pro diagnostiku víceúrovňových/hierarchických a dalších komplikovaných modelů pomocí randomizovaných kvantilových reziduí. Doporučují projít <a href="https://mran.revolutionanalytics.com/web/packages/DHARMa/vignettes/DHARMa.html">článek</a> autora.</p>
+<p><strong>ordinal</strong> - balíček pro výpočet ordinální logistické regrese, užitečný zejména pro výzkumníky, kteří často pracují s likertovskými položkami. <a href="https://rdrr.io/cran/ordinal/man/ordinal-package.html">Github stránky balíčku</a></p>
+<p><strong>psych</strong> - balíček obsahující řadu psychometrických funkcí, jako výpočet koeficientů reliability nebo výpočet faktorové analýzy či modelů teorie odpovědi na položku. <a href="http://personality-project.org/r/overview.pdf">Manuál balíčku</a>.</p>
+<p><strong>lavaan</strong> - balíček pro výpočet modelů strukturálních rovnic (SEM), včetně faktorové analýzy. <a href="https://www.lavaan.ugent.be/">Stránky balíčku</a>.</p>
+<p><strong>blavaan</strong> - bayesiánská obdoba balíčku lavaan. <a href="https://ecmerkle.github.io/blavaan/">Stránky balíčku</a>.</p>
+<p><strong>mirt</strong> - balíček pro výpočet modelů založených na teorii odpovědi na položku, včetně komplikovanějších typů modelů. <a href="https://www.rdocumentation.org/packages/mirt/versions/1.35.1">Stránky balíčku</a>.</p>
+<p><strong>ggeffects</strong> - balíček pro vizualizaci regresních modelů, pro zjednodušení jejich interpretace. S výslednými grafy je možné pracovat jako s ostatními grafy vytvořenými pomocí balíčku ggplot2. <a href="https://strengejacke.github.io/ggeffects/">Stránky balíčku</a>.</p>
+<p><strong>margins</strong> - balíček pro výpočet marginálních efektů a vizualizaci regresních modelů. Obsahuje některé pokročilejší funkce oproti balíčku ggeffects. <a href="https://www.rdocumentation.org/packages/margins/versions/0.3.26">Stránky balíčku</a>.</p>
+</div>
+</div>
+</div>
+
+  <footer class="bg-primary text-white fixed-bottom">
+    <!-- Copyright -->
+    <div class="text-center p-1" style="background-color: rgba(0, 0, 0, 0)">
+      <a class="text-white" href="https://ksoc.ff.cuni.cz/">Katedra sociologie, Filozofická fakulta </br> Univerzita Karlova </a>
+    </div>
+    <!-- Copyright -->
+  </footer>
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open');
+  });
+});
+</script>
+
+<!-- code folding -->
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

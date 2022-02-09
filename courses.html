@@ -11,19 +11,23 @@
 
 
 
-<title>Courses</title>
+<title>Vyučované kurzy</title>
 
-<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<link href="site_libs/bootstrap-3.3.5/css/united.min.css" rel="stylesheet" />
-<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
-<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
-<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/header-attrs-2.11/header-attrs.js"></script>
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+<link href="site_libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script>
+<link href="site_libs/_Fira Sans-0.4.0/font.css" rel="stylesheet" />
+<link href="site_libs/_Fira Code-0.4.0/font.css" rel="stylesheet" />
+<script src="site_libs/bs3compat-0.3.1/transition.js"></script>
+<script src="site_libs/bs3compat-0.3.1/tabs.js"></script>
+<script src="site_libs/bs3compat-0.3.1/bs3compat.js"></script>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
-<link href="site_libs/anchor-sections-1.0/anchor-sections.css" rel="stylesheet" />
-<script src="site_libs/anchor-sections-1.0/anchor-sections.js"></script>
+<link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
 
 <style type="text/css">
   code{white-space: pre-wrap;}
@@ -35,11 +39,6 @@
     </style>
 
 <style type="text/css">code{white-space: pre;}</style>
-<style type="text/css">
-  pre:not([class]) {
-    background-color: white;
-  }
-</style>
 <script type="text/javascript">
 if (window.hljs) {
   hljs.configure({languages: []});
@@ -52,32 +51,7 @@ if (window.hljs) {
 
 
 
-<style type="text/css">
-h1 {
-  font-size: 34px;
-}
-h1.title {
-  font-size: 38px;
-}
-h2 {
-  font-size: 30px;
-}
-h3 {
-  font-size: 24px;
-}
-h4 {
-  font-size: 18px;
-}
-h5 {
-  font-size: 16px;
-}
-h6 {
-  font-size: 12px;
-}
-.table th:not([align]) {
-  text-align: left;
-}
-</style>
+
 
 
 
@@ -87,10 +61,6 @@ h6 {
   max-width: 940px;
   margin-left: auto;
   margin-right: auto;
-}
-code {
-  color: inherit;
-  background-color: rgba(0, 0, 0, 0.04);
 }
 img {
   max-width:100%;
@@ -107,40 +77,13 @@ button.code-folding-btn:focus {
 summary {
   display: list-item;
 }
+pre code {
+  padding: 0;
+}
 </style>
 
 
 <style type="text/css">
-/* padding for bootstrap navbar */
-body {
-  padding-top: 51px;
-  padding-bottom: 40px;
-}
-/* offset scroll position for anchor links (for fixed navbar)  */
-.section h1 {
-  padding-top: 56px;
-  margin-top: -56px;
-}
-.section h2 {
-  padding-top: 56px;
-  margin-top: -56px;
-}
-.section h3 {
-  padding-top: 56px;
-  margin-top: -56px;
-}
-.section h4 {
-  padding-top: 56px;
-  margin-top: -56px;
-}
-.section h5 {
-  padding-top: 56px;
-  margin-top: -56px;
-}
-.section h6 {
-  padding-top: 56px;
-  margin-top: -56px;
-}
 .dropdown-submenu {
   position: relative;
 }
@@ -168,7 +111,7 @@ body {
   margin-right: -10px;
 }
 .dropdown-submenu:hover>a:after {
-  border-left-color: #ffffff;
+  border-left-color: #adb5bd;
 }
 .dropdown-submenu.pull-left {
   float: none;
@@ -180,7 +123,7 @@ body {
 }
 </style>
 
-<script>
+<script type="text/javascript">
 // manage active state of menu based on current page
 $(document).ready(function () {
   // active menu anchor
@@ -191,10 +134,23 @@ $(document).ready(function () {
   var menuAnchor = $('a[href="' + href + '"]');
 
   // mark it active
-  menuAnchor.parent().addClass('active');
+  menuAnchor.tab('show');
 
   // if it's got a parent navbar menu mark it active as well
   menuAnchor.closest('li.dropdown').addClass('active');
+
+  // Navbar adjustments
+  var navHeight = $(".navbar").first().height() + 15;
+  var style = document.createElement('style');
+  var pt = "padding-top: " + navHeight + "px; ";
+  var mt = "margin-top: -" + navHeight + "px; ";
+  var css = "";
+  // offset scroll position for anchor links (for fixed navbar)
+  for (var i = 1; i <= 6; i++) {
+    css += ".section h" + i + "{ " + pt + mt + "}\n";
+  }
+  style.innerHTML = "body {" + pt + "padding-bottom: 40px; }\n" + css;
+  document.head.appendChild(style);
 });
 </script>
 
@@ -206,7 +162,6 @@ $(document).ready(function () {
   max-height: 500px;
   min-height: 44px;
   overflow-y: auto;
-  background: white;
   border: 1px solid #ddd;
   border-radius: 4px;
 }
@@ -278,38 +233,62 @@ $(document).ready(function () {
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="index.html">Department of Sociology FA CU, Quantitative Methods Cluster</a>
+      <a class="navbar-brand" href="index.html">Kvantitativní výzkum v sociologii</a>
     </div>
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
         <li>
-  <a href="index.html">Home</a>
+  <a href="index.html">Úvod</a>
 </li>
 <li>
-  <a href="courses.html">Courses</a>
+  <a href="courses.html">Vyučované kurzy</a>
+</li>
+<li>
+  <a href="resources.html">Samostudium</a>
 </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        
+        <li>
+  <a href="https://ksoc.ff.cuni.cz/">
+    <span class="fa fa-graduation-cap"></span>
+     
+  </a>
+</li>
+<li>
+  <a href="https://github.com/Sociology-FA-CU">
+    <span class="fa fa-github"></span>
+     
+  </a>
+</li>
       </ul>
     </div><!--/.nav-collapse -->
   </div><!--/.container -->
 </div><!--/.navbar -->
 
-<div class="fluid-row" id="header">
+<div id="header">
 
 
 
-<h1 class="title toc-ignore">Courses</h1>
+<h1 class="title toc-ignore">Vyučované kurzy</h1>
 
 </div>
 
 
-<p>We offer following courses:</p>
-<ul>
-<li>Applied Regression in R</li>
-</ul>
+<p>V současné době vyučujeme následující kurzy:</p>
+<p><strong>Úvod do analýzy dat v R (SIS kód: ASGV00154)</strong></p>
+<p>Kurz je úvodem do programovacího jazyka R vyvinutého pro statistickou analýzu dat. V kurzu není předpokládána předchozí znalost jazyka R, ale podmínkou je základní znalost statistiky a výhodou jsou předchozí zkušenosti s analýzou dat. Stránky kurzu jsou dostupné <a href="https://sociology-fa-cu.github.io/Uvod_do_analyzy_dat_v_R/index.html">zde</a>.</p>
+<p><strong>Aplikovaná regrese v R (SIS kód: ASGV00995)</strong></p>
+<p>Kurz seznámí studenty s metodou lineární regresní analýzy s důrazem na aplikované využití v softwaru R. Design kurzu se zaměřuje na studenty společenskovědních oborů, což se projevuje v jeho zacílení na koncepční pochopení lineární regrese a praktické aplikace ve společenských vědách. Kurz má své vlastní stránky k nalezení <a href="https://sociology-fa-cu.github.io/appliedregressioninr/">zde</a>.</p>
+<p><strong>Vybraná témata analýzy dat (SIS kód: ASGV00993)</strong></p>
+<p>Tento předmět je zamýšlen jako příležitost pro studenty doktorského a magisterského studia ke zvládnutí pokročilých nebo inovativních metod analýzy dat. Celkové množství přímé výuky je menší než při klasické výuce. Větší prostor je naopak věnován samostatné přípravě na jednotlivá témata. Stránky kurzu včetně aktuálního rozpisu hostů jsou <a href="https://sociology-fa-cu.github.io/vybranatemataanalyzy/">zde</a>.</p>
 
+  <footer class="bg-primary text-white fixed-bottom">
+    <!-- Copyright -->
+    <div class="text-center p-1" style="background-color: rgba(0, 0, 0, 0)">
+      <a class="text-white" href="https://ksoc.ff.cuni.cz/">Katedra sociologie, Filozofická fakulta </br> Univerzita Karlova </a>
+    </div>
+    <!-- Copyright -->
+  </footer>
 
 
 
@@ -337,7 +316,7 @@ $(document).ready(function () {
 
 $(document).ready(function () {
   $('.tabset-dropdown > .nav-tabs > li').click(function () {
-    $(this).parent().toggleClass('nav-tabs-open')
+    $(this).parent().toggleClass('nav-tabs-open');
   });
 });
 </script>

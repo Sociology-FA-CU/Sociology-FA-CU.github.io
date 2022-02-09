@@ -1,5 +1,6 @@
 ---
-title: "Home to Quantitative Methods"
+title: "Úvod"
+output: html_document
 ---
     
-This website is dedicated to courses on quantitative methods at the Department of Sociology, Faculty of Arts, Charles University.
+Tato stránka je věnovaná materiálům k výuce specializačního klastru Kvantitativních metod na Katedře sociologie Filozofické fakulty Univerzity Karlovy.

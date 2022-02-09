@@ -1,8 +1,18 @@
 ---
-title: "Courses"
+title: "Vyučované kurzy"
 output: html_document
 ---
 
-We offer following courses:
+V současné době vyučujeme následující kurzy:
 
-- Applied Regression in R
+**Úvod do analýzy dat v R (SIS kód: ASGV00154)**
+
+Kurz je úvodem do programovacího jazyka R vyvinutého pro statistickou analýzu dat. V kurzu není předpokládána předchozí znalost jazyka R, ale podmínkou je základní znalost statistiky a výhodou jsou předchozí zkušenosti s analýzou dat. Stránky kurzu jsou dostupné [zde](https://sociology-fa-cu.github.io/Uvod_do_analyzy_dat_v_R/index.html).
+
+**Aplikovaná regrese v R (SIS kód: ASGV00995)**
+
+Kurz seznámí studenty s metodou lineární regresní analýzy s důrazem na aplikované využití v softwaru R. Design kurzu se zaměřuje na studenty společenskovědních oborů, což se projevuje v jeho zacílení na koncepční pochopení lineární regrese a praktické aplikace ve společenských vědách. Kurz má své vlastní stránky k nalezení [zde](https://sociology-fa-cu.github.io/appliedregressioninr/).
+
+**Vybraná témata analýzy dat (SIS kód: ASGV00993)**
+
+Tento předmět je zamýšlen jako příležitost pro studenty doktorského a magisterského studia ke zvládnutí pokročilých nebo inovativních metod analýzy dat. Celkové množství přímé výuky je menší než při klasické výuce. Větší prostor je naopak věnován samostatné přípravě na jednotlivá témata. Stránky kurzu včetně aktuálního rozpisu hostů jsou [zde](https://sociology-fa-cu.github.io/vybranatemataanalyzy/).

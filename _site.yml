@@ -1,12 +1,29 @@
 name: "sociology-quant"
 output_dir: "."
 navbar:
-  title: "Department of Sociology FA CU, Quantitative Methods Cluster"
+  title: "Kvantitativní výzkum v sociologii"
   left:
-    - text: "Home"
+    - text: "Úvod"
       href: index.html
-    - text: "Courses"
+    - text: "Vyučované kurzy"
       href: courses.html
+    - text: "Samostudium"
+      href: resources.html
+  right:
+    - icon: fa-graduation-cap
+      href: https://ksoc.ff.cuni.cz/
+    - icon: fa-github
+      href: https://github.com/Sociology-FA-CU
 output:
   html_document:
-    theme: united
+    theme:
+      bootswatch: united
+      primary: "#BB5C37"
+      heading_font:
+        google: "Fira Sans"
+      base_font:
+        google: "Fira Sans"
+      code_font:
+        google: "Fira Code"
+    include:
+      after_body: footer.html
