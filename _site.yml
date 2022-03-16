@@ -9,6 +9,8 @@ navbar:
       href: courses.html
     - text: "Samostudium"
       href: resources.html
+    - text: "Samostatné přednášky"
+      href: speakings.html
   right:
     - icon: fa-graduation-cap
       href: https://ksoc.ff.cuni.cz/

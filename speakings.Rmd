@@ -1,0 +1,15 @@
+---
+output: html_document
+---
+
+</br>
+
+Seznam přednášek našich členů mimo vyučované kurzy.
+
+## 2021/2022
+
+- TBD
+
+## 2020/2021
+
+- TBD
