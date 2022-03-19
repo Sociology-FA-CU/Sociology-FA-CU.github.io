@@ -20,7 +20,6 @@ data("UCBAdmissions") # for Berkeley data
 
 ```
 
-
 ## Co nás dnes čeká?
 
 1)  Popisné statistiky
@@ -130,15 +129,12 @@ mosaic( ~ Dept + Gender + Admit, data = UCBAdmissions,
 
 ## Obecný problém: Simpsonův paradox
 
-
 ```{r}
 p1 <- ggdraw() + draw_image("figures/05_Simpson_wiki_groups.png", scale = 0.9)
 p2 <- ggdraw() + draw_image("figures/05_Simpson_wiki_combined.png", scale = 0.9)
 
 plot_grid(p1, p2)
 ```
-
-
 
 ## Co si odnést?
 
@@ -159,4 +155,103 @@ Pokud byste měli chuť si osvěžit úplně základní statistiku netechnickou 
 
 # P-hodnota a replikační krize
 
-## Reference
+## Nabízet méně, prodávat více (choice paralysis)
+
+::: {.centered}
+![](figures/jams.jpg){width=70%}
+:::
+
+<font size="2">[Obrázek z Medium.com](https://medium.com/@prathameshw95/the-jam-experiment-and-its-effects-in-day-to-day-life-1cec6d03c94e)</font>
+
+::: {.notes}
+Původní studie [@iyengar2000] nasbírala tisíce citací. Pokusy o replikaci ale nebyly přesvědčivé, průměrný efekt byl 0. Především ty, které "nic nenaměřily" se ale nedařilo publikovat.   
+:::
+
+## Zkreslení přeživších
+
+::: {.centered}
+![](figures/survivor_plane.jpg){width=70%}
+:::
+
+
+::: {.notes}
+Podobné: Pokud se ptáte na spokojenost jen těch zákazníků, kteří službu úspěšně použili a ne těch, kdo například nezvládli registraci nebo se jinak nevyznali v systému. 55 000 dolarů vybraných na bramborový salát na Kickstarteru. 
+:::
+
+## Pořádné zatřesení
+
+* Daryl Bem: Lidé vidí do budoucnosti (Journal of Personality and Social Psychology, 2011)
+
+>- Pokus o replikaci nevyšly, ale časopis je odmítl publikovat
+ 
+    
+
+::: {.notes}
+[Původní Bemův článek](https://prevention.ucsf.edu/sites/prevention.ucsf.edu/files/uploads/2011/02/bem2011.pdf), publikovaný 2011, ale online first už 2010. Příklady Bemových experimentů: lidé měli tipovat, za kterým ze dvou černých čtverců na monitoru je určitý obrázek (ten se náhodně přiřadil až po tipnutí. Tipovali lépe než náhodně. Lidé měli dělat nácvik paměťového cvičení až poté, co paměťové cvičení uskutečnili. Polovina, která po cvičení náhodně dělala nácvik, měla lepší výsledky (efekt do minulosti). [Článek na Slate.com vypráví příběh detailně](https://slate.com/health-and-science/2017/06/daryl-bem-proved-esp-is-real-showed-science-is-broken.html).
+:::
+
+## Publikační zkreslení, replikační krize a Brian Nosek
+
+Nosek shromáždil síť psychologů - replikace 100 studií z respektovaných psychologických časopisů. Jen v 39 případech replikovaly výsledky původních studií.
+
+[Článek o replikaci 100 studií v časopise Science, rok 2015.](https://www.science.org/doi/10.1126/science.aac4716)
+
+## Důvody replikační krize
+
+- Publikační zkreslení
+- Malá prestiž replikačního výzkumu
+- P-hacking
+
+
+::: {.notes}
+"If you have a result that looks publishable but fragile, the logic of science tells you to try to disprove it. Yet the logic of academic grants and promotions tells you to publish at once, and for goodness’ sake don’t prod it too hard." [@harford2021]
+:::
+
+
+## P-hacking v podání Derrena Browna
+
+<iframe src="https://www.youtube.com/embed/XzYLHOX50Bc" data-external= "1" > </iframe>
+
+::: {.notes}
+[A video where D. Brown explains how they shooted a video with 10 heads in a row](https://www.youtube.com/watch?v=n1SJ-Tn3bcQ)
+:::
+
+## Nenápadný p-hacking
+
+- 1024 výzkumníků se pokusí hodit 10krát po sobě pannu
+- výzkumníkovi se nepovede experiment, tak ho zahodí a zkusí něco jiného
+- výslekdy nejsou statisticky signifikantní,...
+
+    - ... ale kdyby se sebralo pár pozorování navíc
+    - ... ale kdyby se data zanalyzovala po skupinách
+    - ... ale kdyby se data zanalyzovala jiným modelem
+    - ... ale kdyby se vyloučila odlehlá pozorování
+
+## HARKing 
+
+Hypothesis after results known
+
+## John Ioannidis ... na jeho slova došlo
+
+- V roce 2005 publikoval vizionářský článek ["Why Most Published Research Findings Are False"](https://journals.plos.org/plosmedicine/article?id=10.1371/journal.pmed.0020124), kde tuto situaci předpověděl.
+
+## A ne, POWER POSING asi nefunguje
+
+... i když ten Ted Talk má na YouTube 20 miliónů zhlédnutí
+
+::: {.centered}
+![](figures/power_pose.jpg){width=25%}
+:::
+
+<font size="2">[Zdroj Wikipedie](https://en.wikipedia.org/wiki/Power_posing)</font>
+
+::: {.notes}
+Hypotéza "fake it till you make it" - dělejte power posing, budete se cítit silněji (Amy Cuddy, výsledky: změní se ochota gamblovat, vzroste testosteron, poklesne kortizol, lidé budou mít lepší výkon při pracovním pohovoru). Několik pokusů o replikaci selhalo. 
+:::
+
+## Co je p-hodnota?
+
+
+## Reference {.smaller}
+
+(Kromě těch, kde jsou v prezentaci přímé prokliky na zdroj.)
