@@ -164,7 +164,6 @@ Pokud byste měli chuť si osvěžit úplně základní statistiku netechnickou 
 
 ## to do
 
-- RCT obrázek - převzít z prezentací
 - Statistické modely - očišťování vlivu (jak různě to dělat) - stratifikace
 - Kauzální inference pochází z teorie, ne z modelu
 - Typy "třetích proměnných" - confounder, mediator, moderator, collider
