@@ -16,6 +16,9 @@ knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
 library(tidyverse)
 library(vcd) # for mosaic plot
 library(cowplot) # for ggdraw
+library(dagitty)
+library(ggdag)
+library(patchwork)
 data("UCBAdmissions") # for Berkeley data
 
 ```
@@ -76,7 +79,9 @@ Chudoba:
 
 ## Způsob agregace chudoby a politické implikace
 
-TBD - obrázek v ruce
+::: {.centered}
+![](figures/poverty.jpg)
+:::
 
 ## Základní reprodukční číslo {.flexbox .vcenter}
 
@@ -155,19 +160,191 @@ Pokud byste měli chuť si osvěžit úplně základní statistiku netechnickou 
 
 ## Randomized controlled trial (RCT)
 
-
 ::: {.centered}
-![](figures/rct.png){width=75%}
+![](figures/rct.png){width="75%"}
 :::
 
 <font size="2">[Haynes a kol., 2012](https://www.gov.uk/government/uploads/system/uploads/attachment_data/file/62529/TLA-1906126.pdf)</font>
 
-## to do
+## Statistické modely
 
-- Statistické modely - očišťování vlivu (jak různě to dělat) - stratifikace
-- Kauzální inference pochází z teorie, ne z modelu
-- Typy "třetích proměnných" - confounder, mediator, moderator, collider
-- četba - the book of why, Masters of Metrics, Nor, Youtube přednášky Statistical Rethinking 2022
+-   deskriptivní, prediktivní, explanativní [@shmueli2010]
+
+-   explanativní - kauzální ambice, zásadní je teoretické ukotvení
+
+## DAG (directed acyclic graph)
+
+-   heurestický nástroj pro explanativní modelování
+-   pomáhá vyjasnit teoretický model, než se pustíme do statistického modelování
+
+## 4 základní elementy zmatení
+
+-   y ... závislá proměnná
+-   x ... nezávislá proměnná
+-   z ... třetí proměnná
+
+::: {.centered}
+![](figures/elements_of_confound.png){width="60%"}
+:::
+
+<font size="2">Obrázek z [McElreath, Statistical Rethinking 2022](https://www.youtube.com/watch?v=UpP-_mBvECI&list=PLDcUM9US4XdMROZ57-OIRtIK0aOynbgZN&index=6)</font>
+
+## Kontrola vlivu třetí proměnné (conditioning, stratification)
+
+-   kontrolní proměnná ve statistickém modelu
+-   výběr vzorku
+-   stratifikace v rámci analýzy (oddělené analýzy)
+
+## Nepravá korelace
+
+::: {.centered}
+![](figures/confounder.png){width="30%"}
+:::
+
+<font size="1">
+
+<center>
+
+Obrázek z [McElreath, Statistical Rethinking 2022](https://www.youtube.com/watch?v=UpP-_mBvECI&list=PLDcUM9US4XdMROZ57-OIRtIK0aOynbgZN&index=6)
+
+</center>
+
+</font>
+
+-   mezi X a Y existuje asociace
+-   po kontrole Z asociace mizí
+
+::: {.notes}
+Například čím více zmrzliny se prodá, tím více lidí se utopí (sluníčko). Čím více svateb, tím více rozvodů (věk vstupu do manželství).
+:::
+
+## Střední člen (the Pipe)
+
+::: {.centered}
+![](figures/pipe.png){width="30%"}
+:::
+
+<font size="1">
+
+<center>
+
+Obrázek z [McElreath, Statistical Rethinking 2022](https://www.youtube.com/watch?v=UpP-_mBvECI&list=PLDcUM9US4XdMROZ57-OIRtIK0aOynbgZN&index=6)
+
+</center>
+
+</font>
+
+-   mezi X a Y existuje asociace
+-   po kontrole Z asociace mizí (ale chceme to?)
+
+::: {.notes}
+Například vzdělanější lidé spíše volí pravicové strany. Možná chceme kontrolovat pro příjem a ukázat, že příjem je mediátor. Pokud se stejně vzdělaní lidé neliší v příjmu, nemá vzdělání další dopad na volbu strany. Ale možná mediátor kontrolovat nechceme, viz následující snímek.
+:::
+
+## Když pro mediátor kontrolovat nesmíme...
+
+Houbová plíseň snižuje růst rostliny. Chci testovat, jak nasazení chemického ošetření ochrání rostlinu před tímto vlivem.
+
+Ošetření -\> Plíseň -\> Růst
+
+Nesmím kontrolovat pro plíseň, pokud nás zajímavá efekt ošetření na růst.
+
+> -   post-treatment bias [@montgomery2018]
+
+::: {.notes}
+Nedávejte do regresního modelu vše, co měříte. Opírejte se o teorii.
+:::
+
+## Collider
+
+::: {.centered}
+![](figures/collider.png){width="30%"}
+:::
+
+<font size="1">
+
+<center>
+
+Obrázek z [McElreath, Statistical Rethinking 2022](https://www.youtube.com/watch?v=UpP-_mBvECI&list=PLDcUM9US4XdMROZ57-OIRtIK0aOynbgZN&index=6)
+
+</center>
+
+</font>
+
+-   mezi X a Y není asociace
+-   po kontrole Z se asociace mezi nimi objeví
+
+## Příklad toho, jak nás může collider zmást
+
+
+::: {.centered}
+![](figures/collider_example.png){width="50%"}
+:::
+
+<font size="1">
+
+<center>
+
+Obrázek z [McElreath, Statistical Rethinking 2022](https://www.youtube.com/watch?v=UpP-_mBvECI&list=PLDcUM9US4XdMROZ57-OIRtIK0aOynbgZN&index=6)
+
+</center>
+
+</font>
+
+::: {.notes}
+Původně žádná korelace, ale při zaměření jen na ty, kterým bylo uděleno financování, vidíme negativní vztah. Podobně negativní vztah mezi inteligencí a pracovitostí mezi univerzitními studenty. Mezi herci atraktivita negativně asociována s talentem (opět, vliv výběru). To je kontrola skrze vzorek.    
+:::
+
+## Další příklad collideru
+
+::: {.centered}
+![](figures/collider_married.png){width="95%"}
+:::
+
+<font size="1">
+
+<center>
+
+Obrázek z [McElreath, Statistical Rethinking 2022](https://www.youtube.com/watch?v=UpP-_mBvECI&list=PLDcUM9US4XdMROZ57-OIRtIK0aOynbgZN&index=6)
+
+</center>
+
+</font>
+
+
+::: {.notes}
+Případně v modelu kvůli špatnému modelu: Vztah věku a štěstí. Předpokládejem, že mezi nimi není žádný vztah. Ale jak věk, tak štěstí zvyšuje šanci na sňatek. Pokud kontrolujeme pro manželství (stratifikujeme podle manželství), uměle vytváříme negativní vztah mezi štěstím a věkem, i když věk v naší hypotetické realitě štěstí nijak neovlivňuje (funguje jako konstanta od narození do smrti).
+:::
+
+
+## Descendant 
+
+::: {.centered}
+![](figures/descendant.png){width="30%"}
+:::
+
+<font size="1">
+
+<center>
+
+Obrázek z [McElreath, Statistical Rethinking 2022](https://www.youtube.com/watch?v=UpP-_mBvECI&list=PLDcUM9US4XdMROZ57-OIRtIK0aOynbgZN&index=6)
+
+</center>
+
+</font>
+
+
+- descendant se chová podle toho, na co je napojen (zda je Z confonder, pipe, nebo collider)
+- například pokud by Z byl collider, nesmím kontrolovat ani pro A
+
+::: {.notes}
+Například v přechozím příkladu by mohlo být problématické kontrolovat pro děti, pokud by děti byly silným descendantem manželství.  
+:::
+
+
+## Kde si přečíst víc?
+
+Vlivné a přístupné pojednání o kauzalitě je The Book of Why [@pearl2018] od současné klíčové postavy teorie kauzálního výstupu. Šikovnou malou knihou na přečtení od začátku do konce je Mastering Metrics [@angrist2014] od autorů řady vlivných ekonomických kauzálních studií. Naopak dobrou "referenční" tlustou knihou je Counterfactuals and Causal Inference [@morgan2014].
 
 # P-hodnota a replikační krize
 
@@ -271,7 +448,7 @@ Hypotéza "fake it till you make it" - dělejte power posing, budete se cítit s
 -   Cochrane Collaboration (systematic reviews, medicína)
 -   Campbell Collaboration (systematic reviews, sociální vědy, vzdělávání)
 
-## Co je p-hodnota? 
+## Co je p-hodnota?
 
 "Informally, a p-value is the probability under a specified statistical model that a statistical summary of the data (e.g., the sample mean difference between two compared groups) would be equal to or more extreme than its observed value." [@wasserstein2016]
 
@@ -281,18 +458,14 @@ Hypotéza "fake it till you make it" - dělejte power posing, budete se cítit s
 
 ## Kritika p-hodnoty {.smaller}
 
-- p-hodnota je nevhodně používána jako míra důležitosti výsledku (přitom nulová hypotéza může být zcela banální)
-- p-hodnota je používána jako doklad toho, že byl učiněn vědecký objev, při zanedbání mnohem důležitějších kritérií (design studie, kvalita měřícího nástroje, předchozí evidence,...)
-- p-hodnota je používána nesprávně (p-hacking)
-- p-hodnota je nesprávně interpretována (např. nezamítání nulové hypotézy je vnímáno jako evidence ve prospěch nulové hypotézy)
-- obvykle není věcný rozdíl mezi p-hodnotou 5,1 a 4,9
-
-
+-   p-hodnota je nevhodně používána jako míra důležitosti výsledku (přitom nulová hypotéza může být zcela banální)
+-   p-hodnota je používána jako doklad toho, že byl učiněn vědecký objev, při zanedbání mnohem důležitějších kritérií (design studie, kvalita měřícího nástroje, předchozí evidence,...)
+-   p-hodnota je používána nesprávně (p-hacking)
+-   p-hodnota je nesprávně interpretována (např. nezamítání nulové hypotézy je vnímáno jako evidence ve prospěch nulové hypotézy)
+-   obvykle není věcný rozdíl mezi p-hodnotou 5,1 a 4,9
 
 ## Další čtení o p-hodnotě
 
-Zásadní text je [vyjádření American Statistical Association](https://amstat.tandfonline.com/doi/full/10.1080/00031305.2016.1154108#.YjeIWOqZO3C). Doporučit lze také [tento blog](http://daniellakens.blogspot.com/2021/11/why-p-values-should-be-interpreted-as-p.html) Daniela Lakense. 
+Zásadní text je [vyjádření American Statistical Association](https://amstat.tandfonline.com/doi/full/10.1080/00031305.2016.1154108#.YjeIWOqZO3C). Doporučit lze také [tento blog](http://daniellakens.blogspot.com/2021/11/why-p-values-should-be-interpreted-as-p.html) Daniela Lakense.
 
 ## Reference {.smaller}
-
-(Kromě těch, kde jsou v prezentaci přímé prokliky na zdroj.)
