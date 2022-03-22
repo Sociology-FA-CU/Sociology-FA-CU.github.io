@@ -1,8 +1,10 @@
 ---
 title: "Datová gramotnost (nejen) pro začínající vědce"
-author: "Jaromír Mazák"
+author: "Jaromír Mazák, Katedra sociologie FF UK, jaromir.mazak@ff.cuni.cz"
 date: "22. 3. 2022"
-output: ioslides_presentation
+output: 
+  ioslides_presentation:
+    css: "../css/slides-style.css"
 bibliography: references.bib
 ---
 
