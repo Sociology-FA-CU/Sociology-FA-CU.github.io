@@ -1,14 +1,16 @@
 ---
-output: html_document
+output:
+  html_document:
+    css: "css/site-style.css"
 ---
 
 </br>
 
 Metodologické přednášky našich členů mimo vyučované kurzy, například jednorázové přednášky, veřejná vystoupení atp.
 
-# 2021/2022 {.tabset}
+## 2021/2022
 
-## Datová gramotnost
+<details><summary>Datová gramotnost - Jaromír Mazák (22. března 2022)</summary>
 
 - Vyučující: Mgr. Jaromír Mazák, Ph.D. [(Více o lektorovi zde)](https://ksoc.ff.cuni.cz/mazak/)
 - Termín: 22. března 2022 od 10:00 do 11:30 
@@ -31,11 +33,16 @@ V ideálním světě by data měla vést k přesnější představě o realitě 
 
 [Odkaz na kurz na webu doktorského studia Univerzity Karlovy](https://phd.cuni.cz/PHD-239.html?event=23494&lang=cz)
 
+</details>
 
-## Principy a praxe vizualizace dat
+<details><summary>Principy a praxe vizualizace dat - Jaromír Mazák (TBA)</summary>
 
 TBD
 
-# 2020/2021
+</details>
+
+<br>
+
+## 2020/2021
 
 - TBD
