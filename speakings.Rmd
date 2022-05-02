@@ -8,6 +8,14 @@ output:
 
 Metodologické přednášky našich členů mimo vyučované kurzy, například jednorázové přednášky, veřejná vystoupení atp.
 
+Některé prezentace jsou ve formátu HTML. Pro jejich maximální využití můžete použít následující zkratky:
+
+- šipkami je možné přecházet z jednoho snímku na druhý.
+- klávesa `f` spustí zobrazení plné obrazovky (fullscreen)
+- klávesa `w` spustí širokoúhlé zobrazení (widescreen)
+- klávesa `o` zobrazí přehled snímků
+- klávesa `p` zobrazí poznámku k aktuálnímu snímku (pokud existuje)
+
 ## 2021/2022
 
 <details><summary>Datová gramotnost - Jaromír Mazák (22. března 2022)</summary>
@@ -15,14 +23,6 @@ Metodologické přednášky našich členů mimo vyučované kurzy, například 
 - Vyučující: Mgr. Jaromír Mazák, Ph.D. [(Více o lektorovi zde)](https://ksoc.ff.cuni.cz/mazak/)
 - Termín: 22. března 2022 od 10:00 do 11:30 
 - Formát: Online, 90 minut
-
-Na odkaze níže naleznete kompletní prezentaci k semináři. Při práci s HTML verzí prezentací je možné využívat následujících klávesových zkratek:
-
-- šipkami je možné přecházet z jednoho snímku na druhý.
-- klávesa `f` spustí zobrazení plné obrazovky (fullscreen)
-- klávesa `w` spustí širokoúhlé zobrazení (widescreen)
-- klávesa `o` zobrazí přehled snímků
-- klávesa `p` zobrazí poznámku k aktuálnímu snímku (pokud existuje)
 
 [Prezentace ke spuštění v prohlížeči](slides/data_literacy.html)
 
@@ -35,9 +35,20 @@ V ideálním světě by data měla vést k přesnější představě o realitě 
 
 </details>
 
-<details><summary>Principy a praxe vizualizace dat - Jaromír Mazák (TBA)</summary>
+<details><summary>Principy a praxe vizualizace dat - Jaromír Mazák (3. května 2022)</summary>
 
-TBD
+- Vyučující: Mgr. Jaromír Mazák, Ph.D. [(Více o lektorovi zde)](https://ksoc.ff.cuni.cz/mazak/)
+- Termín: 3. května 2022 od 10:00 do 11:30 
+- Formát: Online, 90 minut
+
+[Prezentace ke spuštění v prohlížeči](slides/visualization.html)
+
+**Anotace**
+
+Vizualizace byla v rámci analýzy dat dlouho považována za jakousi druhořadou kratochvíli. Na prvním místě měla být čísla, jejich převedení do grafů pak bylo spíše jen příjemným dochucením. Tento přístup se v posledních dekádách mění. Nejpozději od vlivných publikací Edwarda Tufteho o designu vizualizace si vědecká komunita začala uvědomovat, že vizualizace dat je klíčová nejen pro úspěšnou komunikaci vědeckých závěrů, ale že je také sama o sobě mocným nástrojem explorativní analýzy a generování poznání. V rámci semináře se seznámíme jak s vybranými obecnými principy efektivní vizualizace dat, tak s konkrétními aplikacemi na ilustrativních příkladech typu „jak to lze udělat lépe“. Cílem semináře je představit vizualizaci dat jako vědeckou subdisciplínu, která si díky dostupnému softwaru zasluhuje stále větší prostor v každodenní vědecké práci. Po úvodním představení principů se zaměříme na koncept „grammar of graphics“ představený Lelandem Wilkinsonem ve stejnojmenné knize. Od tohoto konceptu se rychle odrazíme k jeho nejslavnější implementaci, kterou je knihovna ggplot2 (Hadley Wickham) napsaná pro opensource statistický jazyk R. Účastníci budou uvedeni do práce s tímto softwarem. Ambicí kurzu je vzbudit u studentů zájem o efektivní, extrémně flexibilní a zároveň uživatelsky přijatelně náročnou vizualizaci dat, kterou knihovna ggplot2 nabízí. Studenti a studentky si také odnesou velké množství volně dostupných materiálů k dalšímu samostudiu.
+
+[Odkaz na kurz na webu doktorského studia Univerzity Karlovy](https://phd.cuni.cz/PHD-239.html?event=23496&lang=cz)
+
 
 </details>
 
