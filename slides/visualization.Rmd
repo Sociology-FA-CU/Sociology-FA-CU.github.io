@@ -29,19 +29,16 @@ countries <- read_rds(here("slides","data", "countries.rds"))
 
 ```
 
-
 ```{=html}
 <style>
 .forceBreak { -webkit-column-break-after: always; break-after: column; }
 </style>
 ```
-
-
 ## Přehled témat
 
-* Proč grafy raději než text
-* Obecné principy vizualizace
-* Architektura vizualizace (grammar of graphics)
+-   Proč grafy raději než text
+-   Obecné principy vizualizace
+-   Architektura vizualizace (grammar of graphics)
 
 # Proč grafy raději než text?
 
@@ -94,7 +91,7 @@ Thanks to Snow's visualizations, suspicion fell on watr sources rather than 'bad
 <font size="2">Zdroj @medina2014</font>
 
 ::: {.notes}
-Zrak je náš hlavní smysl, svět vidíme skrze obrazy. Text musíme nejprve dekódovat a pak si ho abstraktně představit. 
+Zrak je náš hlavní smysl, svět vidíme skrze obrazy. Text musíme nejprve dekódovat a pak si ho abstraktně představit.
 :::
 
 # Obecné principy vizulizace
@@ -103,38 +100,40 @@ Zrak je náš hlavní smysl, svět vidíme skrze obrazy. Text musíme nejprve de
 
 Klíčová postava moderního přístupu k vizualizaci informací.
 
-Chartjunk; data : ink ratio; data density; micro - macro reading. 
+Chartjunk; data : ink ratio; data density; micro - macro reading.
 
 ::: {.notes}
-**Chartjunk** nepotřebné dekorace, **data : ink ratio** - snaha maximalizovat, tj. zachytit hodně data s použitím málo inkoustu; **data density** - snaha zobrazit co nejvíce dat při důrazu na hlavní trendy; **micro-macro reading** z grafu jsou jasné trendy, ale zároveň nabízí možnost detailní inspekce. 
+**Chartjunk** nepotřebné dekorace, **data : ink ratio** - snaha maximalizovat, tj. zachytit hodně data s použitím málo inkoustu; **data density** - snaha zobrazit co nejvíce dat při důrazu na hlavní trendy; **micro-macro reading** z grafu jsou jasné trendy, ale zároveň nabízí možnost detailní inspekce.
 :::
 
 ## Obecné principy vizulizace
 
-1) Důraz na data
-1) Čitelnost
-1) Integrita
+1)  Důraz na data
+2)  Čitelnost
+3)  Integrita
 
 # PRINCIP 1: Důraz na data
 
-## PRINCIP 1: Důraz na data 
+## PRINCIP 1: Důraz na data
 
 Méně je více. Grafy mají efektivně komunikovat informace, design má tento cíl podpořit, ne zamlžit.
 
 ::: {.centered}
-![](figures/diamonds.png){width=50%}
+![](figures/diamonds.png){width="45%"}
 :::
+
+<font size="2">Převzato z @harford2021</font>
+
 
 ## Poměr DATA : INKOUST
 
-“Above all else show the data.” (Eduard Tufte)
+"Above all else show the data." (Eduard Tufte)
 
 ::: {.centered}
-![](figures/data_ink_2.png){width=80%}
+![](figures/data_ink_2.png){width="75%"}
 :::
 
 <font size="2">[Zdroj obrázku](https://simplexct.com/data-ink-ratio)</font>
-
 
 ## Méně je více
 
@@ -147,31 +146,28 @@ Méně je více. Grafy mají efektivně komunikovat informace, design má tento 
 ## Někdy se trochu inkoustu navíc vyplatí...
 
 ::: {.centered}
-![](figures/data_ink_3.png){width=80%}
+![](figures/data_ink_3.png){width="80%"}
 :::
 
 <font size="2">[Zdroj obrázku](https://visguides.org/t/data-ink-ratio-principle-how-to-use-it/72/5)</font>
 
-
 ## Nepoužívejte 3D grafy
 
 ::: {.centered}
-![](figures/3d.png){width=80%}
+![](figures/3d.png){width="80%"}
 :::
 
 <font size="2">[Zdroj obrázku](https://www.slideshare.net/vis4/making-data-visualizations-a-survival-guide)</font>
-
-
 
 ## Nejde jen o zbytečný efekt, ale aktivně škodí
 
 ::: {.centered}
-![](figures/3D_pie_chart.png){width=70%}
+![](figures/3D_pie_chart.png){width="70%"}
 :::
 
 <font size="2">[Zdroj obrázku](https://www.slideshare.net/vis4/making-data-visualizations-a-survival-guide)</font>
 
-# Důraz na data: Nespoléhejte se na default
+# Důraz na data: \nNespoléhejte se na default
 
 ## Excel koláčový graf
 
@@ -183,7 +179,7 @@ p2 <- ggdraw() + draw_image("figures/excel_remake_pie.png", scale = 0.9)
 plot_grid(p1, p2)
 ```
 
-## Excel koláčový graf - důraz 
+## Excel koláčový graf - důraz
 
 ```{r, fig.align='center', fig.cap='Financování dle zdroje, v tisících Kč'}
 # note, the path needs to add "slides/" before figures to work in console, but be like this to compile
@@ -193,12 +189,11 @@ p2 <- ggdraw() + draw_image("figures/excel_remake_pie2.png", scale = 0.9)
 plot_grid(p1, p2)
 ```
 
-
-##  Excel sloupcový graf {.columns-2}
+## Excel sloupcový graf {.columns-2}
 
 PŘED
 
-![](figures/excel_default_bar.png){width=90%}
+![](figures/excel_default_bar.png){width="90%"}
 
 <p class="forceBreak">
 
@@ -206,13 +201,13 @@ PŘED
 
 PO
 
-![](figures/excel_remake_bar.png){width=90%}
+![](figures/excel_remake_bar.png){width="90%"}
 
 ## Excel sloupcový graf časová řada {.columns-2}
 
 PŘED
 
-![](figures/excel_default_bars.png){width=90%}
+![](figures/excel_default_bars.png){width="90%"}
 
 <p class="forceBreak">
 
@@ -220,13 +215,13 @@ PŘED
 
 PO
 
-![](figures/excel_remake_bars.png){width=90%}
+![](figures/excel_remake_bars.png){width="90%"}
 
 ## Excel spojnicový graf {.columns-2}
 
 PŘED
 
-![](figures/excel_default_line.png){width=90%}
+![](figures/excel_default_line.png){width="90%"}
 
 <p class="forceBreak">
 
@@ -234,13 +229,13 @@ PŘED
 
 PO
 
-![](figures/excel_remake_line.png){width=90%}
+![](figures/excel_remake_line.png){width="90%"}
 
 ## Excel likertovská škála (diverging chart) {.columns-2}
 
 PŘED
 
-![](figures/excel_default_likert.png){width=90%}
+![](figures/excel_default_likert.png){width="90%"}
 
 <p class="forceBreak">
 
@@ -248,13 +243,13 @@ PŘED
 
 PO
 
-![](figures/excel_remake_likert.png){width=90%}
+![](figures/excel_remake_likert.png){width="90%"}
 
 ## Excel likertovská škála - varianta (diverging chart) {.columns-2}
 
 PŘED
 
-![](figures/excel_default_likert.png){width=90%}
+![](figures/excel_default_likert.png){width="90%"}
 
 <p class="forceBreak">
 
@@ -262,7 +257,7 @@ PŘED
 
 PO
 
-![](figures/excel_remake_likert2.png){width=90%}
+![](figures/excel_remake_likert2.png){width="90%"}
 
 # PRINCIP 2: Čitelnost
 
@@ -276,12 +271,10 @@ Respekt k tomu, jak funguje lidská kognice.
 
 <font size="2">[Zdroj Christopher G. Healey](https://www.csc2.ncsu.edu/faculty/healey/PP/index.html)</font>
 
-
 ## Koláčové grafy se nehodí na provonávání
 
-
 ::: {.centered}
-![](figures/pie_compare.png){width=70%}
+![](figures/pie_compare.png){width="70%"}
 :::
 
 <font size="2">[Zdroj Wiki](https://en.wikipedia.org/wiki/Pie_chart#/media/File:Piecharts.svg)</font>
@@ -334,12 +327,11 @@ gg4 <-
 
 ```
 
-
 ## Příklad zlepšení čitelnosti i důrazu {.columns-2}
 
 SKUTEČNÁ PUBLIKACE
 
-![](figures/male_female_country_comparison.png){width=90%}
+![](figures/male_female_country_comparison.png){width="90%"}
 
 <p class="forceBreak">
 
@@ -347,15 +339,15 @@ SKUTEČNÁ PUBLIKACE
 
 NÁVRH NA ZLEPŠENÍ
 
-![](figures/male_female_country_comparison2.png){width=75%}
-<font size="2">[Schwabish, J. A. (2014) An Economist’s Guide to Visualizing Data](https://pubs.aeaweb.org/doi/pdf/10.1257/jep.28.1.209)</font>
+![](figures/male_female_country_comparison2.png){width="75%"} 
 
+<font size="2">[Schwabish, J. A. (2014) An Economist's Guide to Visualizing Data](https://pubs.aeaweb.org/doi/pdf/10.1257/jep.28.1.209)</font>
 
 ## "Small multiples" zlepšují čitelnost časových řad {.columns-2}
 
 SKUTEČNÁ PUBLIKACE
 
-![](figures/small_multiples_no.png){width=90%}
+![](figures/small_multiples_no.png){width="90%"}
 
 <p class="forceBreak">
 
@@ -363,10 +355,9 @@ SKUTEČNÁ PUBLIKACE
 
 NÁVRH NA ZLEPŠENÍ
 
-![](figures/small_multiples_yes.png){width=90%}
+![](figures/small_multiples_yes.png){width="90%"}
 
-<font size="2">[Schwabish, J. A. (2014) An Economist’s Guide to Visualizing Data](https://pubs.aeaweb.org/doi/pdf/10.1257/jep.28.1.209)</font>
-
+<font size="2">[Schwabish, J. A. (2014) An Economist's Guide to Visualizing Data](https://pubs.aeaweb.org/doi/pdf/10.1257/jep.28.1.209)</font>
 
 ## Pokud máte flexibilní nástroj, můžete být kreativní...
 
@@ -380,13 +371,12 @@ p4 <- ggdraw() + draw_image("figures/comparison4.png", scale = 0.9)
 plot_grid(p1, p2, p3, p4)
 ```
 
-<font size="2">[Schwabish, J. A. (2014) An Economist’s Guide to Visualizing Data](https://pubs.aeaweb.org/doi/pdf/10.1257/jep.28.1.209)</font>
-
+<font size="2">[Schwabish, J. A. (2014) An Economist's Guide to Visualizing Data](https://pubs.aeaweb.org/doi/pdf/10.1257/jep.28.1.209)</font>
 
 ## S tímhle opatrně...
 
 ::: {.centered}
-![](figures/composition_time.png){width=70%}
+![](figures/composition_time.png){width="70%"}
 :::
 
 Může být užitečné pro dvě kategorie.
@@ -394,18 +384,16 @@ Může být užitečné pro dvě kategorie.
 ## Dobře zvládnutá datová hustota
 
 ::: {.centered}
-![](figures/ft.png){width=90%}
+![](figures/ft.png){width="90%"}
 :::
 
-<font size="2">Zdroj [Financial Times](blogs.ft.com/ftdata/2015/04/17/eu-unemployment-tracker/ )</font>
-
+<font size="2">Zdroj [Financial Times](blogs.ft.com/ftdata/2015/04/17/eu-unemployment-tracker/)</font>
 
 # PRINCIP 3: Integrita
 
-
 ## PRINCIP 3: Integrita
 
-Vy rozhodujete o tom, jaké sdělení vizualizace vynese do popředí. Tím ale také nesete odpovědnost za možná zkreslení či přímo manipulace. 
+Vy rozhodujete o tom, jaké sdělení vizualizace vynese do popředí. Tím ale také nesete odpovědnost za možná zkreslení či přímo manipulace.
 
 ::: {.centered}
 ![](figures/spider.jfif)
@@ -414,12 +402,12 @@ Vy rozhodujete o tom, jaké sdělení vizualizace vynese do popředí. Tím ale 
 ## Jak moc že to rostou ceny bytů?
 
 ::: {.centered}
-![](figures/byty.jpg){width=60%}
+![](figures/byty.jpg){width="60%"}
 :::
 
-## Problém osy y {.columns-2 .smaller} 
+## Problém osy y {.columns-2 .smaller}
 
-![](figures/byty.jpg){width=95%}
+![](figures/byty.jpg){width="95%"}
 
 <p class="forceBreak">
 
@@ -433,31 +421,28 @@ knitr::include_graphics(c("figures/byty2.jpg","figures/byty3.jpg"))
 
 ## Někdy je osa y arbitrární
 
-
 ```{r, echo=FALSE,out.width="49%", out.height="20%",fig.show='hold',fig.align='center'}
 
 knitr::include_graphics(c("figures/teplota_a.png","figures/teplota_b.png"))
 
 ```
 
-
 ## Někdy je potřeba "zazoomovat"
 
 ::: {.centered}
-![](figures/employ.png){width=90%}
+![](figures/employ.png){width="90%"}
 :::
 
 ## Pokud osa y nezačíná na 0 ...
 
-* ... použijte "line chart", raději než "bar chart"
-* ... upozorněte na to
+-   ... použijte "line chart", raději než "bar chart"
+-   ... upozorněte na to
 
 ::: {.centered}
-![](figures/y_axis_cut.png){width=70%}
+![](figures/y_axis_cut.png){width="70%"}
 :::
 
 <font size="2">[Zdroj obrázku Highcharts.com](https://medium.economist.com/why-you-sometimes-need-to-break-the-rules-in-data-viz-4d8ece284919)</font>
-
 
 ## Trápí nás chudoba nejméně ze všech evropských zemí?
 
@@ -471,9 +456,9 @@ knitr::include_graphics(c("figures/teplota_a.png","figures/teplota_b.png"))
 
 Zde data z července 2021.
 
-<div class="centered">
+::: {.centered}
 ![](figures/volebni_model_cvvm.png){width="80%"}
-</div>
+:::
 
 ## Nejistotu lze vizualizovat i u odhadů modelu
 
@@ -498,9 +483,7 @@ p1
 
 ```
 
-
 ## Pravdivá vizualizace, ale...
-
 
 ::: {.centered}
 ![](figures/cumulative.jpg)
@@ -508,49 +491,47 @@ p1
 
 <font size="2">[Zdroj obrázku](https://www.benzinga.com/analyst-ratings/analyst-color/17/06/9675339/celebrating-the-10th-anniversary-of-the-iphone-a-look-ba)</font>
 
-## Obecné principy vizualizace - shrnutí{.smaller}
+## Obecné principy vizualizace - shrnutí {.smaller}
 
 Důraz na data
 
-* Defaultní nastavení je často potřeba změnit
-* Ponechte jen ty prvky grafu, které mají informační hodnotu
-* Nepoužívejte 3D grafy
-* Přemýšlejte o tom, co chcete grafem říct
+-   Defaultní nastavení je často potřeba změnit
+-   Ponechte jen ty prvky grafu, které mají informační hodnotu
+-   Nepoužívejte 3D grafy
+-   Přemýšlejte o tom, co chcete grafem říct
 
 Čitelnost
 
-* Respektujte lidskou kognici
-* Vodorovné popisky grafu jsou lepší než svislé
-* Přemýšlejte o tom, v jakém kontextu se s grafem čtenář setká
-* Inspirujte se kreativními přístupy
+-   Respektujte lidskou kognici
+-   Vodorovné popisky grafu jsou lepší než svislé
+-   Přemýšlejte o tom, v jakém kontextu se s grafem čtenář setká
+-   Inspirujte se kreativními přístupy
 
 Integrita
 
-* Opatrně s osou y
-* Komunikujte význam toho, co vizualizujete
-* Zohledněte míru nejistoty
+-   Opatrně s osou y
+-   Komunikujte význam toho, co vizualizujete
+-   Zohledněte míru nejistoty
 
 ::: {.notes}
-**Důraz na data** Data nemluví za sebe, vy rozhodujete o tom, na co chcete vizualizací upozornit (ale nesmíte manipulovat); barvy používejte jako nositele informace, ne jako ozdobu; 
-**Čitelnost** Pokud to jde, data popisujte přímo v grafu; použití koláčových grafů minimalizujte, určitě nepoužívejte pro srovnání složení více skupin rozdíly v délce vs. rozdíly v úhlu); Přizpůsobte svoji vizualizaci účelu (jednodušší do prezentace, složitější do článku); Titulek v prezentaci nemusí jen pojmenovávat, může vyprávět příběh. V článku větčinou příběh vyprávíme spíše v textu.
+**Důraz na data** Data nemluví za sebe, vy rozhodujete o tom, na co chcete vizualizací upozornit (ale nesmíte manipulovat); barvy používejte jako nositele informace, ne jako ozdobu; **Čitelnost** Pokud to jde, data popisujte přímo v grafu; použití koláčových grafů minimalizujte, určitě nepoužívejte pro srovnání složení více skupin rozdíly v délce vs. rozdíly v úhlu); Přizpůsobte svoji vizualizaci účelu (jednodušší do prezentace, složitější do článku); Titulek v prezentaci nemusí jen pojmenovávat, může vyprávět příběh. V článku větčinou příběh vyprávíme spíše v textu.
 :::
 
-# Architektura vizualizace (grammar of graphics)
+# Architektura vizualizace \n(grammar of graphics)
 
 ## Leland Wilkinson an 'The Grammar of Graphics' (book)
 
 Co dělá dobrou vizualizaci? Jednotlivé komponenty...
 
-1) Data
-1) Proměnné
-1) Algebra
-1) Měřítko
-1) Geometrie (line chart, bar chart, ...)
-1) "Estetika" (barvy, tvary, sytost, ...)
-1) ...
+1)  Data
+2)  Proměnné
+3)  Algebra
+4)  Měřítko
+5)  Geometrie (line chart, bar chart, ...)
+6)  "Estetika" (barvy, tvary, sytost, ...)
+7)  ...
 
 ## Hadley Wickham a překlopení Wilkinsonových myšlenek do softwaru
-
 
 ::: {.centered}
 ![](figures/ggplot2_logo.png)
@@ -560,20 +541,42 @@ Co dělá dobrou vizualizaci? Jednotlivé komponenty...
 
 Sedm vrstev grafu. Tři povinné:
 
-
 <ol>
-<li> Data
-<li> Estetika - mapování informací na barvu, tvar, sytost, ...
-<li> Geometrie - grafické elementy, které reprezentují data
+
+<li>
+
+Data
+
+<li>
+
+Estetika - mapování informací na barvu, tvar, sytost, ...
+
+<li>
+
+Geometrie - grafické elementy, které reprezentují data
+
 </ol>
 
 Čtyři "navíc":
 
 <ol start=4>
-<li> Facety (small multiples)
-<li> Agregované statistiky (např. regresní křivka)
-<li> Úprava souřadnic (např. logaritmické měřítko)
-<li> Téma (theme) - design grafu
+
+<li>
+
+Facety (small multiples)
+
+<li>
+
+Agregované statistiky (např. regresní křivka)
+
+<li>
+
+Úprava souřadnic (např. logaritmické měřítko)
+
+<li>
+
+Téma (theme) - design grafu
+
 </ol>
 
 ## Data {.smaller}
@@ -582,20 +585,19 @@ Sedm vrstev grafu. Tři povinné:
 head(penguins)
 ```
 
-
 ```{r echo = TRUE, fig.height=2}
 ggplot(data = penguins)
 ```
 
 ## Estetika (Aesthetics) {.columns-2 .smaller}
 
-* osy
-* obrys
-* výplň
-* velikost
-* průhlednost
-* tvar
-* ...
+-   osy
+-   obrys
+-   výplň
+-   velikost
+-   průhlednost
+-   tvar
+-   ...
 
 <p class="forceBreak">
 
@@ -606,15 +608,14 @@ ggplot(data = penguins,
        aes(x = sex))
 ```
 
-
 ## Geometrie {.columns-2 .smaller}
 
-* křivky
-* body
-* sloupce
-* histogram
-* boxplot
-* ...
+-   křivky
+-   body
+-   sloupce
+-   histogram
+-   boxplot
+-   ...
 
 <p class="forceBreak">
 
@@ -627,32 +628,95 @@ ggplot(data = penguins,
 ```
 
 
+## Geometrie 2 {.columns-2 .smaller}
+
+-   křivky
+-   body
+-   sloupce
+-   histogram
+-   boxplot
+-   ...
+
+<p class="forceBreak">
+
+</p>
+
+```{r echo = TRUE, fig.height=3.5, fig.width=4}
+ggplot(data = penguins %>% 
+         filter(!is.na(sex)), 
+       aes(x = sex,
+           y = bill_length_mm)) + 
+  geom_boxplot() +
+  theme_classic()
+```
+
+
+## Galerie 1
+
+::: {.centered}
+![](figures/violin.png){width="75%"}
+:::
+
+<font size="2">[Galerie ggplot2](https://r-graph-gallery.com/)</font>
+
+## Galerie 2
+
+::: {.centered}
+![](figures/violin_box.png){width="75%"}
+:::
+
+<font size="2">[Galerie ggplot2](https://r-graph-gallery.com/)</font>
+
+## Galerie 3
+
+::: {.centered}
+![](figures/box_jitter.png){width="55%"}
+:::
+
+<font size="2">[Galerie ggplot2](https://r-graph-gallery.com/)</font>
+
+## Galerie 4
+
+::: {.centered}
+![](figures/marginal.png){width="99%"}
+:::
+
+<font size="2">[Galerie ggplot2](https://r-graph-gallery.com/)</font>
+
+## Galerie 5
+
+::: {.centered}
+![](figures/lol.png){width="50%"}
+:::
+
+<font size="2">[Galerie ggplot2](https://r-graph-gallery.com/)</font>
 
 ## Poděkování
 
-Tato prezentace přirozeně čerpá z těžko představitelného objemu práce těžko představitelného množství lidí. 
+Tato prezentace přirozeně čerpá z těžko představitelného objemu práce těžko představitelného množství lidí.
 
-Přesto bych speciálně rád poděkoval [Petrovi Bouchalovi](https://petrbouchal.xyz/). S ním jsme v roce 2016 připravovali kurz o metodologii vědy na letní akademii pro středoškoláky [Discover](https://discover.sk/cs/), kde jsme se vizualizaci hodně věnovali. Petr také hostoval v mých kurzech na FF UK a teprve při jeho předndáškách jsem plně docenil hodnotu toho, když vizualizaci začneme vnímat jako plnohodnotnou pomocnou vědeckou disciplínu. S řadou příkladů v této prezentaci jsem se seznámil díky Petrovi. 
+Přesto bych speciálně rád poděkoval [Petrovi Bouchalovi](https://petrbouchal.xyz/). S ním jsme v roce 2016 připravovali kurz o metodologii vědy na letní akademii pro středoškoláky [Discover](https://discover.sk/cs/), kde jsme se vizualizaci hodně věnovali. Petr také hostoval v mých kurzech na FF UK a teprve při jeho předndáškách jsem plně docenil hodnotu toho, když vizualizaci začneme vnímat jako plnohodnotnou pomocnou vědeckou disciplínu. S řadou příkladů v této prezentaci jsem se seznámil díky Petrovi.
 
 ## Zdroje - principy a aplikace {.smaller}
 
-1) [Jonathan Schwabish - blog](https://policyviz.com/)
-1) [The Economist a jeho daily charts](https://www.economist.com/graphic-detail)
-1) [Hans Rosling's Gapminder](https://www.gapminder.org/)
-1) [Office for National Statistics](https://www.gapminder.org/) - Presenting data
-1)  Šestero dobré vizualizace podle v [Průvodce evaluátora](https://www.dotaceeu.cz/getmedia/3ce5f6b9-24cc-4ac1-80d9-9eb769203f5a/Pruvodce-evaluatora_final_202007.pdf.aspx) - Sbírka evaluačních tipů a doporučení
-1)  [The Data Visualization Checklist](https://stephanieevergreen.com/updated-data-visualization-checklist/)
-1) Vybrané principy diskutované na [blogu datové novinářky The Economist](https://medium.economist.com/why-you-sometimes-need-to-break-the-rules-in-data-viz-4d8ece284919)
-1) [Makeover Monday](https://www.makeovermonday.co.uk/)
-1) [Excel charts](https://excelcharts.com/)
-1) [Vizualizační fakapy](https://viz.wtf/) - pro zasmání
+1)  [Jonathan Schwabish - blog](https://policyviz.com/)
+2)  [The Economist a jeho daily charts](https://www.economist.com/graphic-detail)
+3)  [Hans Rosling's Gapminder](https://www.gapminder.org/)
+4)  [Office for National Statistics](https://www.gapminder.org/) - Presenting data
+5)  Šestero dobré vizualizace podle v [Průvodce evaluátora](https://www.dotaceeu.cz/getmedia/3ce5f6b9-24cc-4ac1-80d9-9eb769203f5a/Pruvodce-evaluatora_final_202007.pdf.aspx) - Sbírka evaluačních tipů a doporučení
+6)  [The Data Visualization Checklist](https://stephanieevergreen.com/updated-data-visualization-checklist/)
+7)  Vybrané principy diskutované na [blogu datové novinářky The Economist](https://medium.economist.com/why-you-sometimes-need-to-break-the-rules-in-data-viz-4d8ece284919)
+8)  [Makeover Monday](https://www.makeovermonday.co.uk/)
+9)  [Excel charts](https://excelcharts.com/)
+10) [Vizualizační fakapy](https://viz.wtf/) - pro zasmání
 
 ## Zdroje - ggplot2 {.smaller}
 
-1) Některé přednášky kurzu [Úvod do analýzy dat v R](https://sociology-fa-cu.github.io/Uvod_do_analyzy_dat_v_R/)
-1) Kapitola [Graphics for Communication](https://r4ds.had.co.nz/graphics-for-communication.html) knihy R for Data Science
-1) [Kniha ggplot2](https://ggplot2-book.org/) od jejího autora Hadleyho Wickhama
-1) Veká [galerie grafů v ggplot2](https://r-graph-gallery.com/)
+1)  Některé přednášky kurzu [Úvod do analýzy dat v R](https://sociology-fa-cu.github.io/Uvod_do_analyzy_dat_v_R/)
+2)  Kapitola [Graphics for Communication](https://r4ds.had.co.nz/graphics-for-communication.html) knihy R for Data Science
+3)  [Kniha ggplot2](https://ggplot2-book.org/) od jejího autora Hadleyho Wickhama
+4)  Veká [galerie grafů v ggplot2](https://r-graph-gallery.com/)
+5)  Součástí [této galerie](https://www.data-to-viz.com/caveats.html) je i přehled principů vizualizace
 
 ## Odkazovaná literatura a další zdroje {.smaller}
 
