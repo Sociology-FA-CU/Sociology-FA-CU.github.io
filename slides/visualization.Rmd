@@ -167,7 +167,7 @@ Méně je více. Grafy mají efektivně komunikovat informace, design má tento 
 
 <font size="2">[Zdroj obrázku](https://www.slideshare.net/vis4/making-data-visualizations-a-survival-guide)</font>
 
-# Důraz na data: \nNespoléhejte se na default
+# Nespoléhejte se na default
 
 ## Excel koláčový graf
 
