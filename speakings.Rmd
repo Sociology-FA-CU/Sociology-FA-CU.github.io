@@ -52,6 +52,25 @@ Vizualizace byla v rámci analýzy dat dlouho považována za jakousi druhořado
 
 </details>
 
+<details><summary>Principles and practice of data visualisation - Jaromír Mazák (17 May 2022)</summary>
+
+- Lecturer: Mgr. Jaromír Mazák, Ph.D. [(More about the lecturer here)](https://ksoc.ff.cuni.cz/mazak/)
+- Date: 17 May 2022, 10:00-11:30 (90 minutes) 
+- Format: Online, 90 minutes
+
+[Presentation in browser](slides/visualization_eng.html)
+
+**Anotace**
+
+[Note, this is an English version of the course taught previously in Czech (on 3 May 2022). The content is almost the same.]
+
+Visualization has long been regarded as a kind of second-rate pastime in data analysis. Numbers should come first, and their translation into graphs was rather a pleasant aftertaste. This approach has been changing in recent decades. Since Edward Tufte's influential publications on visualization design, the scientific community has come to realize that data visualization is not only crucial for the successful communication of scientific conclusions, but also a powerful tool in its own right for exploratory analysis and generation of knowledge. The seminar will introduce selected general principles of effective data visualization as well as specific applications on illustrative examples such as "how to do it better." The aim of the seminar is to present data visualization as a scientific subdiscipline that, thanks to the available software, deserves increasing space in everyday scientific work. After the initial presentation of the principles, we will focus on the concept of "grammar of graphics" introduced by Leland Wilkinson in the book of the same name. We will quickly move from this concept to its most famous implementation, which is the ggplot2 library (Hadley Wickham) written for the opensource statistical language R. Participants will be introduced to work with this software. The ambition of the course is to raise students' interest in the efficient, extremely flexible and relatively user-friendly data visualization offered by the ggplot2 library. Students will also take away a large amount of freely available materials for further self-study.
+
+[Link to the course on the PhD website of Charles University](https://phd.cuni.cz/PHD-239.html?event=23993&lang=cz)
+
+
+</details>
+
 <br>
 
 ## 2020/2021
