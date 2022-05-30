@@ -41,6 +41,8 @@ Série navazující na *Essence of Linear Algebra*. Stejné jako ta předchozí,
 <br>
 Teorie pravděpodobnosti, a na ní stojící statistika, představuje denní chléb každého kvantitativního sociologa. Od jednoduchých deskriptivních statistik po komplikované nelineární modely, aplikaci statistiky najdeme ve většině kvantitativně orientovaných sociologických článků. Její znalost jde proto jen stěží přecenit a jejímu studiu se vyplatí věnovat dostatek času.
 
+Jeden z garantů klastru Kvantitativních metod analýzy dat vyučuje na Katedře sociologie také úvodní kurz Statistiky. [Dedikované a věčně rozpracované stránky kurzu Statistika 1 jsou dostupné zde.](https://sociology-fa-cu.github.io/statistika1/)
+
 ##### Učebnice
 <br>
 **Introduction to Probability (J. Blitzstein & J. Hwang, 2019)**
