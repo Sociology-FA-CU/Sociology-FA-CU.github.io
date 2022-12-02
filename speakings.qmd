@@ -1,0 +1,81 @@
+---
+output:
+  html_document:
+    css: "css/site-style.css"
+---
+
+</br>
+
+Metodologické přednášky našich členů mimo vyučované kurzy, například jednorázové přednášky, veřejná vystoupení atp.
+
+Některé prezentace jsou ve formátu HTML. Pro jejich maximální využití můžete použít následující zkratky:
+
+-   šipkami je možné přecházet z jednoho snímku na druhý.
+-   klávesa `f` spustí zobrazení plné obrazovky (fullscreen)
+-   klávesa `w` spustí širokoúhlé zobrazení (widescreen)
+-   klávesa `o` zobrazí přehled snímků
+-   klávesa `p` zobrazí poznámku k aktuálnímu snímku (pokud existuje)
+
+## 2021/2022
+
+<details>
+
+<summary>Datová gramotnost - Jaromír Mazák (22. března 2022)</summary>
+
+-   Vyučující: Mgr. Jaromír Mazák, Ph.D. [(Více o lektorovi zde)](https://ksoc.ff.cuni.cz/mazak/)
+-   Termín: 22. března 2022 od 10:00 do 11:30
+-   Formát: Online, 90 minut
+
+[Prezentace ke spuštění v prohlížeči](slides/data_literacy.html)
+
+**Anotace**
+
+V ideálním světě by data měla vést k přesnější představě o realitě a k lepším rozhodnutím. Pro vědce jsou navíc základní surovinou pro vytváření vědění. Nedávná replikační krize v psychologii i jiných oborech nicméně ukázala, že ani vědecká komunita není imunní proti nesprávné práci s daty. Mladí vědci tak stojí před výzvou, aby vedle zájmu o svůj obor věnovali kritickou pozornost také zaběhnutým či oborovým postupům práce s daty a posouvali svůj obor nejen ve věcné rovině, ale také metodologicky.Tento 90minutový seminář je koncipován jako pozvánka do světa práce s daty, která není jen mechanická či „podle kuchařky", nýbrž je citlivá k různými omezením, která s prací s daty nutně souvisí, a nečiní závěry, pro které v datech není opora. Cílem semináře je doktorandům pomoct v osvojení si návyků, díky kterým dokážou při práci s daty ve správnou chvíli zpozornět a klást si důležité otázky. Konkrétně bude věnována pozornost vybraným nástrahám popisné statistiky, problematice kauzální inference a kontroverzi kolem p-hodnoty včetně vysvětlení replikační krize. Účastníkům budou doporučeny prameny pro návazné studium. Předpokládá se, že účastníci již například v průběhu bakalářského nebo magisterského studia absolvovali základní statistické a metodologické kurzy a mají alespoň základní pochopení lineární regrese, testování nulových hypotéz a mají zkušenost s interpretací výstupů softwaru pro statistickou analýzu (např. tabulky regresních koeficientů, standardních chyb a p-hodnot).
+
+[Odkaz na kurz na webu doktorského studia Univerzity Karlovy](https://phd.cuni.cz/PHD-239.html?event=23494&lang=cz)
+
+</details>
+
+<details>
+
+<summary>Principy a praxe vizualizace dat - Jaromír Mazák (3. května 2022)</summary>
+
+-   Vyučující: Mgr. Jaromír Mazák, Ph.D. [(Více o lektorovi zde)](https://ksoc.ff.cuni.cz/mazak/)
+-   Termín: 3. května 2022 od 10:00 do 11:30
+-   Formát: Online, 90 minut
+
+[Prezentace ke spuštění v prohlížeči](slides/visualization.html)
+
+**Anotace**
+
+Vizualizace byla v rámci analýzy dat dlouho považována za jakousi druhořadou kratochvíli. Na prvním místě měla být čísla, jejich převedení do grafů pak bylo spíše jen příjemným dochucením. Tento přístup se v posledních dekádách mění. Nejpozději od vlivných publikací Edwarda Tufteho o designu vizualizace si vědecká komunita začala uvědomovat, že vizualizace dat je klíčová nejen pro úspěšnou komunikaci vědeckých závěrů, ale že je také sama o sobě mocným nástrojem explorativní analýzy a generování poznání. V rámci semináře se seznámíme jak s vybranými obecnými principy efektivní vizualizace dat, tak s konkrétními aplikacemi na ilustrativních příkladech typu „jak to lze udělat lépe". Cílem semináře je představit vizualizaci dat jako vědeckou subdisciplínu, která si díky dostupnému softwaru zasluhuje stále větší prostor v každodenní vědecké práci. Po úvodním představení principů se zaměříme na koncept „grammar of graphics" představený Lelandem Wilkinsonem ve stejnojmenné knize. Od tohoto konceptu se rychle odrazíme k jeho nejslavnější implementaci, kterou je knihovna ggplot2 (Hadley Wickham) napsaná pro opensource statistický jazyk R. Účastníci budou uvedeni do práce s tímto softwarem. Ambicí kurzu je vzbudit u studentů zájem o efektivní, extrémně flexibilní a zároveň uživatelsky přijatelně náročnou vizualizaci dat, kterou knihovna ggplot2 nabízí. Studenti a studentky si také odnesou velké množství volně dostupných materiálů k dalšímu samostudiu.
+
+[Odkaz na kurz na webu doktorského studia Univerzity Karlovy](https://phd.cuni.cz/PHD-239.html?event=23496&lang=cz)
+
+</details>
+
+<details>
+
+<summary>Principles and practice of data visualisation - Jaromír Mazák (17 May 2022)</summary>
+
+-   Lecturer: Mgr. Jaromír Mazák, Ph.D. [(More about the lecturer here)](https://ksoc.ff.cuni.cz/mazak/)
+-   Date: 17 May 2022, 10:00-11:30 (90 minutes)
+-   Format: Online, 90 minutes
+
+[Presentation in browser](slides/visualization_eng.html)
+
+**Anotace**
+
+\[Note, this is an English version of the course taught previously in Czech (on 3 May 2022). The content is almost the same.\]
+
+Visualization has long been regarded as a kind of second-rate pastime in data analysis. Numbers should come first, and their translation into graphs was rather a pleasant aftertaste. This approach has been changing in recent decades. Since Edward Tufte's influential publications on visualization design, the scientific community has come to realize that data visualization is not only crucial for the successful communication of scientific conclusions, but also a powerful tool in its own right for exploratory analysis and generation of knowledge. The seminar will introduce selected general principles of effective data visualization as well as specific applications on illustrative examples such as "how to do it better." The aim of the seminar is to present data visualization as a scientific subdiscipline that, thanks to the available software, deserves increasing space in everyday scientific work. After the initial presentation of the principles, we will focus on the concept of "grammar of graphics" introduced by Leland Wilkinson in the book of the same name. We will quickly move from this concept to its most famous implementation, which is the ggplot2 library (Hadley Wickham) written for the opensource statistical language R. Participants will be introduced to work with this software. The ambition of the course is to raise students' interest in the efficient, extremely flexible and relatively user-friendly data visualization offered by the ggplot2 library. Students will also take away a large amount of freely available materials for further self-study.
+
+[Link to the course on the PhD website of Charles University](https://phd.cuni.cz/PHD-239.html?event=23993&lang=cz)
+
+</details>
+
+<br>
+
+## 2020/2021
+
+-   TBD

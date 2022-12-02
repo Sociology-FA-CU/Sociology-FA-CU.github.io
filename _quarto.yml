@@ -1,0 +1,28 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: "Kvantitativní výzkum v sociologii"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Úvod
+      - href: courses.qmd
+        text: "Vyučovaná kurzy"
+      - href: resources.qmd
+        text: Samostudium
+      - href: speakings.qmd
+        text: "Samostatné přednášky"
+  page-footer:
+    left: '<a href= "https://ksoc.ff.cuni.cz/"><img src="/media/ksoc-logo.svg" width="224" height="80" /></a>'
+    right: 'Sponzorem výuky je [NMS Market Research](https://nms.global/cz/)'
+
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: true
+
+editor: visual
+
