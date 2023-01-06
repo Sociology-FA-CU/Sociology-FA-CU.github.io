@@ -26,7 +26,7 @@ Některé prezentace jsou ve formátu HTML. Pro jejich maximální využití mů
 -   Termín: 22. března 2022 od 10:00 do 11:30
 -   Formát: Online, 90 minut
 
-[Prezentace ke spuštění v prohlížeči](slides/data_literacy.html)
+[Prezentace ke spuštění v prohlížeči](docs/slides/data_literacy.html)
 
 **Anotace**
 
@@ -44,7 +44,7 @@ V ideálním světě by data měla vést k přesnější představě o realitě 
 -   Termín: 3. května 2022 od 10:00 do 11:30
 -   Formát: Online, 90 minut
 
-[Prezentace ke spuštění v prohlížeči](slides/visualization.html)
+[Prezentace ke spuštění v prohlížeči](docs/slides/visualization.html)
 
 **Anotace**
 
@@ -62,7 +62,7 @@ Vizualizace byla v rámci analýzy dat dlouho považována za jakousi druhořado
 -   Date: 17 May 2022, 10:00-11:30 (90 minutes)
 -   Format: Online, 90 minutes
 
-[Presentation in browser](slides/visualization_eng.html)
+[Presentation in browser](docs/slides/visualization_eng.html)
 
 **Anotace**
 
