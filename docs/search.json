@@ -35,6 +35,1084 @@
     "text": "Tato stránka je věnovaná materiálům k výuce specializačního klastru Kvantitativních metod na Katedře sociologie Filozofické fakulty Univerzity Karlovy. Výuka tohoto klastru probíhá převážně v jazyce R. Na listě vyučované kurzy najdete rozcestník na webovou oporu jednotlivých kurzů - často jde o živé weby, které se vyvíjí spolu s dalším rozvojem jednotlivých kurzů. Ne vše je hotové :-)\nJednorázové přednášky k různým příležitostem (vzdělávání doktorandů, hostování atp.) jsou dostupné na kartě Samostatné přednášky.\nTento specializační klastr garantují a jeho koncepční rozvoj zajišťují:\nMgr. Jaromír Mazák, Ph.D.\nMgr. Aleš Vomáčka"
   },
   {
+    "objectID": "slides/data_literacy.html#co-nás-dnes-čeká",
+    "href": "slides/data_literacy.html#co-nás-dnes-čeká",
+    "title": "Datová gramotnost (nejen) pro začínající vědce",
+    "section": "Co nás dnes čeká?",
+    "text": "Co nás dnes čeká?\n\nPopisné statistiky\nKauzální inference\nP-hodnota a replikační krize"
+  },
+  {
+    "objectID": "slides/data_literacy.html#statistika-je-když",
+    "href": "slides/data_literacy.html#statistika-je-když",
+    "title": "Datová gramotnost (nejen) pro začínající vědce",
+    "section": "Statistika je když…",
+    "text": "Statistika je když…\nEfektivita vakcíny Pfizer-BioNTech je 73 %.\n11,5 % lidí v Česku je ohroženo chudobou.\n\nEfektivita vakcíny je definována jako relativní pokles rizika. Tj. v očkované skupině je zasaženo o 73 % méně lidí, než by se nakazilo bez vakcíny. (Neznamená to, že 27 % z očkovaných bude zasaženo. Neznamená, že 73 % si utvoří protilátky.) Co se myslí pojmeme “zasaženo”? To může být různé. Klíčové se ptát, efektivita proti čemu: V tomto případě proti nakažení, dále 90 % efektivita proti hospitalizaci. Dále víme, že efektivita proti nákaze poklesla z 88 % po 1 měsíci na 47 % po 5 měsících. Chudoba ukazatel ohrožení chudobou a sociálním vyloučením má jasnou, ale ne moc intuitivní definici, viz další snímek."
+  },
+  {
+    "objectID": "slides/data_literacy.html#ohrožení-chudobou-a-sociálním-vyloučením",
+    "href": "slides/data_literacy.html#ohrožení-chudobou-a-sociálním-vyloučením",
+    "title": "Datová gramotnost (nejen) pro začínající vědce",
+    "section": "Ohrožení chudobou a sociálním vyloučením",
+    "text": "Ohrožení chudobou a sociálním vyloučením\n\n\n\nZdroj Eurostat\n\n\nJak byste takto nízkou míru ohrožení chudobou u nás vysvětlili?"
+  },
+  {
+    "objectID": "slides/data_literacy.html#co-je-ohrožení-chudobou-a-sociálním-vyloučením",
+    "href": "slides/data_literacy.html#co-je-ohrožení-chudobou-a-sociálním-vyloučením",
+    "title": "Datová gramotnost (nejen) pro začínající vědce",
+    "section": "Co je ohrožení chudobou a sociálním vyloučením?",
+    "text": "Co je ohrožení chudobou a sociálním vyloučením?\n\nAt risk of poverty or social exclusion, abbreviated as AROPE, corresponds to the sum of persons who are either at risk of poverty, or severely materially and socially deprived or living in a household with a very low work intensity.\nEurostat\n\n\n\nAle co to znamená?\n\n\n\nAt risk of poverty rate = share of people with an equivalised disposable income (after social transfer) below the at-risk-of-poverty threshold, which is set at 60 % of the national median equivalised disposable income after social transfers. Severe material deprivation rate = cannot afford at least 4 out of 9 predefined material items considered by most people to be desirable or even necessary to lead an adequate life. Low work intensity indicator = households where the adults (those aged 18-59, but excluding students aged 18-24) worked a working time equal or less than 20 % of their total combined work-time potential during the previous year."
+  },
+  {
+    "objectID": "slides/data_literacy.html#operacionalizace",
+    "href": "slides/data_literacy.html#operacionalizace",
+    "title": "Datová gramotnost (nejen) pro začínající vědce",
+    "section": "Operacionalizace",
+    "text": "Operacionalizace\nPřeklopení pojmů z jazyka teorie do observačního jazyka.\nChudoba:\n\nMetrika (například příjmová chudoba)\nHranice chudoby (například 60 % mediánu v dané ekonomice)\nAgregace"
+  },
+  {
+    "objectID": "slides/data_literacy.html#způsob-agregace-chudoby-a-politické-implikace",
+    "href": "slides/data_literacy.html#způsob-agregace-chudoby-a-politické-implikace",
+    "title": "Datová gramotnost (nejen) pro začínající vědce",
+    "section": "Způsob agregace chudoby a politické implikace",
+    "text": "Způsob agregace chudoby a politické implikace"
+  },
+  {
+    "objectID": "slides/data_literacy.html#základní-reprodukční-číslo",
+    "href": "slides/data_literacy.html#základní-reprodukční-číslo",
+    "title": "Datová gramotnost (nejen) pro začínající vědce",
+    "section": "Základní reprodukční číslo",
+    "text": "Základní reprodukční číslo\n\\[\\Huge R_0\\]"
+  },
+  {
+    "objectID": "slides/data_literacy.html#základní-představa-pro-r_0-2",
+    "href": "slides/data_literacy.html#základní-představa-pro-r_0-2",
+    "title": "Datová gramotnost (nejen) pro začínající vědce",
+    "section": "Základní představa pro \\(R_0 = 2\\)",
+    "text": "Základní představa pro \\(R_0 = 2\\)\n\nZdroj obrázku Michigan Health Lab"
+  },
+  {
+    "objectID": "slides/data_literacy.html#blíže-skutečnosti-pro-r_0-3",
+    "href": "slides/data_literacy.html#blíže-skutečnosti-pro-r_0-3",
+    "title": "Datová gramotnost (nejen) pro začínající vědce",
+    "section": "Blíže skutečnosti (pro \\(R_0 = 3\\))",
+    "text": "Blíže skutečnosti (pro \\(R_0 = 3\\))\n\n\n\nPřevzato z (spiegelhalter2021?)"
+  },
+  {
+    "objectID": "slides/data_literacy.html#odhad-rozložení-počtu-nakažených",
+    "href": "slides/data_literacy.html#odhad-rozložení-počtu-nakažených",
+    "title": "Datová gramotnost (nejen) pro začínající vědce",
+    "section": "Odhad rozložení počtu nakažených",
+    "text": "Odhad rozložení počtu nakažených\n\n\n\nPřevzato z (spiegelhalter2021?)\n\n“when introduced into susceptible communities, around 75% of people who catch the virus do not go on to infect anyone else, while a small minority (10%) lead to the great majority (80%) of new cases. There are several reasons for this. Some may be particularly infectious, while ‘super-spreader’ events can also occur. There was a choir practice in Washington State where one person with ‘cold-like’ symptoms led to 52 infections of 60 other singers.”"
+  },
+  {
+    "objectID": "slides/data_literacy.html#přijetí-na-univerzitu-v-berkeley-dle-pohlaví",
+    "href": "slides/data_literacy.html#přijetí-na-univerzitu-v-berkeley-dle-pohlaví",
+    "title": "Datová gramotnost (nejen) pro začínající vědce",
+    "section": "Přijetí na Univerzitu v Berkeley dle pohlaví",
+    "text": "Přijetí na Univerzitu v Berkeley dle pohlaví"
+  },
+  {
+    "objectID": "slides/data_literacy.html#zohlednění-fakult",
+    "href": "slides/data_literacy.html#zohlednění-fakult",
+    "title": "Datová gramotnost (nejen) pro začínající vědce",
+    "section": "Zohlednění fakult",
+    "text": "Zohlednění fakult"
+  },
+  {
+    "objectID": "slides/data_literacy.html#obecný-problém-simpsonův-paradox",
+    "href": "slides/data_literacy.html#obecný-problém-simpsonův-paradox",
+    "title": "Datová gramotnost (nejen) pro začínající vědce",
+    "section": "Obecný problém: Simpsonův paradox",
+    "text": "Obecný problém: Simpsonův paradox"
+  },
+  {
+    "objectID": "slides/data_literacy.html#co-si-odnést",
+    "href": "slides/data_literacy.html#co-si-odnést",
+    "title": "Datová gramotnost (nejen) pro začínající vědce",
+    "section": "Co si odnést?",
+    "text": "Co si odnést?\n\nNestačí chroustat čísla, je potřeba rozumět tomu, co znamenají. “Avoid premature enumeration.” (T. Harford)\nOperacionalizace je zřídka (pokud vůbec kdy) neutrální. Co a jak sledujeme má implikace pro naše rozhodování.\nPopisná statistika může zastírat mechanismus, který působí v realitě.\nVztahy na individuální a agregované úrovni mohou být dramaticky odlišné (Simpsonův paradox)."
+  },
+  {
+    "objectID": "slides/data_literacy.html#kde-se-začíst",
+    "href": "slides/data_literacy.html#kde-se-začíst",
+    "title": "Datová gramotnost (nejen) pro začínající vědce",
+    "section": "Kde se začíst?",
+    "text": "Kde se začíst?\nSkvělá kniha pro rozvoj datové gramotnosti každodenního života je How to Make the World Add Up (Harford 2021). Tim Harford je dlouhodobý tvůrce podcastu More or Less (BBC) a jeho příklady jsou strhující, skvěle podané a prakticky užitečné - kniha není psána poraženecky, že nás statistika jen klame, ale pozitivně - co můžeme dělat lépe.\nPokud to chcete vzít ještě více od podlahy a zaměřit se na sebe a svůj postoj ke světu a poznávání, doporučuji knihu The Scout Mindset (Galef 2021) postavenou na metafoře dvou myšlenkových nastavení: vojáka a zvěda.\nPokud byste měli chuť si osvěžit úplně základní statistiku netechnickou formou, doporučuji moderní přístup k výuce statistiky jako investigativního procesu The Art of Statistics (Spiegelhalter 2019)"
+  },
+  {
+    "objectID": "slides/data_literacy.html#randomized-controlled-trial-rct",
+    "href": "slides/data_literacy.html#randomized-controlled-trial-rct",
+    "title": "Datová gramotnost (nejen) pro začínající vědce",
+    "section": "Randomized controlled trial (RCT)",
+    "text": "Randomized controlled trial (RCT)\n\n\n\nHaynes a kol., 2012"
+  },
+  {
+    "objectID": "slides/data_literacy.html#statistické-modely",
+    "href": "slides/data_literacy.html#statistické-modely",
+    "title": "Datová gramotnost (nejen) pro začínající vědce",
+    "section": "Statistické modely",
+    "text": "Statistické modely\n\ndeskriptivní, prediktivní, explanativní (Shmueli 2010)\nexplanativní - kauzální ambice, zásadní je teoretické ukotvení"
+  },
+  {
+    "objectID": "slides/data_literacy.html#dag-directed-acyclic-graph",
+    "href": "slides/data_literacy.html#dag-directed-acyclic-graph",
+    "title": "Datová gramotnost (nejen) pro začínající vědce",
+    "section": "DAG (directed acyclic graph)",
+    "text": "DAG (directed acyclic graph)\n\nheurestický nástroj pro explanativní modelování\npomáhá vyjasnit teoretický model, než se pustíme do statistického modelování"
+  },
+  {
+    "objectID": "slides/data_literacy.html#základní-elementy-zmatení",
+    "href": "slides/data_literacy.html#základní-elementy-zmatení",
+    "title": "Datová gramotnost (nejen) pro začínající vědce",
+    "section": "4 základní elementy zmatení",
+    "text": "4 základní elementy zmatení\n\ny … závislá proměnná\nx … nezávislá proměnná\nz … třetí proměnná\n\n\n\n\nObrázek z McElreath, Statistical Rethinking 2022"
+  },
+  {
+    "objectID": "slides/data_literacy.html#kontrola-vlivu-třetí-proměnné-conditioning-stratification",
+    "href": "slides/data_literacy.html#kontrola-vlivu-třetí-proměnné-conditioning-stratification",
+    "title": "Datová gramotnost (nejen) pro začínající vědce",
+    "section": "Kontrola vlivu třetí proměnné (conditioning, stratification)",
+    "text": "Kontrola vlivu třetí proměnné (conditioning, stratification)\n\nkontrolní proměnná ve statistickém modelu\nvýběr vzorku\nstratifikace v rámci analýzy (oddělené analýzy)"
+  },
+  {
+    "objectID": "slides/data_literacy.html#nepravá-korelace",
+    "href": "slides/data_literacy.html#nepravá-korelace",
+    "title": "Datová gramotnost (nejen) pro začínající vědce",
+    "section": "Nepravá korelace",
+    "text": "Nepravá korelace\n\n\n\n\n\nObrázek z McElreath, Statistical Rethinking 2022\n\n\n\nmezi X a Y existuje asociace\npo kontrole Z asociace mizí\n\n\nNapříklad čím více zmrzliny se prodá, tím více lidí se utopí (sluníčko). Čím více svateb, tím více rozvodů (věk vstupu do manželství)."
+  },
+  {
+    "objectID": "slides/data_literacy.html#střední-člen-the-pipe",
+    "href": "slides/data_literacy.html#střední-člen-the-pipe",
+    "title": "Datová gramotnost (nejen) pro začínající vědce",
+    "section": "Střední člen (the Pipe)",
+    "text": "Střední člen (the Pipe)\n\n\n\n\n\nObrázek z McElreath, Statistical Rethinking 2022\n\n\n\nmezi X a Y existuje asociace\npo kontrole Z asociace mizí (ale chceme to?)\n\n\nNapříklad vzdělanější lidé spíše volí pravicové strany. Možná chceme kontrolovat pro příjem a ukázat, že příjem je mediátor. Pokud se stejně vzdělaní lidé neliší v příjmu, nemá vzdělání další dopad na volbu strany. Ale možná mediátor kontrolovat nechceme, viz následující snímek."
+  },
+  {
+    "objectID": "slides/data_literacy.html#když-pro-mediátor-kontrolovat-nesmíme",
+    "href": "slides/data_literacy.html#když-pro-mediátor-kontrolovat-nesmíme",
+    "title": "Datová gramotnost (nejen) pro začínající vědce",
+    "section": "Když pro mediátor kontrolovat nesmíme…",
+    "text": "Když pro mediátor kontrolovat nesmíme…\nHoubová plíseň snižuje růst rostliny. Chci testovat, jak nasazení chemického ošetření ochrání rostlinu před tímto vlivem.\nOšetření -> Plíseň -> Růst\nNesmím kontrolovat pro plíseň, pokud nás zajímavá efekt ošetření na růst.\n\n\npost-treatment bias (Montgomery, Nyhan, a Torres 2018)\n\n\n\nNedávejte do regresního modelu vše, co měříte. Opírejte se o teorii."
+  },
+  {
+    "objectID": "slides/data_literacy.html#collider",
+    "href": "slides/data_literacy.html#collider",
+    "title": "Datová gramotnost (nejen) pro začínající vědce",
+    "section": "Collider",
+    "text": "Collider\n\n\n\n\n\nObrázek z McElreath, Statistical Rethinking 2022\n\n\n\nmezi X a Y není asociace\npo kontrole Z se asociace mezi nimi objeví"
+  },
+  {
+    "objectID": "slides/data_literacy.html#příklad-toho-jak-nás-může-collider-zmást",
+    "href": "slides/data_literacy.html#příklad-toho-jak-nás-může-collider-zmást",
+    "title": "Datová gramotnost (nejen) pro začínající vědce",
+    "section": "Příklad toho, jak nás může collider zmást",
+    "text": "Příklad toho, jak nás může collider zmást\n\n\n\n\n\nObrázek z McElreath, Statistical Rethinking 2022\n\n\n\nPůvodně žádná korelace, ale při zaměření jen na ty, kterým bylo uděleno financování, vidíme negativní vztah. Podobně negativní vztah mezi inteligencí a pracovitostí mezi univerzitními studenty. Mezi herci atraktivita negativně asociována s talentem (opět, vliv výběru). To je kontrola skrze vzorek."
+  },
+  {
+    "objectID": "slides/data_literacy.html#další-příklad-collideru",
+    "href": "slides/data_literacy.html#další-příklad-collideru",
+    "title": "Datová gramotnost (nejen) pro začínající vědce",
+    "section": "Další příklad collideru",
+    "text": "Další příklad collideru\n\n\n\n\n\nObrázek z McElreath, Statistical Rethinking 2022\n\n\n\nPřípadně v modelu kvůli špatnému modelu: Vztah věku a štěstí. Předpokládejem, že mezi nimi není žádný vztah. Ale jak věk, tak štěstí zvyšuje šanci na sňatek. Pokud kontrolujeme pro manželství (stratifikujeme podle manželství), uměle vytváříme negativní vztah mezi štěstím a věkem, i když věk v naší hypotetické realitě štěstí nijak neovlivňuje (funguje jako konstanta od narození do smrti)."
+  },
+  {
+    "objectID": "slides/data_literacy.html#descendant",
+    "href": "slides/data_literacy.html#descendant",
+    "title": "Datová gramotnost (nejen) pro začínající vědce",
+    "section": "Descendant",
+    "text": "Descendant\n\n\n\n\n\nObrázek z McElreath, Statistical Rethinking 2022\n\n\n\ndescendant se chová podle toho, na co je napojen (zda je Z confonder, pipe, nebo collider)\nnapříklad pokud by Z byl collider, nesmím kontrolovat ani pro A\n\n\nNapříklad v přechozím příkladu by mohlo být problématické kontrolovat pro děti, pokud by děti byly silným descendantem manželství."
+  },
+  {
+    "objectID": "slides/data_literacy.html#kde-si-přečíst-víc",
+    "href": "slides/data_literacy.html#kde-si-přečíst-víc",
+    "title": "Datová gramotnost (nejen) pro začínající vědce",
+    "section": "Kde si přečíst víc?",
+    "text": "Kde si přečíst víc?\nVlivné a přístupné pojednání o kauzalitě je The Book of Why (Pearl a Mackenzie 2018) od současné klíčové postavy teorie kauzálního výstupu. Šikovnou malou knihou na přečtení od začátku do konce je Mastering Metrics (Angrist a Pischke 2014) od autorů řady vlivných ekonomických kauzálních studií. Naopak dobrou “referenční” tlustou knihou je Counterfactuals and Causal Inference (Morgan a Winship 2014)."
+  },
+  {
+    "objectID": "slides/data_literacy.html#nabízet-méně-prodávat-více-choice-paralysis",
+    "href": "slides/data_literacy.html#nabízet-méně-prodávat-více-choice-paralysis",
+    "title": "Datová gramotnost (nejen) pro začínající vědce",
+    "section": "Nabízet méně, prodávat více (choice paralysis)",
+    "text": "Nabízet méně, prodávat více (choice paralysis)\n\n\n\nObrázek z Medium.com\n\nPůvodní studie (Iyengar a Lepper 2000) nasbírala tisíce citací. Pokusy o replikaci ale nebyly přesvědčivé, průměrný efekt byl 0. Především ty, které “nic nenaměřily” se ale nedařilo publikovat."
+  },
+  {
+    "objectID": "slides/data_literacy.html#zkreslení-přeživších",
+    "href": "slides/data_literacy.html#zkreslení-přeživších",
+    "title": "Datová gramotnost (nejen) pro začínající vědce",
+    "section": "Zkreslení přeživších",
+    "text": "Zkreslení přeživších\n\n\n\n\nPodobné: Pokud se ptáte na spokojenost jen těch zákazníků, kteří službu úspěšně použili a ne těch, kdo například nezvládli registraci nebo se jinak nevyznali v systému. 55 000 dolarů vybraných na bramborový salát na Kickstarteru."
+  },
+  {
+    "objectID": "slides/data_literacy.html#pořádné-zatřesení",
+    "href": "slides/data_literacy.html#pořádné-zatřesení",
+    "title": "Datová gramotnost (nejen) pro začínající vědce",
+    "section": "Pořádné zatřesení",
+    "text": "Pořádné zatřesení\n\nDaryl Bem: Lidé vidí do budoucnosti (Journal of Personality and Social Psychology, 2011)\n\n\n\nPokus o replikaci nevyšly, ale časopis je odmítl publikovat\n\n\n\nPůvodní Bemův článek, publikovaný 2011, ale online first už 2010. Příklady Bemových experimentů: lidé měli tipovat, za kterým ze dvou černých čtverců na monitoru je určitý obrázek (ten se náhodně přiřadil až po tipnutí. Tipovali lépe než náhodně. Lidé měli dělat nácvik paměťového cvičení až poté, co paměťové cvičení uskutečnili. Polovina, která po cvičení náhodně dělala nácvik, měla lepší výsledky (efekt do minulosti). Článek na Slate.com vypráví příběh detailně."
+  },
+  {
+    "objectID": "slides/data_literacy.html#publikační-zkreslení-replikační-krize-a-brian-nosek",
+    "href": "slides/data_literacy.html#publikační-zkreslení-replikační-krize-a-brian-nosek",
+    "title": "Datová gramotnost (nejen) pro začínající vědce",
+    "section": "Publikační zkreslení, replikační krize a Brian Nosek",
+    "text": "Publikační zkreslení, replikační krize a Brian Nosek\nNosek shromáždil síť psychologů - replikace 100 studií z respektovaných psychologických časopisů. Jen v 39 případech replikovaly výsledky původních studií.\nČlánek o replikaci 100 studií v časopise Science, rok 2015."
+  },
+  {
+    "objectID": "slides/data_literacy.html#důvody-replikační-krize",
+    "href": "slides/data_literacy.html#důvody-replikační-krize",
+    "title": "Datová gramotnost (nejen) pro začínající vědce",
+    "section": "Důvody replikační krize",
+    "text": "Důvody replikační krize\n\nPublikační zkreslení\nMalá prestiž replikačního výzkumu\nP-hacking\n\n\n“If you have a result that looks publishable but fragile, the logic of science tells you to try to disprove it. Yet the logic of academic grants and promotions tells you to publish at once, and for goodness’ sake don’t prod it too hard.” (Harford 2021)"
+  },
+  {
+    "objectID": "slides/data_literacy.html#p-hacking-v-podání-derrena-browna",
+    "href": "slides/data_literacy.html#p-hacking-v-podání-derrena-browna",
+    "title": "Datová gramotnost (nejen) pro začínající vědce",
+    "section": "P-hacking v podání Derrena Browna",
+    "text": "P-hacking v podání Derrena Browna\n\n\n\nA video where D. Brown explains how they shooted a video with 10 heads in a row"
+  },
+  {
+    "objectID": "slides/data_literacy.html#nenápadný-p-hacking",
+    "href": "slides/data_literacy.html#nenápadný-p-hacking",
+    "title": "Datová gramotnost (nejen) pro začínající vědce",
+    "section": "Nenápadný p-hacking",
+    "text": "Nenápadný p-hacking\n\n1024 výzkumníků se pokusí hodit 10krát po sobě pannu\nvýzkumníkovi se nepovede experiment, tak ho zahodí a zkusí něco jiného\nvýslekdy nejsou statisticky signifikantní,…\n\n… ale kdyby se sebralo pár pozorování navíc\n… ale kdyby se data zanalyzovala po skupinách\n… ale kdyby se data zanalyzovala jiným modelem\n… ale kdyby se vyloučila odlehlá pozorování"
+  },
+  {
+    "objectID": "slides/data_literacy.html#harking",
+    "href": "slides/data_literacy.html#harking",
+    "title": "Datová gramotnost (nejen) pro začínající vědce",
+    "section": "HARKing",
+    "text": "HARKing\nHypothesis after results known"
+  },
+  {
+    "objectID": "slides/data_literacy.html#john-ioannidis-na-jeho-slova-došlo",
+    "href": "slides/data_literacy.html#john-ioannidis-na-jeho-slova-došlo",
+    "title": "Datová gramotnost (nejen) pro začínající vědce",
+    "section": "John Ioannidis … na jeho slova došlo",
+    "text": "John Ioannidis … na jeho slova došlo\n\nV roce 2005 publikoval vizionářský článek “Why Most Published Research Findings Are False”, kde tuto situaci předpověděl."
+  },
+  {
+    "objectID": "slides/data_literacy.html#a-ne-power-posing-asi-nefunguje",
+    "href": "slides/data_literacy.html#a-ne-power-posing-asi-nefunguje",
+    "title": "Datová gramotnost (nejen) pro začínající vědce",
+    "section": "A ne, POWER POSING asi nefunguje",
+    "text": "A ne, POWER POSING asi nefunguje\n… i když ten Ted Talk má na YouTube 20 miliónů zhlédnutí\n\n\n\nZdroj Wikipedie\n\nHypotéza “fake it till you make it” - dělejte power posing, budete se cítit silněji (Amy Cuddy, výsledky: změní se ochota gamblovat, vzroste testosteron, poklesne kortizol, lidé budou mít lepší výkon při pracovním pohovoru). Několik pokusů o replikaci selhalo."
+  },
+  {
+    "objectID": "slides/data_literacy.html#jak-z-toho-ven",
+    "href": "slides/data_literacy.html#jak-z-toho-ven",
+    "title": "Datová gramotnost (nejen) pro začínající vědce",
+    "section": "Jak z toho ven?",
+    "text": "Jak z toho ven?\n\nPre-registrace. Top lékařské časopisy už jinak ani studie nepublikují (i když své standardy často nedodržují příliš přísně), ostatní obory to pomalu začínají dohánět (a všude to není možné)\nČasopis Trials (medicína) - publikace RCT nezávisle na výsledku a signifikanci.\nCochrane Collaboration (systematic reviews, medicína)\nCampbell Collaboration (systematic reviews, sociální vědy, vzdělávání)"
+  },
+  {
+    "objectID": "slides/data_literacy.html#co-je-p-hodnota",
+    "href": "slides/data_literacy.html#co-je-p-hodnota",
+    "title": "Datová gramotnost (nejen) pro začínající vědce",
+    "section": "Co je p-hodnota?",
+    "text": "Co je p-hodnota?\n“Informally, a p-value is the probability under a specified statistical model that a statistical summary of the data (e.g., the sample mean difference between two compared groups) would be equal to or more extreme than its observed value.” (Wasserstein a Lazar 2016)\n\n“Researchers often wish to turn a p-value into a statement about the truth of a null hypothesis, or about the probability that random chance produced the observed data. The p-value is neither. It is a statement about data in relation to a specified hypothetical explanation, and is not a statement about the explanation itself.” (Wasserstein a Lazar 2016)"
+  },
+  {
+    "objectID": "slides/data_literacy.html#kritika-p-hodnoty",
+    "href": "slides/data_literacy.html#kritika-p-hodnoty",
+    "title": "Datová gramotnost (nejen) pro začínající vědce",
+    "section": "Kritika p-hodnoty",
+    "text": "Kritika p-hodnoty\n\np-hodnota je nevhodně používána jako míra důležitosti výsledku (přitom nulová hypotéza může být zcela banální)\np-hodnota je používána jako doklad toho, že byl učiněn vědecký objev, při zanedbání mnohem důležitějších kritérií (design studie, kvalita měřícího nástroje, předchozí evidence,…)\np-hodnota je používána nesprávně (p-hacking)\np-hodnota je nesprávně interpretována (např. nezamítání nulové hypotézy je vnímáno jako evidence ve prospěch nulové hypotézy)\nobvykle není věcný rozdíl mezi p-hodnotou 5,1 a 4,9"
+  },
+  {
+    "objectID": "slides/data_literacy.html#další-čtení-o-p-hodnotě",
+    "href": "slides/data_literacy.html#další-čtení-o-p-hodnotě",
+    "title": "Datová gramotnost (nejen) pro začínající vědce",
+    "section": "Další čtení o p-hodnotě",
+    "text": "Další čtení o p-hodnotě\nZásadní text je vyjádření American Statistical Association. Doporučit lze také tento blog Daniela Lakense."
+  },
+  {
+    "objectID": "slides/visualization_eng.html#what-to-expect",
+    "href": "slides/visualization_eng.html#what-to-expect",
+    "title": "Principles and practice of data visualisation",
+    "section": "What to expect",
+    "text": "What to expect\n\nWhy visualizations rather than text\nGeneral principles of visualization\nGrammar of graphics"
+  },
+  {
+    "objectID": "slides/visualization_eng.html#florence-nightingale-and-the-crimean-war-1850s",
+    "href": "slides/visualization_eng.html#florence-nightingale-and-the-crimean-war-1850s",
+    "title": "Principles and practice of data visualisation",
+    "section": "Florence Nightingale and the Crimean War (1850s)",
+    "text": "Florence Nightingale and the Crimean War (1850s)\n\n\n\nSource Highcharts.com\n\nBlue diesease from poor hygiene. Red battle wounds, Black other causes. Nightingale: first female fellow of the Royal Satistical Society, teamed up with a brilliant statistician of poor parents William Farr who lacked Nightingale’s fame and political connections. About lobbying with Queen Victoria: ‘She may look at it because it has pictures.’ 16 000 of the 18 000 deaths were from preventable disease."
+  },
+  {
+    "objectID": "slides/visualization_eng.html#john-snow-and-the-cholera-epidemy-on-london",
+    "href": "slides/visualization_eng.html#john-snow-and-the-cholera-epidemy-on-london",
+    "title": "Principles and practice of data visualisation",
+    "section": "John Snow and the cholera epidemy on London",
+    "text": "John Snow and the cholera epidemy on London\n\n\n\nSource Highcharts.com\n\nThanks to Snow’s visualizations, suspicion fell on water sources rather than ‘bad air’ which was the main suspect of causing cholera until then."
+  },
+  {
+    "objectID": "slides/visualization_eng.html#count-all-the-threes",
+    "href": "slides/visualization_eng.html#count-all-the-threes",
+    "title": "Principles and practice of data visualisation",
+    "section": "Count all the threes",
+    "text": "Count all the threes\n\n\n\nSource Ware (2012)"
+  },
+  {
+    "objectID": "slides/visualization_eng.html#count-all-the-threes-now",
+    "href": "slides/visualization_eng.html#count-all-the-threes-now",
+    "title": "Principles and practice of data visualisation",
+    "section": "Count all the threes now",
+    "text": "Count all the threes now\n\n\n\nSource Ware (2012)"
+  },
+  {
+    "objectID": "slides/visualization_eng.html#we-remember-better-visually",
+    "href": "slides/visualization_eng.html#we-remember-better-visually",
+    "title": "Principles and practice of data visualisation",
+    "section": "We remember better visually",
+    "text": "We remember better visually\n\n\n\nSource Medina (2014)\n\nSight is our main sense, we see the world through images. We have to decode the text first and then imagine what it means in the abstract."
+  },
+  {
+    "objectID": "slides/visualization_eng.html#eduard-tufte",
+    "href": "slides/visualization_eng.html#eduard-tufte",
+    "title": "Principles and practice of data visualisation",
+    "section": "Eduard Tufte",
+    "text": "Eduard Tufte\nA key figure in the modern approach to visualization of information.\nChartjunk; data : ink ratio; data density; micro - macro reading.\n\nChartjunk unnecessary decorations, data : ink ratio - trying to maximize, i.e. capture a lot of data using little ink; data density - trying to display as much data as possible while emphasizing the main trends; micro-macro reading from the chart are clear trends, but at the same time offers the possibility of detailed inspection."
+  },
+  {
+    "objectID": "slides/visualization_eng.html#general-principles-of-visualization-1",
+    "href": "slides/visualization_eng.html#general-principles-of-visualization-1",
+    "title": "Principles and practice of data visualisation",
+    "section": "General principles of visualization",
+    "text": "General principles of visualization\n\nEmphasis on data\nReadability\nIntegrity"
+  },
+  {
+    "objectID": "slides/visualization_eng.html#principle-1-emphasis-on-data-1",
+    "href": "slides/visualization_eng.html#principle-1-emphasis-on-data-1",
+    "title": "Principles and practice of data visualisation",
+    "section": "PRINCIPLE 1: Emphasis on data",
+    "text": "PRINCIPLE 1: Emphasis on data\nLess is more. Graphs are meant to communicate information effectively, design is meant to support that goal, not obscure it.\n\n\n\nSource Harford (2021)"
+  },
+  {
+    "objectID": "slides/visualization_eng.html#data-ink-ratio",
+    "href": "slides/visualization_eng.html#data-ink-ratio",
+    "title": "Principles and practice of data visualisation",
+    "section": "DATA : INK ratio",
+    "text": "DATA : INK ratio\n“Above all else show the data.” (Eduard Tufte)\n\n\n\nSource"
+  },
+  {
+    "objectID": "slides/visualization_eng.html#more-is-less",
+    "href": "slides/visualization_eng.html#more-is-less",
+    "title": "Principles and practice of data visualisation",
+    "section": "More is less",
+    "text": "More is less\n\n\n\nSource"
+  },
+  {
+    "objectID": "slides/visualization_eng.html#sometimes-a-little-extra-ink-is-worth-it",
+    "href": "slides/visualization_eng.html#sometimes-a-little-extra-ink-is-worth-it",
+    "title": "Principles and practice of data visualisation",
+    "section": "Sometimes a little extra ink is worth it…",
+    "text": "Sometimes a little extra ink is worth it…\n\n\n\nSource"
+  },
+  {
+    "objectID": "slides/visualization_eng.html#do-not-use-3d-charts",
+    "href": "slides/visualization_eng.html#do-not-use-3d-charts",
+    "title": "Principles and practice of data visualisation",
+    "section": "Do not use 3D charts",
+    "text": "Do not use 3D charts\n\n\n\nSource"
+  },
+  {
+    "objectID": "slides/visualization_eng.html#this-is-not-just-an-unnecessary-effect-but-it-actively-harms",
+    "href": "slides/visualization_eng.html#this-is-not-just-an-unnecessary-effect-but-it-actively-harms",
+    "title": "Principles and practice of data visualisation",
+    "section": "This is not just an unnecessary effect, but it actively harms",
+    "text": "This is not just an unnecessary effect, but it actively harms\n\n\n\nSource"
+  },
+  {
+    "objectID": "slides/visualization_eng.html#excel-pie-chart",
+    "href": "slides/visualization_eng.html#excel-pie-chart",
+    "title": "Principles and practice of data visualisation",
+    "section": "Excel pie chart",
+    "text": "Excel pie chart\n\n\n\n\n\nSource of funding [thousands CZK]"
+  },
+  {
+    "objectID": "slides/visualization_eng.html#excel-pie-chart---emphasis",
+    "href": "slides/visualization_eng.html#excel-pie-chart---emphasis",
+    "title": "Principles and practice of data visualisation",
+    "section": "Excel pie chart - emphasis",
+    "text": "Excel pie chart - emphasis\n\n\n\n\n\nFinancování dle zdroje, v tisících Kč"
+  },
+  {
+    "objectID": "slides/visualization_eng.html#excel-bar-chart",
+    "href": "slides/visualization_eng.html#excel-bar-chart",
+    "title": "Principles and practice of data visualisation",
+    "section": "Excel bar chart",
+    "text": "Excel bar chart\nBEFORE\n\n\n\nAFTER"
+  },
+  {
+    "objectID": "slides/visualization_eng.html#excel-bar-chart---time-series",
+    "href": "slides/visualization_eng.html#excel-bar-chart---time-series",
+    "title": "Principles and practice of data visualisation",
+    "section": "Excel bar chart - time series",
+    "text": "Excel bar chart - time series\nBEFORE\n\n\n\nAFTER"
+  },
+  {
+    "objectID": "slides/visualization_eng.html#excel-line-chart",
+    "href": "slides/visualization_eng.html#excel-line-chart",
+    "title": "Principles and practice of data visualisation",
+    "section": "Excel Line Chart",
+    "text": "Excel Line Chart\nBEFORE\n\n\n\nAFTER"
+  },
+  {
+    "objectID": "slides/visualization_eng.html#excel-likert-scale-diverging-chart",
+    "href": "slides/visualization_eng.html#excel-likert-scale-diverging-chart",
+    "title": "Principles and practice of data visualisation",
+    "section": "Excel Likert scale (diverging chart)",
+    "text": "Excel Likert scale (diverging chart)\nBEFORE\n\n\n\nAFTER"
+  },
+  {
+    "objectID": "slides/visualization_eng.html#excel-likert-scale---alternative-version-diverging-chart",
+    "href": "slides/visualization_eng.html#excel-likert-scale---alternative-version-diverging-chart",
+    "title": "Principles and practice of data visualisation",
+    "section": "Excel Likert scale - alternative version (diverging chart)",
+    "text": "Excel Likert scale - alternative version (diverging chart)\nBEFORE\n\n\n\nAFTER"
+  },
+  {
+    "objectID": "slides/visualization_eng.html#principle-2-readability-1",
+    "href": "slides/visualization_eng.html#principle-2-readability-1",
+    "title": "Principles and practice of data visualisation",
+    "section": "PRINCIPLE 2: Readability",
+    "text": "PRINCIPLE 2: Readability\nRespect for how human cognition works.\n\n\n\nSource Christopher G. Healey"
+  },
+  {
+    "objectID": "slides/visualization_eng.html#pie-charts-are-not-suitable-for-making-comparisons",
+    "href": "slides/visualization_eng.html#pie-charts-are-not-suitable-for-making-comparisons",
+    "title": "Principles and practice of data visualisation",
+    "section": "Pie charts are not suitable for making comparisons",
+    "text": "Pie charts are not suitable for making comparisons\n\n\n\nSource Wiki"
+  },
+  {
+    "objectID": "slides/visualization_eng.html#university-educated-in-new-eu-members",
+    "href": "slides/visualization_eng.html#university-educated-in-new-eu-members",
+    "title": "Principles and practice of data visualisation",
+    "section": "% university-educated in new EU members",
+    "text": "% university-educated in new EU members"
+  },
+  {
+    "objectID": "slides/visualization_eng.html#example-of-improved-readability-and-emphasis",
+    "href": "slides/visualization_eng.html#example-of-improved-readability-and-emphasis",
+    "title": "Principles and practice of data visualisation",
+    "section": "Example of improved readability and emphasis",
+    "text": "Example of improved readability and emphasis\nACTUAL PUBLICATION\n\n\n\nSUGGESTION FOR IMPROVEMENT\n\nSchwabish, J. A. (2014) An Economist’s Guide to Visualizing Data"
+  },
+  {
+    "objectID": "slides/visualization_eng.html#small-multiples-improve-readability-of-time-series",
+    "href": "slides/visualization_eng.html#small-multiples-improve-readability-of-time-series",
+    "title": "Principles and practice of data visualisation",
+    "section": "“Small multiples” improve readability of time series",
+    "text": "“Small multiples” improve readability of time series\nACTUAL PUBLICATION\n\n\n\nSUGGESTION FOR IMPROVEMENT\n\nSchwabish, J. A. (2014) An Economist’s Guide to Visualizing Data"
+  },
+  {
+    "objectID": "slides/visualization_eng.html#if-you-have-a-flexible-tool-you-can-be-creative",
+    "href": "slides/visualization_eng.html#if-you-have-a-flexible-tool-you-can-be-creative",
+    "title": "Principles and practice of data visualisation",
+    "section": "If you have a flexible tool, you can be creative…",
+    "text": "If you have a flexible tool, you can be creative…\n\n\n\n\n\n\n\n\n\nSchwabish, J. A. (2014) An Economist’s Guide to Visualizing Data"
+  },
+  {
+    "objectID": "slides/visualization_eng.html#careful-with-this-one",
+    "href": "slides/visualization_eng.html#careful-with-this-one",
+    "title": "Principles and practice of data visualisation",
+    "section": "Careful with this one…",
+    "text": "Careful with this one…\n\n\n\nMay be useful for two categories"
+  },
+  {
+    "objectID": "slides/visualization_eng.html#well-managed-data-density",
+    "href": "slides/visualization_eng.html#well-managed-data-density",
+    "title": "Principles and practice of data visualisation",
+    "section": "Well-managed data density",
+    "text": "Well-managed data density\n\n\n\nSource Financial Times"
+  },
+  {
+    "objectID": "slides/visualization_eng.html#principle-3-integrity-1",
+    "href": "slides/visualization_eng.html#principle-3-integrity-1",
+    "title": "Principles and practice of data visualisation",
+    "section": "PRINCIPLE 3: Integrity",
+    "text": "PRINCIPLE 3: Integrity\nYou decide what message visualization brings to the forefront. But you are also responsible for possible distortions or manipulations."
+  },
+  {
+    "objectID": "slides/visualization_eng.html#how-much-are-the-prices-of-flats-rising",
+    "href": "slides/visualization_eng.html#how-much-are-the-prices-of-flats-rising",
+    "title": "Principles and practice of data visualisation",
+    "section": "How much are the prices of flats rising?",
+    "text": "How much are the prices of flats rising?"
+  },
+  {
+    "objectID": "slides/visualization_eng.html#the-big-problem-with-the-y-axis",
+    "href": "slides/visualization_eng.html#the-big-problem-with-the-y-axis",
+    "title": "Principles and practice of data visualisation",
+    "section": "The big problem with the y axis",
+    "text": "The big problem with the y axis\n\n\n\n\n\n\n\n\naxis y in -20 mil. (top), in 0 (bottom)\n\n\n\n\n\n\n\naxis y in -20 mil. (top), in 0 (bottom)"
+  },
+  {
+    "objectID": "slides/visualization_eng.html#sometimes-the-y-axis-is-arbitrary",
+    "href": "slides/visualization_eng.html#sometimes-the-y-axis-is-arbitrary",
+    "title": "Principles and practice of data visualisation",
+    "section": "Sometimes the y-axis is arbitrary",
+    "text": "Sometimes the y-axis is arbitrary"
+  },
+  {
+    "objectID": "slides/visualization_eng.html#sometimes-we-just-need-to-zoom",
+    "href": "slides/visualization_eng.html#sometimes-we-just-need-to-zoom",
+    "title": "Principles and practice of data visualisation",
+    "section": "Sometimes, we just need to “zoom”",
+    "text": "Sometimes, we just need to “zoom”"
+  },
+  {
+    "objectID": "slides/visualization_eng.html#so-if-the-y-axis-does-not-start-at-0",
+    "href": "slides/visualization_eng.html#so-if-the-y-axis-does-not-start-at-0",
+    "title": "Principles and practice of data visualisation",
+    "section": "SO if the y-axis does not start at 0 …",
+    "text": "SO if the y-axis does not start at 0 …\n\n… use “line chart” rather than “bar chart”\n… highlight the fact\n\n\n\n\nSource Highcharts.com"
+  },
+  {
+    "objectID": "slides/visualization_eng.html#should-we-be-the-least-worried-about-poverty-of-all-european-countries",
+    "href": "slides/visualization_eng.html#should-we-be-the-least-worried-about-poverty-of-all-european-countries",
+    "title": "Principles and practice of data visualisation",
+    "section": "Should we be the least worried about poverty of all European countries?",
+    "text": "Should we be the least worried about poverty of all European countries?\n\n\n\nSource Eurostat"
+  },
+  {
+    "objectID": "slides/visualization_eng.html#visualizing-uncertainty",
+    "href": "slides/visualization_eng.html#visualizing-uncertainty",
+    "title": "Principles and practice of data visualisation",
+    "section": "Visualizing uncertainty",
+    "text": "Visualizing uncertainty\nData from July 2021"
+  },
+  {
+    "objectID": "slides/visualization_eng.html#uncertainty-can-also-be-visualized-in-model-estimates",
+    "href": "slides/visualization_eng.html#uncertainty-can-also-be-visualized-in-model-estimates",
+    "title": "Principles and practice of data visualisation",
+    "section": "Uncertainty can also be visualized in model estimates",
+    "text": "Uncertainty can also be visualized in model estimates"
+  },
+  {
+    "objectID": "slides/visualization_eng.html#a-true-visualization-but",
+    "href": "slides/visualization_eng.html#a-true-visualization-but",
+    "title": "Principles and practice of data visualisation",
+    "section": "A true visualization, BUT…",
+    "text": "A true visualization, BUT…\n\n\n\nSource"
+  },
+  {
+    "objectID": "slides/visualization_eng.html#general-principles-of-visualization---summary",
+    "href": "slides/visualization_eng.html#general-principles-of-visualization---summary",
+    "title": "Principles and practice of data visualisation",
+    "section": "General principles of visualization - SUMMARY",
+    "text": "General principles of visualization - SUMMARY\nEmphasis on data\n\nDefault settings often need to be changed\nKeep only those chart elements that have an informational value\nDo not use 3D charts\nThink about what you want the chart to say\n\nReadability\n\nRespect human cognition\nHorizontal chart labels are better than vertical\nThink about the context in which the reader encounters the chart\nBe inspired by creative approaches\n\nIntegrity\n\nBe careful with the y-axis\nCommunicate the meaning of what you visualize\nTake into account the degree of uncertainty\n\n\nEmphasis on data The data does not speak for itself, you decide what you want visualization to highlight (but you must not manipulate); use colors as a carrier of information, not as an ornament; Readability If possible, describe the data directly in the chart; minimize the use of pie charts); Customize your visualization to your purpose (easier for presentations, more complex to articles); The figure caption on the slide does not have to just name the displayed topic, it can tell a story. In the article, we mostly tell the story in text."
+  },
+  {
+    "objectID": "slides/visualization_eng.html#leland-wilkinson-and-the-grammar-of-graphics-book",
+    "href": "slides/visualization_eng.html#leland-wilkinson-and-the-grammar-of-graphics-book",
+    "title": "Principles and practice of data visualisation",
+    "section": "Leland Wilkinson and ‘The Grammar of Graphics’ (book)",
+    "text": "Leland Wilkinson and ‘The Grammar of Graphics’ (book)\nWhat makes a good visualization? Individual components…\n\nData\nVariables\nAlgebra\nScale\nGeometry (line chart, bar chart, …)\n“Aesthetics” (colors, shapes, saturation, …)\n…"
+  },
+  {
+    "objectID": "slides/visualization_eng.html#hadley-wickham-and-developing-a-software-solution-of-wilkinsons-ideas",
+    "href": "slides/visualization_eng.html#hadley-wickham-and-developing-a-software-solution-of-wilkinsons-ideas",
+    "title": "Principles and practice of data visualisation",
+    "section": "Hadley Wickham and developing a software solution of Wilkinson’s ideas",
+    "text": "Hadley Wickham and developing a software solution of Wilkinson’s ideas"
+  },
+  {
+    "objectID": "slides/visualization_eng.html#ggplot2",
+    "href": "slides/visualization_eng.html#ggplot2",
+    "title": "Principles and practice of data visualisation",
+    "section": "ggplot2",
+    "text": "ggplot2\nSeven chart layers. Three required:\n\n\nData\n\nAesthetics - mapping information to color, shape, saturation, …\n\nGeometry - graphic elements that represent data\n\nFour “extra”:\n\n\nFacets (small multiples)\n\nAggregated statistics (e.g. regression curve)\n\nCoordinate editing (e.g. logarithmic scale)\n\nTheme (theme) - chart design"
+  },
+  {
+    "objectID": "slides/visualization_eng.html#data",
+    "href": "slides/visualization_eng.html#data",
+    "title": "Principles and practice of data visualisation",
+    "section": "Data",
+    "text": "Data\n\n\n# A tibble: 6 × 8\n  species island    bill_length_mm bill_depth_mm flipper_l…¹ body_…² sex    year\n  <fct>   <fct>              <dbl>         <dbl>       <int>   <int> <fct> <int>\n1 Adelie  Torgersen           39.1          18.7         181    3750 male   2007\n2 Adelie  Torgersen           39.5          17.4         186    3800 fema…  2007\n3 Adelie  Torgersen           40.3          18           195    3250 fema…  2007\n4 Adelie  Torgersen           NA            NA            NA      NA <NA>   2007\n5 Adelie  Torgersen           36.7          19.3         193    3450 fema…  2007\n6 Adelie  Torgersen           39.3          20.6         190    3650 male   2007\n# … with abbreviated variable names ¹​flipper_length_mm, ²​body_mass_g\n\n\n\nggplot(data = penguins)"
+  },
+  {
+    "objectID": "slides/visualization_eng.html#aesthetics",
+    "href": "slides/visualization_eng.html#aesthetics",
+    "title": "Principles and practice of data visualisation",
+    "section": "Aesthetics",
+    "text": "Aesthetics\n\nAxes\nOutline\nFill\nSize\nTransparency\nShape\n…\n\n\n\n\nggplot(data = penguins, \n       aes(x = sex))"
+  },
+  {
+    "objectID": "slides/visualization_eng.html#geometry",
+    "href": "slides/visualization_eng.html#geometry",
+    "title": "Principles and practice of data visualisation",
+    "section": "Geometry",
+    "text": "Geometry\n\nlines\npoints\ncolumns\nhistogram\nboxplot\n…\n\n\n\n\nggplot(data = penguins, \n       aes(x = sex)) + \n  geom_bar()"
+  },
+  {
+    "objectID": "slides/visualization_eng.html#geometry-2",
+    "href": "slides/visualization_eng.html#geometry-2",
+    "title": "Principles and practice of data visualisation",
+    "section": "Geometry 2",
+    "text": "Geometry 2\n\nlines\npoints\ncolumns\nhistogram\nboxplot\n…\n\n\n\n\nggplot(data = penguins %>% \n         filter(!is.na(sex)), \n       aes(x = sex,\n           y = bill_length_mm)) + \n  geom_boxplot() +\n  theme_classic()"
+  },
+  {
+    "objectID": "slides/visualization_eng.html#galery-1",
+    "href": "slides/visualization_eng.html#galery-1",
+    "title": "Principles and practice of data visualisation",
+    "section": "Galery 1",
+    "text": "Galery 1\n\n\n\nGalerie ggplot2"
+  },
+  {
+    "objectID": "slides/visualization_eng.html#galery-2",
+    "href": "slides/visualization_eng.html#galery-2",
+    "title": "Principles and practice of data visualisation",
+    "section": "Galery 2",
+    "text": "Galery 2\n\n\n\nGalerie ggplot2"
+  },
+  {
+    "objectID": "slides/visualization_eng.html#galery-3",
+    "href": "slides/visualization_eng.html#galery-3",
+    "title": "Principles and practice of data visualisation",
+    "section": "Galery 3",
+    "text": "Galery 3\n\n\n\nGalerie ggplot2"
+  },
+  {
+    "objectID": "slides/visualization_eng.html#galery-4",
+    "href": "slides/visualization_eng.html#galery-4",
+    "title": "Principles and practice of data visualisation",
+    "section": "Galery 4",
+    "text": "Galery 4\n\n\n\nGalerie ggplot2"
+  },
+  {
+    "objectID": "slides/visualization_eng.html#galerie-5",
+    "href": "slides/visualization_eng.html#galerie-5",
+    "title": "Principles and practice of data visualisation",
+    "section": "Galerie 5",
+    "text": "Galerie 5\n\n\n\nGalerie ggplot2"
+  },
+  {
+    "objectID": "slides/visualization_eng.html#courtesy",
+    "href": "slides/visualization_eng.html#courtesy",
+    "title": "Principles and practice of data visualisation",
+    "section": "Courtesy",
+    "text": "Courtesy\nThis presentation naturally draws on a hard-to-imagine volume of work of a hard-to-imagine number of people.\nNevertheless, I would especially like to thank Petr Bouchal. With him, in 2016, we prepared a course on the methodology of science at the summer academy for high school students Discover, where we devoted a lot of space to visualization. Petr was also a guest lecturer in my courses at Faculty of Arts, CU, and it was only during his lectures that I fully appreciated the value of seeing visualization as a full-fledged auxiliary scientific discipline. I became acquainted with a number of examples in this presentation thanks to Petr"
+  },
+  {
+    "objectID": "slides/visualization_eng.html#additional-resources---principles-and-applications",
+    "href": "slides/visualization_eng.html#additional-resources---principles-and-applications",
+    "title": "Principles and practice of data visualisation",
+    "section": "Additional resources - principles and applications",
+    "text": "Additional resources - principles and applications\n\nJonathan Schwabish - blog\nThe Economist and the daily charts\nHans Rosling’s Gapminder\nOffice for National Statistics - Presenting data\n(CZ language) Six tips for good visualizations by Průvodce evaluátora - Collection of evaluation tips and recommendations\nThe Data Visualization Checklist\nSelected principles discussed at the blog by a data journalis at the Economist\nMakeover Monday\nExcel charts\nVisualization fuck-ups - for a laugh"
+  },
+  {
+    "objectID": "slides/visualization_eng.html#additional-resources---working-with-ggplot2",
+    "href": "slides/visualization_eng.html#additional-resources---working-with-ggplot2",
+    "title": "Principles and practice of data visualisation",
+    "section": "Additional resources - working with ggplot2",
+    "text": "Additional resources - working with ggplot2\n\nSome lectures of the course I co-teach Introduction to data analysis in R\nChapter Graphics for Communication in the book R for Data Science\nThe book ggplot2 by Hadleyho Wickhama\nBig galery of charts in ggplot2 including the code how they were created\nAs part of the galery website mentioned in the bullet above, you can also find an interesting overview of theoretical visualizations tips"
+  },
+  {
+    "objectID": "slides/visualization_eng.html#referenced-literature-and-other-sources",
+    "href": "slides/visualization_eng.html#referenced-literature-and-other-sources",
+    "title": "Principles and practice of data visualisation",
+    "section": "Referenced literature and other sources",
+    "text": "Referenced literature and other sources\nIf the resources referenced in the presentation are not interactive (they do not contain a link directly to their location), you can find them in the list here:"
+  },
+  {
+    "objectID": "slides/visualization.html#přehled-témat",
+    "href": "slides/visualization.html#přehled-témat",
+    "title": "Principy a praxe vizualizace dat",
+    "section": "Přehled témat",
+    "text": "Přehled témat\n\nProč grafy raději než text\nObecné principy vizualizace\nArchitektura vizualizace (grammar of graphics)"
+  },
+  {
+    "objectID": "slides/visualization.html#florence-nightingale-a-krymská-válka-1850s",
+    "href": "slides/visualization.html#florence-nightingale-a-krymská-válka-1850s",
+    "title": "Principy a praxe vizualizace dat",
+    "section": "Florence Nightingale a Krymská válka (1850s)",
+    "text": "Florence Nightingale a Krymská válka (1850s)\n\n\n\nZdroj obrázku Highcharts.com\n\nBlue diesease from poor hygiene. Red battle wounds, Black other causes. Nightingale: first female fellow of the Royal Satistical Society, teamed up with a brilliant statistician of poor parents William Farr who lacked Nightingale’s fame and political connections. About lobbying with Queen Victoria: ‘She may look at it because it has pictures.’ 16 000 of the 18 000 deaths were from preventable disease."
+  },
+  {
+    "objectID": "slides/visualization.html#john-snow-a-epidemie-cholery-v-londýně",
+    "href": "slides/visualization.html#john-snow-a-epidemie-cholery-v-londýně",
+    "title": "Principy a praxe vizualizace dat",
+    "section": "John Snow a epidemie cholery v Londýně",
+    "text": "John Snow a epidemie cholery v Londýně\n\n\n\nZdroj obrázku Highcharts.com\n\nThanks to Snow’s visualizations, suspicion fell on watr sources rather than ‘bad air’ which was the main suspect of causing cholera until then."
+  },
+  {
+    "objectID": "slides/visualization.html#spočítejte-všechny-trojky",
+    "href": "slides/visualization.html#spočítejte-všechny-trojky",
+    "title": "Principy a praxe vizualizace dat",
+    "section": "Spočítejte všechny trojky",
+    "text": "Spočítejte všechny trojky\n\n\n\nZdroj Ware (2012)"
+  },
+  {
+    "objectID": "slides/visualization.html#spočítejte-všechny-trojky-1",
+    "href": "slides/visualization.html#spočítejte-všechny-trojky-1",
+    "title": "Principy a praxe vizualizace dat",
+    "section": "Spočítejte všechny trojky",
+    "text": "Spočítejte všechny trojky\n\n\n\nZdroj Ware (2012)"
+  },
+  {
+    "objectID": "slides/visualization.html#lépe-si-pamatujeme-vizuálně",
+    "href": "slides/visualization.html#lépe-si-pamatujeme-vizuálně",
+    "title": "Principy a praxe vizualizace dat",
+    "section": "Lépe si pamatujeme vizuálně",
+    "text": "Lépe si pamatujeme vizuálně\n\n\n\nZdroj Medina (2014)\n\nZrak je náš hlavní smysl, svět vidíme skrze obrazy. Text musíme nejprve dekódovat a pak si ho abstraktně představit."
+  },
+  {
+    "objectID": "slides/visualization.html#eduard-tufte",
+    "href": "slides/visualization.html#eduard-tufte",
+    "title": "Principy a praxe vizualizace dat",
+    "section": "Eduard Tufte",
+    "text": "Eduard Tufte\nKlíčová postava moderního přístupu k vizualizaci informací.\nChartjunk; data : ink ratio; data density; micro - macro reading.\n\nChartjunk nepotřebné dekorace, data : ink ratio - snaha maximalizovat, tj. zachytit hodně data s použitím málo inkoustu; data density - snaha zobrazit co nejvíce dat při důrazu na hlavní trendy; micro-macro reading z grafu jsou jasné trendy, ale zároveň nabízí možnost detailní inspekce."
+  },
+  {
+    "objectID": "slides/visualization.html#obecné-principy-vizulizace-1",
+    "href": "slides/visualization.html#obecné-principy-vizulizace-1",
+    "title": "Principy a praxe vizualizace dat",
+    "section": "Obecné principy vizulizace",
+    "text": "Obecné principy vizulizace\n\nDůraz na data\nČitelnost\nIntegrita"
+  },
+  {
+    "objectID": "slides/visualization.html#princip-1-důraz-na-data-1",
+    "href": "slides/visualization.html#princip-1-důraz-na-data-1",
+    "title": "Principy a praxe vizualizace dat",
+    "section": "PRINCIP 1: Důraz na data",
+    "text": "PRINCIP 1: Důraz na data\nMéně je více. Grafy mají efektivně komunikovat informace, design má tento cíl podpořit, ne zamlžit.\n\n\n\nPřevzato z Harford (2021)"
+  },
+  {
+    "objectID": "slides/visualization.html#poměr-data-inkoust",
+    "href": "slides/visualization.html#poměr-data-inkoust",
+    "title": "Principy a praxe vizualizace dat",
+    "section": "Poměr DATA : INKOUST",
+    "text": "Poměr DATA : INKOUST\n“Above all else show the data.” (Eduard Tufte)\n\n\n\nZdroj obrázku"
+  },
+  {
+    "objectID": "slides/visualization.html#méně-je-více",
+    "href": "slides/visualization.html#méně-je-více",
+    "title": "Principy a praxe vizualizace dat",
+    "section": "Méně je více",
+    "text": "Méně je více\n\n\n\nZdroj obrázku"
+  },
+  {
+    "objectID": "slides/visualization.html#někdy-se-trochu-inkoustu-navíc-vyplatí",
+    "href": "slides/visualization.html#někdy-se-trochu-inkoustu-navíc-vyplatí",
+    "title": "Principy a praxe vizualizace dat",
+    "section": "Někdy se trochu inkoustu navíc vyplatí…",
+    "text": "Někdy se trochu inkoustu navíc vyplatí…\n\n\n\nZdroj obrázku"
+  },
+  {
+    "objectID": "slides/visualization.html#nepoužívejte-3d-grafy",
+    "href": "slides/visualization.html#nepoužívejte-3d-grafy",
+    "title": "Principy a praxe vizualizace dat",
+    "section": "Nepoužívejte 3D grafy",
+    "text": "Nepoužívejte 3D grafy\n\n\n\nZdroj obrázku"
+  },
+  {
+    "objectID": "slides/visualization.html#nejde-jen-o-zbytečný-efekt-ale-aktivně-škodí",
+    "href": "slides/visualization.html#nejde-jen-o-zbytečný-efekt-ale-aktivně-škodí",
+    "title": "Principy a praxe vizualizace dat",
+    "section": "Nejde jen o zbytečný efekt, ale aktivně škodí",
+    "text": "Nejde jen o zbytečný efekt, ale aktivně škodí\n\n\n\nZdroj obrázku"
+  },
+  {
+    "objectID": "slides/visualization.html#excel-koláčový-graf",
+    "href": "slides/visualization.html#excel-koláčový-graf",
+    "title": "Principy a praxe vizualizace dat",
+    "section": "Excel koláčový graf",
+    "text": "Excel koláčový graf\n\n\n\n\n\nFinancování dle zdroje, v tisících Kč"
+  },
+  {
+    "objectID": "slides/visualization.html#excel-koláčový-graf---důraz",
+    "href": "slides/visualization.html#excel-koláčový-graf---důraz",
+    "title": "Principy a praxe vizualizace dat",
+    "section": "Excel koláčový graf - důraz",
+    "text": "Excel koláčový graf - důraz\n\n\n\n\n\nFinancování dle zdroje, v tisících Kč"
+  },
+  {
+    "objectID": "slides/visualization.html#excel-sloupcový-graf",
+    "href": "slides/visualization.html#excel-sloupcový-graf",
+    "title": "Principy a praxe vizualizace dat",
+    "section": "Excel sloupcový graf",
+    "text": "Excel sloupcový graf\nPŘED\n\n\n\nPO"
+  },
+  {
+    "objectID": "slides/visualization.html#excel-sloupcový-graf-časová-řada",
+    "href": "slides/visualization.html#excel-sloupcový-graf-časová-řada",
+    "title": "Principy a praxe vizualizace dat",
+    "section": "Excel sloupcový graf časová řada",
+    "text": "Excel sloupcový graf časová řada\nPŘED\n\n\n\nPO"
+  },
+  {
+    "objectID": "slides/visualization.html#excel-spojnicový-graf",
+    "href": "slides/visualization.html#excel-spojnicový-graf",
+    "title": "Principy a praxe vizualizace dat",
+    "section": "Excel spojnicový graf",
+    "text": "Excel spojnicový graf\nPŘED\n\n\n\nPO"
+  },
+  {
+    "objectID": "slides/visualization.html#excel-likertovská-škála-diverging-chart",
+    "href": "slides/visualization.html#excel-likertovská-škála-diverging-chart",
+    "title": "Principy a praxe vizualizace dat",
+    "section": "Excel likertovská škála (diverging chart)",
+    "text": "Excel likertovská škála (diverging chart)\nPŘED\n\n\n\nPO"
+  },
+  {
+    "objectID": "slides/visualization.html#excel-likertovská-škála---varianta-diverging-chart",
+    "href": "slides/visualization.html#excel-likertovská-škála---varianta-diverging-chart",
+    "title": "Principy a praxe vizualizace dat",
+    "section": "Excel likertovská škála - varianta (diverging chart)",
+    "text": "Excel likertovská škála - varianta (diverging chart)\nPŘED\n\n\n\nPO"
+  },
+  {
+    "objectID": "slides/visualization.html#princip-2-čitelnost-1",
+    "href": "slides/visualization.html#princip-2-čitelnost-1",
+    "title": "Principy a praxe vizualizace dat",
+    "section": "PRINCIP 2: Čitelnost",
+    "text": "PRINCIP 2: Čitelnost\nRespekt k tomu, jak funguje lidská kognice.\n\n\n\nZdroj Christopher G. Healey"
+  },
+  {
+    "objectID": "slides/visualization.html#koláčové-grafy-se-nehodí-na-provonávání",
+    "href": "slides/visualization.html#koláčové-grafy-se-nehodí-na-provonávání",
+    "title": "Principy a praxe vizualizace dat",
+    "section": "Koláčové grafy se nehodí na provonávání",
+    "text": "Koláčové grafy se nehodí na provonávání\n\n\n\nZdroj Wiki"
+  },
+  {
+    "objectID": "slides/visualization.html#university-educated-in-new-eu-members",
+    "href": "slides/visualization.html#university-educated-in-new-eu-members",
+    "title": "Principy a praxe vizualizace dat",
+    "section": "% university-educated in new EU members",
+    "text": "% university-educated in new EU members"
+  },
+  {
+    "objectID": "slides/visualization.html#příklad-zlepšení-čitelnosti-i-důrazu",
+    "href": "slides/visualization.html#příklad-zlepšení-čitelnosti-i-důrazu",
+    "title": "Principy a praxe vizualizace dat",
+    "section": "Příklad zlepšení čitelnosti i důrazu",
+    "text": "Příklad zlepšení čitelnosti i důrazu\nSKUTEČNÁ PUBLIKACE\n\n\n\nNÁVRH NA ZLEPŠENÍ\n\nSchwabish, J. A. (2014) An Economist’s Guide to Visualizing Data"
+  },
+  {
+    "objectID": "slides/visualization.html#small-multiples-zlepšují-čitelnost-časových-řad",
+    "href": "slides/visualization.html#small-multiples-zlepšují-čitelnost-časových-řad",
+    "title": "Principy a praxe vizualizace dat",
+    "section": "“Small multiples” zlepšují čitelnost časových řad",
+    "text": "“Small multiples” zlepšují čitelnost časových řad\nSKUTEČNÁ PUBLIKACE\n\n\n\nNÁVRH NA ZLEPŠENÍ\n\nSchwabish, J. A. (2014) An Economist’s Guide to Visualizing Data"
+  },
+  {
+    "objectID": "slides/visualization.html#pokud-máte-flexibilní-nástroj-můžete-být-kreativní",
+    "href": "slides/visualization.html#pokud-máte-flexibilní-nástroj-můžete-být-kreativní",
+    "title": "Principy a praxe vizualizace dat",
+    "section": "Pokud máte flexibilní nástroj, můžete být kreativní…",
+    "text": "Pokud máte flexibilní nástroj, můžete být kreativní…\n\n\n\n\n\n\n\n\n\nSchwabish, J. A. (2014) An Economist’s Guide to Visualizing Data"
+  },
+  {
+    "objectID": "slides/visualization.html#s-tímhle-opatrně",
+    "href": "slides/visualization.html#s-tímhle-opatrně",
+    "title": "Principy a praxe vizualizace dat",
+    "section": "S tímhle opatrně…",
+    "text": "S tímhle opatrně…\n\n\n\nMůže být užitečné pro dvě kategorie."
+  },
+  {
+    "objectID": "slides/visualization.html#dobře-zvládnutá-datová-hustota",
+    "href": "slides/visualization.html#dobře-zvládnutá-datová-hustota",
+    "title": "Principy a praxe vizualizace dat",
+    "section": "Dobře zvládnutá datová hustota",
+    "text": "Dobře zvládnutá datová hustota\n\n\n\nZdroj Financial Times"
+  },
+  {
+    "objectID": "slides/visualization.html#princip-3-integrita-1",
+    "href": "slides/visualization.html#princip-3-integrita-1",
+    "title": "Principy a praxe vizualizace dat",
+    "section": "PRINCIP 3: Integrita",
+    "text": "PRINCIP 3: Integrita\nVy rozhodujete o tom, jaké sdělení vizualizace vynese do popředí. Tím ale také nesete odpovědnost za možná zkreslení či přímo manipulace."
+  },
+  {
+    "objectID": "slides/visualization.html#jak-moc-že-to-rostou-ceny-bytů",
+    "href": "slides/visualization.html#jak-moc-že-to-rostou-ceny-bytů",
+    "title": "Principy a praxe vizualizace dat",
+    "section": "Jak moc že to rostou ceny bytů?",
+    "text": "Jak moc že to rostou ceny bytů?"
+  },
+  {
+    "objectID": "slides/visualization.html#problém-osy-y",
+    "href": "slides/visualization.html#problém-osy-y",
+    "title": "Principy a praxe vizualizace dat",
+    "section": "Problém osy y",
+    "text": "Problém osy y\n\n\n\n\n\n\n\n\naxis y in -20 mil. (top), in 0 (bottom)\n\n\n\n\n\n\n\naxis y in -20 mil. (top), in 0 (bottom)"
+  },
+  {
+    "objectID": "slides/visualization.html#někdy-je-osa-y-arbitrární",
+    "href": "slides/visualization.html#někdy-je-osa-y-arbitrární",
+    "title": "Principy a praxe vizualizace dat",
+    "section": "Někdy je osa y arbitrární",
+    "text": "Někdy je osa y arbitrární"
+  },
+  {
+    "objectID": "slides/visualization.html#někdy-je-potřeba-zazoomovat",
+    "href": "slides/visualization.html#někdy-je-potřeba-zazoomovat",
+    "title": "Principy a praxe vizualizace dat",
+    "section": "Někdy je potřeba “zazoomovat”",
+    "text": "Někdy je potřeba “zazoomovat”"
+  },
+  {
+    "objectID": "slides/visualization.html#pokud-osa-y-nezačíná-na-0",
+    "href": "slides/visualization.html#pokud-osa-y-nezačíná-na-0",
+    "title": "Principy a praxe vizualizace dat",
+    "section": "Pokud osa y nezačíná na 0 …",
+    "text": "Pokud osa y nezačíná na 0 …\n\n… použijte “line chart”, raději než “bar chart”\n… upozorněte na to\n\n\n\n\nZdroj obrázku Highcharts.com"
+  },
+  {
+    "objectID": "slides/visualization.html#trápí-nás-chudoba-nejméně-ze-všech-evropských-zemí",
+    "href": "slides/visualization.html#trápí-nás-chudoba-nejméně-ze-všech-evropských-zemí",
+    "title": "Principy a praxe vizualizace dat",
+    "section": "Trápí nás chudoba nejméně ze všech evropských zemí?",
+    "text": "Trápí nás chudoba nejméně ze všech evropských zemí?\n\n\n\nZdroj Eurostat"
+  },
+  {
+    "objectID": "slides/visualization.html#vizualizace-míry-nejistoty",
+    "href": "slides/visualization.html#vizualizace-míry-nejistoty",
+    "title": "Principy a praxe vizualizace dat",
+    "section": "Vizualizace míry nejistoty",
+    "text": "Vizualizace míry nejistoty\nZde data z července 2021."
+  },
+  {
+    "objectID": "slides/visualization.html#nejistotu-lze-vizualizovat-i-u-odhadů-modelu",
+    "href": "slides/visualization.html#nejistotu-lze-vizualizovat-i-u-odhadů-modelu",
+    "title": "Principy a praxe vizualizace dat",
+    "section": "Nejistotu lze vizualizovat i u odhadů modelu",
+    "text": "Nejistotu lze vizualizovat i u odhadů modelu"
+  },
+  {
+    "objectID": "slides/visualization.html#pravdivá-vizualizace-ale",
+    "href": "slides/visualization.html#pravdivá-vizualizace-ale",
+    "title": "Principy a praxe vizualizace dat",
+    "section": "Pravdivá vizualizace, ale…",
+    "text": "Pravdivá vizualizace, ale…\n\n\n\nZdroj obrázku"
+  },
+  {
+    "objectID": "slides/visualization.html#obecné-principy-vizualizace---shrnutí",
+    "href": "slides/visualization.html#obecné-principy-vizualizace---shrnutí",
+    "title": "Principy a praxe vizualizace dat",
+    "section": "Obecné principy vizualizace - shrnutí",
+    "text": "Obecné principy vizualizace - shrnutí\nDůraz na data\n\nDefaultní nastavení je často potřeba změnit\nPonechte jen ty prvky grafu, které mají informační hodnotu\nNepoužívejte 3D grafy\nPřemýšlejte o tom, co chcete grafem říct\n\nČitelnost\n\nRespektujte lidskou kognici\nVodorovné popisky grafu jsou lepší než svislé\nPřemýšlejte o tom, v jakém kontextu se s grafem čtenář setká\nInspirujte se kreativními přístupy\n\nIntegrita\n\nOpatrně s osou y\nKomunikujte význam toho, co vizualizujete\nZohledněte míru nejistoty\n\n\nDůraz na data Data nemluví za sebe, vy rozhodujete o tom, na co chcete vizualizací upozornit (ale nesmíte manipulovat); barvy používejte jako nositele informace, ne jako ozdobu; Čitelnost Pokud to jde, data popisujte přímo v grafu; použití koláčových grafů minimalizujte, určitě nepoužívejte pro srovnání složení více skupin rozdíly v délce vs. rozdíly v úhlu); Přizpůsobte svoji vizualizaci účelu (jednodušší do prezentace, složitější do článku); Titulek v prezentaci nemusí jen pojmenovávat, může vyprávět příběh. V článku větčinou příběh vyprávíme spíše v textu."
+  },
+  {
+    "objectID": "slides/visualization.html#leland-wilkinson-an-the-grammar-of-graphics-book",
+    "href": "slides/visualization.html#leland-wilkinson-an-the-grammar-of-graphics-book",
+    "title": "Principy a praxe vizualizace dat",
+    "section": "Leland Wilkinson an ‘The Grammar of Graphics’ (book)",
+    "text": "Leland Wilkinson an ‘The Grammar of Graphics’ (book)\nCo dělá dobrou vizualizaci? Jednotlivé komponenty…\n\nData\nProměnné\nAlgebra\nMěřítko\nGeometrie (line chart, bar chart, …)\n“Estetika” (barvy, tvary, sytost, …)\n…"
+  },
+  {
+    "objectID": "slides/visualization.html#hadley-wickham-a-překlopení-wilkinsonových-myšlenek-do-softwaru",
+    "href": "slides/visualization.html#hadley-wickham-a-překlopení-wilkinsonových-myšlenek-do-softwaru",
+    "title": "Principy a praxe vizualizace dat",
+    "section": "Hadley Wickham a překlopení Wilkinsonových myšlenek do softwaru",
+    "text": "Hadley Wickham a překlopení Wilkinsonových myšlenek do softwaru"
+  },
+  {
+    "objectID": "slides/visualization.html#ggplot2",
+    "href": "slides/visualization.html#ggplot2",
+    "title": "Principy a praxe vizualizace dat",
+    "section": "ggplot2",
+    "text": "ggplot2\nSedm vrstev grafu. Tři povinné:\n\n\nData\n\nEstetika - mapování informací na barvu, tvar, sytost, …\n\nGeometrie - grafické elementy, které reprezentují data\n\nČtyři “navíc”:\n\n\nFacety (small multiples)\n\nAgregované statistiky (např. regresní křivka)\n\nÚprava souřadnic (např. logaritmické měřítko)\n\nTéma (theme) - design grafu"
+  },
+  {
+    "objectID": "slides/visualization.html#data",
+    "href": "slides/visualization.html#data",
+    "title": "Principy a praxe vizualizace dat",
+    "section": "Data",
+    "text": "Data\n\n\n# A tibble: 6 × 8\n  species island    bill_length_mm bill_depth_mm flipper_l…¹ body_…² sex    year\n  <fct>   <fct>              <dbl>         <dbl>       <int>   <int> <fct> <int>\n1 Adelie  Torgersen           39.1          18.7         181    3750 male   2007\n2 Adelie  Torgersen           39.5          17.4         186    3800 fema…  2007\n3 Adelie  Torgersen           40.3          18           195    3250 fema…  2007\n4 Adelie  Torgersen           NA            NA            NA      NA <NA>   2007\n5 Adelie  Torgersen           36.7          19.3         193    3450 fema…  2007\n6 Adelie  Torgersen           39.3          20.6         190    3650 male   2007\n# … with abbreviated variable names ¹​flipper_length_mm, ²​body_mass_g\n\n\n\nggplot(data = penguins)"
+  },
+  {
+    "objectID": "slides/visualization.html#estetika-aesthetics",
+    "href": "slides/visualization.html#estetika-aesthetics",
+    "title": "Principy a praxe vizualizace dat",
+    "section": "Estetika (Aesthetics)",
+    "text": "Estetika (Aesthetics)\n\nosy\nobrys\nvýplň\nvelikost\nprůhlednost\ntvar\n…\n\n\n\n\nggplot(data = penguins, \n       aes(x = sex))"
+  },
+  {
+    "objectID": "slides/visualization.html#geometrie",
+    "href": "slides/visualization.html#geometrie",
+    "title": "Principy a praxe vizualizace dat",
+    "section": "Geometrie",
+    "text": "Geometrie\n\nkřivky\nbody\nsloupce\nhistogram\nboxplot\n…\n\n\n\n\nggplot(data = penguins, \n       aes(x = sex)) + \n  geom_bar()"
+  },
+  {
+    "objectID": "slides/visualization.html#geometrie-2",
+    "href": "slides/visualization.html#geometrie-2",
+    "title": "Principy a praxe vizualizace dat",
+    "section": "Geometrie 2",
+    "text": "Geometrie 2\n\nkřivky\nbody\nsloupce\nhistogram\nboxplot\n…\n\n\n\n\nggplot(data = penguins %>% \n         filter(!is.na(sex)), \n       aes(x = sex,\n           y = bill_length_mm)) + \n  geom_boxplot() +\n  theme_classic()"
+  },
+  {
+    "objectID": "slides/visualization.html#galerie-1",
+    "href": "slides/visualization.html#galerie-1",
+    "title": "Principy a praxe vizualizace dat",
+    "section": "Galerie 1",
+    "text": "Galerie 1\n\n\n\nGalerie ggplot2"
+  },
+  {
+    "objectID": "slides/visualization.html#galerie-2",
+    "href": "slides/visualization.html#galerie-2",
+    "title": "Principy a praxe vizualizace dat",
+    "section": "Galerie 2",
+    "text": "Galerie 2\n\n\n\nGalerie ggplot2"
+  },
+  {
+    "objectID": "slides/visualization.html#galerie-3",
+    "href": "slides/visualization.html#galerie-3",
+    "title": "Principy a praxe vizualizace dat",
+    "section": "Galerie 3",
+    "text": "Galerie 3\n\n\n\nGalerie ggplot2"
+  },
+  {
+    "objectID": "slides/visualization.html#galerie-4",
+    "href": "slides/visualization.html#galerie-4",
+    "title": "Principy a praxe vizualizace dat",
+    "section": "Galerie 4",
+    "text": "Galerie 4\n\n\n\nGalerie ggplot2"
+  },
+  {
+    "objectID": "slides/visualization.html#galerie-5",
+    "href": "slides/visualization.html#galerie-5",
+    "title": "Principy a praxe vizualizace dat",
+    "section": "Galerie 5",
+    "text": "Galerie 5\n\n\n\nGalerie ggplot2"
+  },
+  {
+    "objectID": "slides/visualization.html#poděkování",
+    "href": "slides/visualization.html#poděkování",
+    "title": "Principy a praxe vizualizace dat",
+    "section": "Poděkování",
+    "text": "Poděkování\nTato prezentace přirozeně čerpá z těžko představitelného objemu práce těžko představitelného množství lidí.\nPřesto bych speciálně rád poděkoval Petrovi Bouchalovi. S ním jsme v roce 2016 připravovali kurz o metodologii vědy na letní akademii pro středoškoláky Discover, kde jsme se vizualizaci hodně věnovali. Petr také hostoval v mých kurzech na FF UK a teprve při jeho předndáškách jsem plně docenil hodnotu toho, když vizualizaci začneme vnímat jako plnohodnotnou pomocnou vědeckou disciplínu. S řadou příkladů v této prezentaci jsem se seznámil díky Petrovi."
+  },
+  {
+    "objectID": "slides/visualization.html#zdroje---principy-a-aplikace",
+    "href": "slides/visualization.html#zdroje---principy-a-aplikace",
+    "title": "Principy a praxe vizualizace dat",
+    "section": "Zdroje - principy a aplikace",
+    "text": "Zdroje - principy a aplikace\n\nJonathan Schwabish - blog\nThe Economist a jeho daily charts\nHans Rosling’s Gapminder\nOffice for National Statistics - Presenting data\nŠestero dobré vizualizace podle v Průvodce evaluátora - Sbírka evaluačních tipů a doporučení\nThe Data Visualization Checklist\nVybrané principy diskutované na blogu datové novinářky The Economist\nMakeover Monday\nExcel charts\nVizualizační fakapy - pro zasmání"
+  },
+  {
+    "objectID": "slides/visualization.html#zdroje---ggplot2",
+    "href": "slides/visualization.html#zdroje---ggplot2",
+    "title": "Principy a praxe vizualizace dat",
+    "section": "Zdroje - ggplot2",
+    "text": "Zdroje - ggplot2\n\nNěkteré přednášky kurzu Úvod do analýzy dat v R\nKapitola Graphics for Communication knihy R for Data Science\nKniha ggplot2 od jejího autora Hadleyho Wickhama\nVeká galerie grafů v ggplot2\nSoučástí této galerie je i přehled principů vizualizace"
+  },
+  {
+    "objectID": "slides/visualization.html#odkazovaná-literatura-a-další-zdroje",
+    "href": "slides/visualization.html#odkazovaná-literatura-a-další-zdroje",
+    "title": "Principy a praxe vizualizace dat",
+    "section": "Odkazovaná literatura a další zdroje",
+    "text": "Odkazovaná literatura a další zdroje\nPokud zdroje odkazované v prezentaci nejsou interaktivní (neobahují rozklik přímo na své umístění), najdete je v seznamu zde:"
+  },
+  {
     "objectID": "resources.html",
     "href": "resources.html",
     "title": "Kvantitativní výzkum v sociologii",

@@ -1,0 +1,1078 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="cs" xml:lang="cs"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.2.280">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Jaromír Mazák, Katedra sociologie FF UK, jaromir.mazak@ff.cuni.cz">
+
+<title>Kvantitativní výzkum v sociologii - Principy a praxe vizualizace dat</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "Žádný výsledek",
+    "search-matching-documents-text": "Nalezené výsledky",
+    "search-copy-link-title": "Zkopírovat odkaz pro vyhledávání",
+    "search-hide-matches-text": "Skrýt další výsledky",
+    "search-more-match-text": "další výsledek v tomto dokumentu",
+    "search-more-matches-text": "dalších výsledků v tomto dokumentu",
+    "search-clear-button-title": "Vymazat",
+    "search-detached-cancel-button-title": "Zrušit",
+    "search-submit-button-title": "Odeslat"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../styles.css">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">Kvantitativní výzkum v sociologii</span>
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../index.html">
+ <span class="menu-text">Úvod</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../courses.html">
+ <span class="menu-text">Vyučovaná kurzy</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../resources.html">
+ <span class="menu-text">Samostudium</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../speakings.html">
+ <span class="menu-text">Samostatné přednášky</span></a>
+  </li>  
+</ul>
+              <div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Na této stránce</h2>
+   
+  <ul>
+  <li><a href="#přehled-témat" id="toc-přehled-témat" class="nav-link active" data-scroll-target="#přehled-témat">Přehled témat</a></li>
+  <li><a href="#proč-grafy-raději-než-text" id="toc-proč-grafy-raději-než-text" class="nav-link" data-scroll-target="#proč-grafy-raději-než-text">Proč grafy raději než text?</a>
+  <ul class="collapse">
+  <li><a href="#florence-nightingale-a-krymská-válka-1850s" id="toc-florence-nightingale-a-krymská-válka-1850s" class="nav-link" data-scroll-target="#florence-nightingale-a-krymská-válka-1850s">Florence Nightingale a Krymská válka (1850s)</a></li>
+  <li><a href="#john-snow-a-epidemie-cholery-v-londýně" id="toc-john-snow-a-epidemie-cholery-v-londýně" class="nav-link" data-scroll-target="#john-snow-a-epidemie-cholery-v-londýně">John Snow a epidemie cholery v Londýně</a></li>
+  <li><a href="#spočítejte-všechny-trojky" id="toc-spočítejte-všechny-trojky" class="nav-link" data-scroll-target="#spočítejte-všechny-trojky">Spočítejte všechny trojky</a></li>
+  <li><a href="#spočítejte-všechny-trojky-1" id="toc-spočítejte-všechny-trojky-1" class="nav-link" data-scroll-target="#spočítejte-všechny-trojky-1">Spočítejte všechny trojky</a></li>
+  <li><a href="#lépe-si-pamatujeme-vizuálně" id="toc-lépe-si-pamatujeme-vizuálně" class="nav-link" data-scroll-target="#lépe-si-pamatujeme-vizuálně">Lépe si pamatujeme vizuálně</a></li>
+  </ul></li>
+  <li><a href="#obecné-principy-vizulizace" id="toc-obecné-principy-vizulizace" class="nav-link" data-scroll-target="#obecné-principy-vizulizace">Obecné principy vizulizace</a>
+  <ul class="collapse">
+  <li><a href="#eduard-tufte" id="toc-eduard-tufte" class="nav-link" data-scroll-target="#eduard-tufte">Eduard Tufte</a></li>
+  <li><a href="#obecné-principy-vizulizace-1" id="toc-obecné-principy-vizulizace-1" class="nav-link" data-scroll-target="#obecné-principy-vizulizace-1">Obecné principy vizulizace</a></li>
+  </ul></li>
+  <li><a href="#princip-1-důraz-na-data" id="toc-princip-1-důraz-na-data" class="nav-link" data-scroll-target="#princip-1-důraz-na-data">PRINCIP 1: Důraz na data</a>
+  <ul class="collapse">
+  <li><a href="#princip-1-důraz-na-data-1" id="toc-princip-1-důraz-na-data-1" class="nav-link" data-scroll-target="#princip-1-důraz-na-data-1">PRINCIP 1: Důraz na data</a></li>
+  <li><a href="#poměr-data-inkoust" id="toc-poměr-data-inkoust" class="nav-link" data-scroll-target="#poměr-data-inkoust">Poměr DATA : INKOUST</a></li>
+  <li><a href="#méně-je-více" id="toc-méně-je-více" class="nav-link" data-scroll-target="#méně-je-více">Méně je více</a></li>
+  <li><a href="#někdy-se-trochu-inkoustu-navíc-vyplatí" id="toc-někdy-se-trochu-inkoustu-navíc-vyplatí" class="nav-link" data-scroll-target="#někdy-se-trochu-inkoustu-navíc-vyplatí">Někdy se trochu inkoustu navíc vyplatí…</a></li>
+  <li><a href="#nepoužívejte-3d-grafy" id="toc-nepoužívejte-3d-grafy" class="nav-link" data-scroll-target="#nepoužívejte-3d-grafy">Nepoužívejte 3D grafy</a></li>
+  <li><a href="#nejde-jen-o-zbytečný-efekt-ale-aktivně-škodí" id="toc-nejde-jen-o-zbytečný-efekt-ale-aktivně-škodí" class="nav-link" data-scroll-target="#nejde-jen-o-zbytečný-efekt-ale-aktivně-škodí">Nejde jen o zbytečný efekt, ale aktivně škodí</a></li>
+  </ul></li>
+  <li><a href="#nespoléhejte-se-na-default" id="toc-nespoléhejte-se-na-default" class="nav-link" data-scroll-target="#nespoléhejte-se-na-default">Nespoléhejte se na default</a>
+  <ul class="collapse">
+  <li><a href="#excel-koláčový-graf" id="toc-excel-koláčový-graf" class="nav-link" data-scroll-target="#excel-koláčový-graf">Excel koláčový graf</a></li>
+  <li><a href="#excel-koláčový-graf---důraz" id="toc-excel-koláčový-graf---důraz" class="nav-link" data-scroll-target="#excel-koláčový-graf---důraz">Excel koláčový graf - důraz</a></li>
+  <li><a href="#excel-sloupcový-graf" id="toc-excel-sloupcový-graf" class="nav-link" data-scroll-target="#excel-sloupcový-graf">Excel sloupcový graf</a></li>
+  <li><a href="#excel-sloupcový-graf-časová-řada" id="toc-excel-sloupcový-graf-časová-řada" class="nav-link" data-scroll-target="#excel-sloupcový-graf-časová-řada">Excel sloupcový graf časová řada</a></li>
+  <li><a href="#excel-spojnicový-graf" id="toc-excel-spojnicový-graf" class="nav-link" data-scroll-target="#excel-spojnicový-graf">Excel spojnicový graf</a></li>
+  <li><a href="#excel-likertovská-škála-diverging-chart" id="toc-excel-likertovská-škála-diverging-chart" class="nav-link" data-scroll-target="#excel-likertovská-škála-diverging-chart">Excel likertovská škála (diverging chart)</a></li>
+  <li><a href="#excel-likertovská-škála---varianta-diverging-chart" id="toc-excel-likertovská-škála---varianta-diverging-chart" class="nav-link" data-scroll-target="#excel-likertovská-škála---varianta-diverging-chart">Excel likertovská škála - varianta (diverging chart)</a></li>
+  </ul></li>
+  <li><a href="#princip-2-čitelnost" id="toc-princip-2-čitelnost" class="nav-link" data-scroll-target="#princip-2-čitelnost">PRINCIP 2: Čitelnost</a>
+  <ul class="collapse">
+  <li><a href="#princip-2-čitelnost-1" id="toc-princip-2-čitelnost-1" class="nav-link" data-scroll-target="#princip-2-čitelnost-1">PRINCIP 2: Čitelnost</a></li>
+  <li><a href="#koláčové-grafy-se-nehodí-na-provonávání" id="toc-koláčové-grafy-se-nehodí-na-provonávání" class="nav-link" data-scroll-target="#koláčové-grafy-se-nehodí-na-provonávání">Koláčové grafy se nehodí na provonávání</a></li>
+  <li><a href="#university-educated-in-new-eu-members" id="toc-university-educated-in-new-eu-members" class="nav-link" data-scroll-target="#university-educated-in-new-eu-members">% university-educated in new EU members</a></li>
+  <li><a href="#příklad-zlepšení-čitelnosti-i-důrazu" id="toc-příklad-zlepšení-čitelnosti-i-důrazu" class="nav-link" data-scroll-target="#příklad-zlepšení-čitelnosti-i-důrazu">Příklad zlepšení čitelnosti i důrazu</a></li>
+  <li><a href="#small-multiples-zlepšují-čitelnost-časových-řad" id="toc-small-multiples-zlepšují-čitelnost-časových-řad" class="nav-link" data-scroll-target="#small-multiples-zlepšují-čitelnost-časových-řad">“Small multiples” zlepšují čitelnost časových řad</a></li>
+  <li><a href="#pokud-máte-flexibilní-nástroj-můžete-být-kreativní" id="toc-pokud-máte-flexibilní-nástroj-můžete-být-kreativní" class="nav-link" data-scroll-target="#pokud-máte-flexibilní-nástroj-můžete-být-kreativní">Pokud máte flexibilní nástroj, můžete být kreativní…</a></li>
+  <li><a href="#s-tímhle-opatrně" id="toc-s-tímhle-opatrně" class="nav-link" data-scroll-target="#s-tímhle-opatrně">S tímhle opatrně…</a></li>
+  <li><a href="#dobře-zvládnutá-datová-hustota" id="toc-dobře-zvládnutá-datová-hustota" class="nav-link" data-scroll-target="#dobře-zvládnutá-datová-hustota">Dobře zvládnutá datová hustota</a></li>
+  </ul></li>
+  <li><a href="#princip-3-integrita" id="toc-princip-3-integrita" class="nav-link" data-scroll-target="#princip-3-integrita">PRINCIP 3: Integrita</a>
+  <ul class="collapse">
+  <li><a href="#princip-3-integrita-1" id="toc-princip-3-integrita-1" class="nav-link" data-scroll-target="#princip-3-integrita-1">PRINCIP 3: Integrita</a></li>
+  <li><a href="#jak-moc-že-to-rostou-ceny-bytů" id="toc-jak-moc-že-to-rostou-ceny-bytů" class="nav-link" data-scroll-target="#jak-moc-že-to-rostou-ceny-bytů">Jak moc že to rostou ceny bytů?</a></li>
+  <li><a href="#problém-osy-y" id="toc-problém-osy-y" class="nav-link" data-scroll-target="#problém-osy-y">Problém osy y</a></li>
+  <li><a href="#někdy-je-osa-y-arbitrární" id="toc-někdy-je-osa-y-arbitrární" class="nav-link" data-scroll-target="#někdy-je-osa-y-arbitrární">Někdy je osa y arbitrární</a></li>
+  <li><a href="#někdy-je-potřeba-zazoomovat" id="toc-někdy-je-potřeba-zazoomovat" class="nav-link" data-scroll-target="#někdy-je-potřeba-zazoomovat">Někdy je potřeba “zazoomovat”</a></li>
+  <li><a href="#pokud-osa-y-nezačíná-na-0" id="toc-pokud-osa-y-nezačíná-na-0" class="nav-link" data-scroll-target="#pokud-osa-y-nezačíná-na-0">Pokud osa y nezačíná na 0 …</a></li>
+  <li><a href="#trápí-nás-chudoba-nejméně-ze-všech-evropských-zemí" id="toc-trápí-nás-chudoba-nejméně-ze-všech-evropských-zemí" class="nav-link" data-scroll-target="#trápí-nás-chudoba-nejméně-ze-všech-evropských-zemí">Trápí nás chudoba nejméně ze všech evropských zemí?</a></li>
+  <li><a href="#vizualizace-míry-nejistoty" id="toc-vizualizace-míry-nejistoty" class="nav-link" data-scroll-target="#vizualizace-míry-nejistoty">Vizualizace míry nejistoty</a></li>
+  <li><a href="#nejistotu-lze-vizualizovat-i-u-odhadů-modelu" id="toc-nejistotu-lze-vizualizovat-i-u-odhadů-modelu" class="nav-link" data-scroll-target="#nejistotu-lze-vizualizovat-i-u-odhadů-modelu">Nejistotu lze vizualizovat i u odhadů modelu</a></li>
+  <li><a href="#pravdivá-vizualizace-ale" id="toc-pravdivá-vizualizace-ale" class="nav-link" data-scroll-target="#pravdivá-vizualizace-ale">Pravdivá vizualizace, ale…</a></li>
+  <li><a href="#obecné-principy-vizualizace---shrnutí" id="toc-obecné-principy-vizualizace---shrnutí" class="nav-link" data-scroll-target="#obecné-principy-vizualizace---shrnutí">Obecné principy vizualizace - shrnutí</a></li>
+  </ul></li>
+  <li><a href="#architektura-vizualizace-grammar-of-graphics" id="toc-architektura-vizualizace-grammar-of-graphics" class="nav-link" data-scroll-target="#architektura-vizualizace-grammar-of-graphics">Architektura vizualizace (grammar of graphics)</a>
+  <ul class="collapse">
+  <li><a href="#leland-wilkinson-an-the-grammar-of-graphics-book" id="toc-leland-wilkinson-an-the-grammar-of-graphics-book" class="nav-link" data-scroll-target="#leland-wilkinson-an-the-grammar-of-graphics-book">Leland Wilkinson an ‘The Grammar of Graphics’ (book)</a></li>
+  <li><a href="#hadley-wickham-a-překlopení-wilkinsonových-myšlenek-do-softwaru" id="toc-hadley-wickham-a-překlopení-wilkinsonových-myšlenek-do-softwaru" class="nav-link" data-scroll-target="#hadley-wickham-a-překlopení-wilkinsonových-myšlenek-do-softwaru">Hadley Wickham a překlopení Wilkinsonových myšlenek do softwaru</a></li>
+  <li><a href="#ggplot2" id="toc-ggplot2" class="nav-link" data-scroll-target="#ggplot2">ggplot2</a></li>
+  <li><a href="#data" id="toc-data" class="nav-link" data-scroll-target="#data">Data</a></li>
+  <li><a href="#estetika-aesthetics" id="toc-estetika-aesthetics" class="nav-link" data-scroll-target="#estetika-aesthetics">Estetika (Aesthetics)</a></li>
+  <li><a href="#geometrie" id="toc-geometrie" class="nav-link" data-scroll-target="#geometrie">Geometrie</a></li>
+  <li><a href="#geometrie-2" id="toc-geometrie-2" class="nav-link" data-scroll-target="#geometrie-2">Geometrie 2</a></li>
+  <li><a href="#galerie-1" id="toc-galerie-1" class="nav-link" data-scroll-target="#galerie-1">Galerie 1</a></li>
+  <li><a href="#galerie-2" id="toc-galerie-2" class="nav-link" data-scroll-target="#galerie-2">Galerie 2</a></li>
+  <li><a href="#galerie-3" id="toc-galerie-3" class="nav-link" data-scroll-target="#galerie-3">Galerie 3</a></li>
+  <li><a href="#galerie-4" id="toc-galerie-4" class="nav-link" data-scroll-target="#galerie-4">Galerie 4</a></li>
+  <li><a href="#galerie-5" id="toc-galerie-5" class="nav-link" data-scroll-target="#galerie-5">Galerie 5</a></li>
+  <li><a href="#poděkování" id="toc-poděkování" class="nav-link" data-scroll-target="#poděkování">Poděkování</a></li>
+  <li><a href="#zdroje---principy-a-aplikace" id="toc-zdroje---principy-a-aplikace" class="nav-link" data-scroll-target="#zdroje---principy-a-aplikace">Zdroje - principy a aplikace</a></li>
+  <li><a href="#zdroje---ggplot2" id="toc-zdroje---ggplot2" class="nav-link" data-scroll-target="#zdroje---ggplot2">Zdroje - ggplot2</a></li>
+  <li><a href="#odkazovaná-literatura-a-další-zdroje" id="toc-odkazovaná-literatura-a-další-zdroje" class="nav-link" data-scroll-target="#odkazovaná-literatura-a-další-zdroje">Odkazovaná literatura a další zdroje</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Principy a praxe vizualizace dat</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Autor</div>
+    <div class="quarto-title-meta-contents">
+             <p>Jaromír Mazák, Katedra sociologie FF UK, jaromir.mazak@ff.cuni.cz </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Publikováno</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">3. května 2022</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+</header>
+
+<div class="cell">
+
+</div>
+<style>
+.forceBreak { -webkit-column-break-after: always; break-after: column; }
+</style>
+<section id="přehled-témat" class="level2">
+<h2 class="anchored" data-anchor-id="přehled-témat">Přehled témat</h2>
+<ul>
+<li>Proč grafy raději než text</li>
+<li>Obecné principy vizualizace</li>
+<li>Architektura vizualizace (grammar of graphics)</li>
+</ul>
+</section>
+<section id="proč-grafy-raději-než-text" class="level1">
+<h1>Proč grafy raději než text?</h1>
+<section id="florence-nightingale-a-krymská-válka-1850s" class="level2">
+<h2 class="anchored" data-anchor-id="florence-nightingale-a-krymská-válka-1850s">Florence Nightingale a Krymská válka (1850s)</h2>
+<div class="centered">
+<p><img src="figures/nightingale_rose.jpg" class="img-fluid"></p>
+</div>
+<p><font size="2"><a href="https://www.highcharts.com/blog/tutorials/166-nightingale-s-diagram/">Zdroj obrázku Highcharts.com</a></font></p>
+<div class="notes">
+<p>Blue diesease from poor hygiene. Red battle wounds, Black other causes. <strong>Nightingale</strong>: first female fellow of the Royal Satistical Society, teamed up with a brilliant statistician of poor parents William Farr who lacked Nightingale’s fame and political connections. About lobbying with Queen Victoria: ‘She may look at it because it has pictures.’ 16 000 of the 18 000 deaths were from preventable disease.</p>
+</div>
+</section>
+<section id="john-snow-a-epidemie-cholery-v-londýně" class="level2">
+<h2 class="anchored" data-anchor-id="john-snow-a-epidemie-cholery-v-londýně">John Snow a epidemie cholery v Londýně</h2>
+<div class="centered">
+<p><img src="figures/snow_cholera.jpg" class="img-fluid" style="width:55.0%"></p>
+</div>
+<p><font size="2"><a href="https://en.wikipedia.org/wiki/File:Snow-cholera-map-1.jpg">Zdroj obrázku Highcharts.com</a></font></p>
+<div class="notes">
+<p>Thanks to Snow’s visualizations, suspicion fell on watr sources rather than ‘bad air’ which was the main suspect of causing cholera until then.</p>
+</div>
+</section>
+<section id="spočítejte-všechny-trojky" class="level2">
+<h2 class="anchored" data-anchor-id="spočítejte-všechny-trojky">Spočítejte všechny trojky</h2>
+<div class="centered">
+<p><img src="figures/count_3s.png" class="img-fluid"></p>
+</div>
+<p><font size="2">Zdroj <span class="citation" data-cites="ware2012">Ware (<a href="#ref-ware2012" role="doc-biblioref">2012</a>)</span></font></p>
+</section>
+<section id="spočítejte-všechny-trojky-1" class="level2">
+<h2 class="anchored" data-anchor-id="spočítejte-všechny-trojky-1">Spočítejte všechny trojky</h2>
+<div class="centered">
+<p><img src="figures/count_3s_hl.png" class="img-fluid"></p>
+</div>
+<p><font size="2">Zdroj <span class="citation" data-cites="ware2012">Ware (<a href="#ref-ware2012" role="doc-biblioref">2012</a>)</span></font></p>
+</section>
+<section id="lépe-si-pamatujeme-vizuálně" class="level2">
+<h2 class="anchored" data-anchor-id="lépe-si-pamatujeme-vizuálně">Lépe si pamatujeme vizuálně</h2>
+<div class="centered">
+<p><img src="figures/remember_pictures.png" class="img-fluid"></p>
+</div>
+<p><font size="2">Zdroj <span class="citation" data-cites="medina2014">Medina (<a href="#ref-medina2014" role="doc-biblioref">2014</a>)</span></font></p>
+<div class="notes">
+<p>Zrak je náš hlavní smysl, svět vidíme skrze obrazy. Text musíme nejprve dekódovat a pak si ho abstraktně představit.</p>
+</div>
+</section>
+</section>
+<section id="obecné-principy-vizulizace" class="level1">
+<h1>Obecné principy vizulizace</h1>
+<section id="eduard-tufte" class="level2">
+<h2 class="anchored" data-anchor-id="eduard-tufte">Eduard Tufte</h2>
+<p>Klíčová postava moderního přístupu k vizualizaci informací.</p>
+<p>Chartjunk; data : ink ratio; data density; micro - macro reading.</p>
+<div class="notes">
+<p><strong>Chartjunk</strong> nepotřebné dekorace, <strong>data : ink ratio</strong> - snaha maximalizovat, tj. zachytit hodně data s použitím málo inkoustu; <strong>data density</strong> - snaha zobrazit co nejvíce dat při důrazu na hlavní trendy; <strong>micro-macro reading</strong> z grafu jsou jasné trendy, ale zároveň nabízí možnost detailní inspekce.</p>
+</div>
+</section>
+<section id="obecné-principy-vizulizace-1" class="level2">
+<h2 class="anchored" data-anchor-id="obecné-principy-vizulizace-1">Obecné principy vizulizace</h2>
+<ol type="1">
+<li>Důraz na data</li>
+<li>Čitelnost</li>
+<li>Integrita</li>
+</ol>
+</section>
+</section>
+<section id="princip-1-důraz-na-data" class="level1">
+<h1>PRINCIP 1: Důraz na data</h1>
+<section id="princip-1-důraz-na-data-1" class="level2">
+<h2 class="anchored" data-anchor-id="princip-1-důraz-na-data-1">PRINCIP 1: Důraz na data</h2>
+<p>Méně je více. Grafy mají efektivně komunikovat informace, design má tento cíl podpořit, ne zamlžit.</p>
+<div class="centered">
+<p><img src="figures/diamonds.png" class="img-fluid" style="width:45.0%"></p>
+</div>
+<p><font size="2">Převzato z <span class="citation" data-cites="harford2021">Harford (<a href="#ref-harford2021" role="doc-biblioref">2021</a>)</span></font></p>
+</section>
+<section id="poměr-data-inkoust" class="level2">
+<h2 class="anchored" data-anchor-id="poměr-data-inkoust">Poměr DATA : INKOUST</h2>
+<p>“Above all else show the data.” (Eduard Tufte)</p>
+<div class="centered">
+<p><img src="figures/data_ink_2.png" class="img-fluid" style="width:75.0%"></p>
+</div>
+<p><font size="2"><a href="https://simplexct.com/data-ink-ratio">Zdroj obrázku</a></font></p>
+</section>
+<section id="méně-je-více" class="level2">
+<h2 class="anchored" data-anchor-id="méně-je-více">Méně je více</h2>
+<div class="centered">
+<p><img src="figures/data-ink.webp" class="img-fluid"></p>
+</div>
+<p><font size="2"><a href="http://socialmediaguerilla.com/content-marketing/less-is-more-improving-the-data-ink-ratio/">Zdroj obrázku</a></font></p>
+</section>
+<section id="někdy-se-trochu-inkoustu-navíc-vyplatí" class="level2">
+<h2 class="anchored" data-anchor-id="někdy-se-trochu-inkoustu-navíc-vyplatí">Někdy se trochu inkoustu navíc vyplatí…</h2>
+<div class="centered">
+<p><img src="figures/data_ink_3.png" class="img-fluid" style="width:80.0%"></p>
+</div>
+<p><font size="2"><a href="https://visguides.org/t/data-ink-ratio-principle-how-to-use-it/72/5">Zdroj obrázku</a></font></p>
+</section>
+<section id="nepoužívejte-3d-grafy" class="level2">
+<h2 class="anchored" data-anchor-id="nepoužívejte-3d-grafy">Nepoužívejte 3D grafy</h2>
+<div class="centered">
+<p><img src="figures/3d.png" class="img-fluid" style="width:80.0%"></p>
+</div>
+<p><font size="2"><a href="https://www.slideshare.net/vis4/making-data-visualizations-a-survival-guide">Zdroj obrázku</a></font></p>
+</section>
+<section id="nejde-jen-o-zbytečný-efekt-ale-aktivně-škodí" class="level2">
+<h2 class="anchored" data-anchor-id="nejde-jen-o-zbytečný-efekt-ale-aktivně-škodí">Nejde jen o zbytečný efekt, ale aktivně škodí</h2>
+<div class="centered">
+<p><img src="figures/3D_pie_chart.png" class="img-fluid" style="width:70.0%"></p>
+</div>
+<p><font size="2"><a href="https://www.slideshare.net/vis4/making-data-visualizations-a-survival-guide">Zdroj obrázku</a></font></p>
+</section>
+</section>
+<section id="nespoléhejte-se-na-default" class="level1">
+<h1>Nespoléhejte se na default</h1>
+<section id="excel-koláčový-graf" class="level2">
+<h2 class="anchored" data-anchor-id="excel-koláčový-graf">Excel koláčový graf</h2>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="visualization_files/figure-html/unnamed-chunk-1-1.png" class="img-fluid figure-img" width="672"></p>
+<p></p><figcaption class="figure-caption">Financování dle zdroje, v tisících Kč</figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="excel-koláčový-graf---důraz" class="level2">
+<h2 class="anchored" data-anchor-id="excel-koláčový-graf---důraz">Excel koláčový graf - důraz</h2>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="visualization_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid figure-img" width="672"></p>
+<p></p><figcaption class="figure-caption">Financování dle zdroje, v tisících Kč</figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="excel-sloupcový-graf" class="level2 columns-2">
+<h2 class="columns-2 anchored" data-anchor-id="excel-sloupcový-graf">Excel sloupcový graf</h2>
+<p>PŘED</p>
+<p><img src="figures/excel_default_bar.png" class="img-fluid" style="width:90.0%"></p>
+<p class="forceBreak">
+</p>
+<p>PO</p>
+<p><img src="figures/excel_remake_bar.png" class="img-fluid" style="width:90.0%"></p>
+</section>
+<section id="excel-sloupcový-graf-časová-řada" class="level2 columns-2">
+<h2 class="columns-2 anchored" data-anchor-id="excel-sloupcový-graf-časová-řada">Excel sloupcový graf časová řada</h2>
+<p>PŘED</p>
+<p><img src="figures/excel_default_bars.png" class="img-fluid" style="width:90.0%"></p>
+<p class="forceBreak">
+</p>
+<p>PO</p>
+<p><img src="figures/excel_remake_bars.png" class="img-fluid" style="width:90.0%"></p>
+</section>
+<section id="excel-spojnicový-graf" class="level2 columns-2">
+<h2 class="columns-2 anchored" data-anchor-id="excel-spojnicový-graf">Excel spojnicový graf</h2>
+<p>PŘED</p>
+<p><img src="figures/excel_default_line.png" class="img-fluid" style="width:90.0%"></p>
+<p class="forceBreak">
+</p>
+<p>PO</p>
+<p><img src="figures/excel_remake_line.png" class="img-fluid" style="width:90.0%"></p>
+</section>
+<section id="excel-likertovská-škála-diverging-chart" class="level2 columns-2">
+<h2 class="columns-2 anchored" data-anchor-id="excel-likertovská-škála-diverging-chart">Excel likertovská škála (diverging chart)</h2>
+<p>PŘED</p>
+<p><img src="figures/excel_default_likert.png" class="img-fluid" style="width:90.0%"></p>
+<p class="forceBreak">
+</p>
+<p>PO</p>
+<p><img src="figures/excel_remake_likert.png" class="img-fluid" style="width:90.0%"></p>
+</section>
+<section id="excel-likertovská-škála---varianta-diverging-chart" class="level2 columns-2">
+<h2 class="columns-2 anchored" data-anchor-id="excel-likertovská-škála---varianta-diverging-chart">Excel likertovská škála - varianta (diverging chart)</h2>
+<p>PŘED</p>
+<p><img src="figures/excel_default_likert.png" class="img-fluid" style="width:90.0%"></p>
+<p class="forceBreak">
+</p>
+<p>PO</p>
+<p><img src="figures/excel_remake_likert2.png" class="img-fluid" style="width:90.0%"></p>
+</section>
+</section>
+<section id="princip-2-čitelnost" class="level1">
+<h1>PRINCIP 2: Čitelnost</h1>
+<section id="princip-2-čitelnost-1" class="level2">
+<h2 class="anchored" data-anchor-id="princip-2-čitelnost-1">PRINCIP 2: Čitelnost</h2>
+<p>Respekt k tomu, jak funguje lidská kognice.</p>
+<div class="centered">
+<p><img src="figures/cognition.png" class="img-fluid"></p>
+</div>
+<p><font size="2"><a href="https://www.csc2.ncsu.edu/faculty/healey/PP/index.html">Zdroj Christopher G. Healey</a></font></p>
+</section>
+<section id="koláčové-grafy-se-nehodí-na-provonávání" class="level2">
+<h2 class="anchored" data-anchor-id="koláčové-grafy-se-nehodí-na-provonávání">Koláčové grafy se nehodí na provonávání</h2>
+<div class="centered">
+<p><img src="figures/pie_compare.png" class="img-fluid" style="width:70.0%"></p>
+</div>
+<p><font size="2"><a href="https://en.wikipedia.org/wiki/Pie_chart#/media/File:Piecharts.svg">Zdroj Wiki</a></font></p>
+</section>
+<section id="university-educated-in-new-eu-members" class="level2">
+<h2 class="anchored" data-anchor-id="university-educated-in-new-eu-members">% university-educated in new EU members</h2>
+<div class="cell">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="visualization_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="příklad-zlepšení-čitelnosti-i-důrazu" class="level2 columns-2">
+<h2 class="columns-2 anchored" data-anchor-id="příklad-zlepšení-čitelnosti-i-důrazu">Příklad zlepšení čitelnosti i důrazu</h2>
+<p>SKUTEČNÁ PUBLIKACE</p>
+<p><img src="figures/male_female_country_comparison.png" class="img-fluid" style="width:90.0%"></p>
+<p class="forceBreak">
+</p>
+<p>NÁVRH NA ZLEPŠENÍ</p>
+<p><img src="figures/male_female_country_comparison2.png" class="img-fluid" style="width:75.0%"></p>
+<p><font size="2"><a href="https://pubs.aeaweb.org/doi/pdf/10.1257/jep.28.1.209">Schwabish, J. A. (2014) An Economist’s Guide to Visualizing Data</a></font></p>
+</section>
+<section id="small-multiples-zlepšují-čitelnost-časových-řad" class="level2 columns-2">
+<h2 class="columns-2 anchored" data-anchor-id="small-multiples-zlepšují-čitelnost-časových-řad">“Small multiples” zlepšují čitelnost časových řad</h2>
+<p>SKUTEČNÁ PUBLIKACE</p>
+<p><img src="figures/small_multiples_no.png" class="img-fluid" style="width:90.0%"></p>
+<p class="forceBreak">
+</p>
+<p>NÁVRH NA ZLEPŠENÍ</p>
+<p><img src="figures/small_multiples_yes.png" class="img-fluid" style="width:90.0%"></p>
+<p><font size="2"><a href="https://pubs.aeaweb.org/doi/pdf/10.1257/jep.28.1.209">Schwabish, J. A. (2014) An Economist’s Guide to Visualizing Data</a></font></p>
+</section>
+<section id="pokud-máte-flexibilní-nástroj-můžete-být-kreativní" class="level2">
+<h2 class="anchored" data-anchor-id="pokud-máte-flexibilní-nástroj-můžete-být-kreativní">Pokud máte flexibilní nástroj, můžete být kreativní…</h2>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="visualization_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p><font size="2"><a href="https://pubs.aeaweb.org/doi/pdf/10.1257/jep.28.1.209">Schwabish, J. A. (2014) An Economist’s Guide to Visualizing Data</a></font></p>
+</section>
+<section id="s-tímhle-opatrně" class="level2">
+<h2 class="anchored" data-anchor-id="s-tímhle-opatrně">S tímhle opatrně…</h2>
+<div class="centered">
+<p><img src="figures/composition_time.png" class="img-fluid" style="width:70.0%"></p>
+</div>
+<p>Může být užitečné pro dvě kategorie.</p>
+</section>
+<section id="dobře-zvládnutá-datová-hustota" class="level2">
+<h2 class="anchored" data-anchor-id="dobře-zvládnutá-datová-hustota">Dobře zvládnutá datová hustota</h2>
+<div class="centered">
+<p><img src="figures/ft.png" class="img-fluid" style="width:90.0%"></p>
+</div>
+<p><font size="2">Zdroj <a href="blogs.ft.com/ftdata/2015/04/17/eu-unemployment-tracker/">Financial Times</a></font></p>
+</section>
+</section>
+<section id="princip-3-integrita" class="level1">
+<h1>PRINCIP 3: Integrita</h1>
+<section id="princip-3-integrita-1" class="level2">
+<h2 class="anchored" data-anchor-id="princip-3-integrita-1">PRINCIP 3: Integrita</h2>
+<p>Vy rozhodujete o tom, jaké sdělení vizualizace vynese do popředí. Tím ale také nesete odpovědnost za možná zkreslení či přímo manipulace.</p>
+<div class="centered">
+<p><img src="figures/spider.jfif" class="img-fluid"></p>
+</div>
+</section>
+<section id="jak-moc-že-to-rostou-ceny-bytů" class="level2">
+<h2 class="anchored" data-anchor-id="jak-moc-že-to-rostou-ceny-bytů">Jak moc že to rostou ceny bytů?</h2>
+<div class="centered">
+<p><img src="figures/byty.jpg" class="img-fluid" style="width:60.0%"></p>
+</div>
+</section>
+<section id="problém-osy-y" class="level2 columns-2 smaller">
+<h2 class="columns-2 smaller anchored" data-anchor-id="problém-osy-y">Problém osy y</h2>
+<p><img src="figures/byty.jpg" class="img-fluid" style="width:95.0%"></p>
+<p class="forceBreak">
+</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/byty2.jpg" style="width:95.0%;height:20.0%" class="figure-img"></p>
+<p></p><figcaption class="figure-caption">axis y in -20 mil. (top), in 0 (bottom)</figcaption><p></p>
+</figure>
+</div>
+</div>
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/byty3.jpg" style="width:95.0%;height:20.0%" class="figure-img"></p>
+<p></p><figcaption class="figure-caption">axis y in -20 mil. (top), in 0 (bottom)</figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="někdy-je-osa-y-arbitrární" class="level2">
+<h2 class="anchored" data-anchor-id="někdy-je-osa-y-arbitrární">Někdy je osa y arbitrární</h2>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/teplota_a.png" style="width:49.0%;height:20.0%" class="figure-img"></p>
+</figure>
+</div>
+</div>
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/teplota_b.png" style="width:49.0%;height:20.0%" class="figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="někdy-je-potřeba-zazoomovat" class="level2">
+<h2 class="anchored" data-anchor-id="někdy-je-potřeba-zazoomovat">Někdy je potřeba “zazoomovat”</h2>
+<div class="centered">
+<p><img src="figures/employ.png" class="img-fluid" style="width:90.0%"></p>
+</div>
+</section>
+<section id="pokud-osa-y-nezačíná-na-0" class="level2">
+<h2 class="anchored" data-anchor-id="pokud-osa-y-nezačíná-na-0">Pokud osa y nezačíná na 0 …</h2>
+<ul>
+<li>… použijte “line chart”, raději než “bar chart”</li>
+<li>… upozorněte na to</li>
+</ul>
+<div class="centered">
+<p><img src="figures/y_axis_cut.png" class="img-fluid" style="width:70.0%"></p>
+</div>
+<p><font size="2"><a href="https://medium.economist.com/why-you-sometimes-need-to-break-the-rules-in-data-viz-4d8ece284919">Zdroj obrázku Highcharts.com</a></font></p>
+</section>
+<section id="trápí-nás-chudoba-nejméně-ze-všech-evropských-zemí" class="level2">
+<h2 class="anchored" data-anchor-id="trápí-nás-chudoba-nejméně-ze-všech-evropských-zemí">Trápí nás chudoba nejméně ze všech evropských zemí?</h2>
+<div class="centered">
+<p><img src="figures/01_risk_of_poverty.png" class="img-fluid" style="width:70.0%"></p>
+</div>
+<p><font size="2"><a href="https://ec.europa.eu/eurostat/web/products-eurostat-news/-/edn-20211015-1#:~:text=In%202020%2C%20there%20were%2096.5,data%20published%20by%20Eurostat%20today.">Zdroj Eurostat</a></font></p>
+</section>
+<section id="vizualizace-míry-nejistoty" class="level2">
+<h2 class="anchored" data-anchor-id="vizualizace-míry-nejistoty">Vizualizace míry nejistoty</h2>
+<p>Zde data z července 2021.</p>
+<div class="centered">
+<p><img src="figures/volebni_model_cvvm.png" class="img-fluid" style="width:80.0%"></p>
+</div>
+</section>
+<section id="nejistotu-lze-vizualizovat-i-u-odhadů-modelu" class="level2">
+<h2 class="anchored" data-anchor-id="nejistotu-lze-vizualizovat-i-u-odhadů-modelu">Nejistotu lze vizualizovat i u odhadů modelu</h2>
+<div class="cell">
+<div class="cell-output-display">
+<p><img src="visualization_files/figure-html/unnamed-chunk-7-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+</section>
+<section id="pravdivá-vizualizace-ale" class="level2">
+<h2 class="anchored" data-anchor-id="pravdivá-vizualizace-ale">Pravdivá vizualizace, ale…</h2>
+<div class="centered">
+<p><img src="figures/cumulative.jpg" class="img-fluid"></p>
+</div>
+<p><font size="2"><a href="https://www.benzinga.com/analyst-ratings/analyst-color/17/06/9675339/celebrating-the-10th-anniversary-of-the-iphone-a-look-ba">Zdroj obrázku</a></font></p>
+</section>
+<section id="obecné-principy-vizualizace---shrnutí" class="level2 smaller">
+<h2 class="smaller anchored" data-anchor-id="obecné-principy-vizualizace---shrnutí">Obecné principy vizualizace - shrnutí</h2>
+<p>Důraz na data</p>
+<ul>
+<li>Defaultní nastavení je často potřeba změnit</li>
+<li>Ponechte jen ty prvky grafu, které mají informační hodnotu</li>
+<li>Nepoužívejte 3D grafy</li>
+<li>Přemýšlejte o tom, co chcete grafem říct</li>
+</ul>
+<p>Čitelnost</p>
+<ul>
+<li>Respektujte lidskou kognici</li>
+<li>Vodorovné popisky grafu jsou lepší než svislé</li>
+<li>Přemýšlejte o tom, v jakém kontextu se s grafem čtenář setká</li>
+<li>Inspirujte se kreativními přístupy</li>
+</ul>
+<p>Integrita</p>
+<ul>
+<li>Opatrně s osou y</li>
+<li>Komunikujte význam toho, co vizualizujete</li>
+<li>Zohledněte míru nejistoty</li>
+</ul>
+<div class="notes">
+<p><strong>Důraz na data</strong> Data nemluví za sebe, vy rozhodujete o tom, na co chcete vizualizací upozornit (ale nesmíte manipulovat); barvy používejte jako nositele informace, ne jako ozdobu; <strong>Čitelnost</strong> Pokud to jde, data popisujte přímo v grafu; použití koláčových grafů minimalizujte, určitě nepoužívejte pro srovnání složení více skupin rozdíly v délce vs.&nbsp;rozdíly v úhlu); Přizpůsobte svoji vizualizaci účelu (jednodušší do prezentace, složitější do článku); Titulek v prezentaci nemusí jen pojmenovávat, může vyprávět příběh. V článku větčinou příběh vyprávíme spíše v textu.</p>
+</div>
+</section>
+</section>
+<section id="architektura-vizualizace-grammar-of-graphics" class="level1">
+<h1>Architektura vizualizace (grammar of graphics)</h1>
+<section id="leland-wilkinson-an-the-grammar-of-graphics-book" class="level2">
+<h2 class="anchored" data-anchor-id="leland-wilkinson-an-the-grammar-of-graphics-book">Leland Wilkinson an ‘The Grammar of Graphics’ (book)</h2>
+<p>Co dělá dobrou vizualizaci? Jednotlivé komponenty…</p>
+<ol type="1">
+<li>Data</li>
+<li>Proměnné</li>
+<li>Algebra</li>
+<li>Měřítko</li>
+<li>Geometrie (line chart, bar chart, …)</li>
+<li>“Estetika” (barvy, tvary, sytost, …)</li>
+<li>…</li>
+</ol>
+</section>
+<section id="hadley-wickham-a-překlopení-wilkinsonových-myšlenek-do-softwaru" class="level2">
+<h2 class="anchored" data-anchor-id="hadley-wickham-a-překlopení-wilkinsonových-myšlenek-do-softwaru">Hadley Wickham a překlopení Wilkinsonových myšlenek do softwaru</h2>
+<div class="centered">
+<p><img src="figures/ggplot2_logo.png" class="img-fluid"></p>
+</div>
+</section>
+<section id="ggplot2" class="level2 smaller">
+<h2 class="smaller anchored" data-anchor-id="ggplot2">ggplot2</h2>
+<p>Sedm vrstev grafu. Tři povinné:</p>
+<ol>
+<li>
+<p>Data</p>
+</li><li>
+<p>Estetika - mapování informací na barvu, tvar, sytost, …</p>
+</li><li>
+<p>Geometrie - grafické elementy, které reprezentují data</p>
+</li></ol>
+<p>Čtyři “navíc”:</p>
+<ol start="4">
+<li>
+<p>Facety (small multiples)</p>
+</li><li>
+<p>Agregované statistiky (např. regresní křivka)</p>
+</li><li>
+<p>Úprava souřadnic (např. logaritmické měřítko)</p>
+</li><li>
+<p>Téma (theme) - design grafu</p>
+</li></ol>
+</section>
+<section id="data" class="level2 smaller">
+<h2 class="smaller anchored" data-anchor-id="data">Data</h2>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 6 × 8
+  species island    bill_length_mm bill_depth_mm flipper_l…¹ body_…² sex    year
+  &lt;fct&gt;   &lt;fct&gt;              &lt;dbl&gt;         &lt;dbl&gt;       &lt;int&gt;   &lt;int&gt; &lt;fct&gt; &lt;int&gt;
+1 Adelie  Torgersen           39.1          18.7         181    3750 male   2007
+2 Adelie  Torgersen           39.5          17.4         186    3800 fema…  2007
+3 Adelie  Torgersen           40.3          18           195    3250 fema…  2007
+4 Adelie  Torgersen           NA            NA            NA      NA &lt;NA&gt;   2007
+5 Adelie  Torgersen           36.7          19.3         193    3450 fema…  2007
+6 Adelie  Torgersen           39.3          20.6         190    3650 male   2007
+# … with abbreviated variable names ¹​flipper_length_mm, ²​body_mass_g</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> penguins)</span></code><button title="Zkopírovat do schránky" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="visualization_files/figure-html/unnamed-chunk-9-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+</section>
+<section id="estetika-aesthetics" class="level2 columns-2 smaller">
+<h2 class="columns-2 smaller anchored" data-anchor-id="estetika-aesthetics">Estetika (Aesthetics)</h2>
+<ul>
+<li>osy</li>
+<li>obrys</li>
+<li>výplň</li>
+<li>velikost</li>
+<li>průhlednost</li>
+<li>tvar</li>
+<li>…</li>
+</ul>
+<p class="forceBreak">
+</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> penguins, </span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>       <span class="fu">aes</span>(<span class="at">x =</span> sex))</span></code><button title="Zkopírovat do schránky" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="visualization_files/figure-html/unnamed-chunk-10-1.png" class="img-fluid" width="384"></p>
+</div>
+</div>
+</section>
+<section id="geometrie" class="level2 columns-2 smaller">
+<h2 class="columns-2 smaller anchored" data-anchor-id="geometrie">Geometrie</h2>
+<ul>
+<li>křivky</li>
+<li>body</li>
+<li>sloupce</li>
+<li>histogram</li>
+<li>boxplot</li>
+<li>…</li>
+</ul>
+<p class="forceBreak">
+</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> penguins, </span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>       <span class="fu">aes</span>(<span class="at">x =</span> sex)) <span class="sc">+</span> </span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>()</span></code><button title="Zkopírovat do schránky" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="visualization_files/figure-html/unnamed-chunk-11-1.png" class="img-fluid" width="384"></p>
+</div>
+</div>
+</section>
+<section id="geometrie-2" class="level2 columns-2 smaller">
+<h2 class="columns-2 smaller anchored" data-anchor-id="geometrie-2">Geometrie 2</h2>
+<ul>
+<li>křivky</li>
+<li>body</li>
+<li>sloupce</li>
+<li>histogram</li>
+<li>boxplot</li>
+<li>…</li>
+</ul>
+<p class="forceBreak">
+</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> penguins <span class="sc">%&gt;%</span> </span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>         <span class="fu">filter</span>(<span class="sc">!</span><span class="fu">is.na</span>(sex)), </span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>       <span class="fu">aes</span>(<span class="at">x =</span> sex,</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>           <span class="at">y =</span> bill_length_mm)) <span class="sc">+</span> </span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>() <span class="sc">+</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_classic</span>()</span></code><button title="Zkopírovat do schránky" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="visualization_files/figure-html/unnamed-chunk-12-1.png" class="img-fluid" width="384"></p>
+</div>
+</div>
+</section>
+<section id="galerie-1" class="level2">
+<h2 class="anchored" data-anchor-id="galerie-1">Galerie 1</h2>
+<div class="centered">
+<p><img src="figures/violin.png" class="img-fluid" style="width:75.0%"></p>
+</div>
+<p><font size="2"><a href="https://r-graph-gallery.com/">Galerie ggplot2</a></font></p>
+</section>
+<section id="galerie-2" class="level2">
+<h2 class="anchored" data-anchor-id="galerie-2">Galerie 2</h2>
+<div class="centered">
+<p><img src="figures/violin_box.png" class="img-fluid" style="width:75.0%"></p>
+</div>
+<p><font size="2"><a href="https://r-graph-gallery.com/">Galerie ggplot2</a></font></p>
+</section>
+<section id="galerie-3" class="level2">
+<h2 class="anchored" data-anchor-id="galerie-3">Galerie 3</h2>
+<div class="centered">
+<p><img src="figures/box_jitter.png" class="img-fluid" style="width:55.0%"></p>
+</div>
+<p><font size="2"><a href="https://r-graph-gallery.com/">Galerie ggplot2</a></font></p>
+</section>
+<section id="galerie-4" class="level2">
+<h2 class="anchored" data-anchor-id="galerie-4">Galerie 4</h2>
+<div class="centered">
+<p><img src="figures/marginal.png" class="img-fluid" style="width:99.0%"></p>
+</div>
+<p><font size="2"><a href="https://r-graph-gallery.com/">Galerie ggplot2</a></font></p>
+</section>
+<section id="galerie-5" class="level2">
+<h2 class="anchored" data-anchor-id="galerie-5">Galerie 5</h2>
+<div class="centered">
+<p><img src="figures/lol.png" class="img-fluid" style="width:50.0%"></p>
+</div>
+<p><font size="2"><a href="https://r-graph-gallery.com/">Galerie ggplot2</a></font></p>
+</section>
+<section id="poděkování" class="level2">
+<h2 class="anchored" data-anchor-id="poděkování">Poděkování</h2>
+<p>Tato prezentace přirozeně čerpá z těžko představitelného objemu práce těžko představitelného množství lidí.</p>
+<p>Přesto bych speciálně rád poděkoval <a href="https://petrbouchal.xyz/">Petrovi Bouchalovi</a>. S ním jsme v roce 2016 připravovali kurz o metodologii vědy na letní akademii pro středoškoláky <a href="https://discover.sk/cs/">Discover</a>, kde jsme se vizualizaci hodně věnovali. Petr také hostoval v mých kurzech na FF UK a teprve při jeho předndáškách jsem plně docenil hodnotu toho, když vizualizaci začneme vnímat jako plnohodnotnou pomocnou vědeckou disciplínu. S řadou příkladů v této prezentaci jsem se seznámil díky Petrovi.</p>
+</section>
+<section id="zdroje---principy-a-aplikace" class="level2 smaller">
+<h2 class="smaller anchored" data-anchor-id="zdroje---principy-a-aplikace">Zdroje - principy a aplikace</h2>
+<ol type="1">
+<li><a href="https://policyviz.com/">Jonathan Schwabish - blog</a></li>
+<li><a href="https://www.economist.com/graphic-detail">The Economist a jeho daily charts</a></li>
+<li><a href="https://www.gapminder.org/">Hans Rosling’s Gapminder</a></li>
+<li><a href="https://www.gapminder.org/">Office for National Statistics</a> - Presenting data</li>
+<li>Šestero dobré vizualizace podle v <a href="https://www.dotaceeu.cz/getmedia/3ce5f6b9-24cc-4ac1-80d9-9eb769203f5a/Pruvodce-evaluatora_final_202007.pdf.aspx">Průvodce evaluátora</a> - Sbírka evaluačních tipů a doporučení</li>
+<li><a href="https://stephanieevergreen.com/updated-data-visualization-checklist/">The Data Visualization Checklist</a></li>
+<li>Vybrané principy diskutované na <a href="https://medium.economist.com/why-you-sometimes-need-to-break-the-rules-in-data-viz-4d8ece284919">blogu datové novinářky The Economist</a></li>
+<li><a href="https://www.makeovermonday.co.uk/">Makeover Monday</a></li>
+<li><a href="https://excelcharts.com/">Excel charts</a></li>
+<li><a href="https://viz.wtf/">Vizualizační fakapy</a> - pro zasmání</li>
+</ol>
+</section>
+<section id="zdroje---ggplot2" class="level2 smaller">
+<h2 class="smaller anchored" data-anchor-id="zdroje---ggplot2">Zdroje - ggplot2</h2>
+<ol type="1">
+<li>Některé přednášky kurzu <a href="https://sociology-fa-cu.github.io/Uvod_do_analyzy_dat_v_R/">Úvod do analýzy dat v R</a></li>
+<li>Kapitola <a href="https://r4ds.had.co.nz/graphics-for-communication.html">Graphics for Communication</a> knihy R for Data Science</li>
+<li><a href="https://ggplot2-book.org/">Kniha ggplot2</a> od jejího autora Hadleyho Wickhama</li>
+<li>Veká <a href="https://r-graph-gallery.com/">galerie grafů v ggplot2</a></li>
+<li>Součástí <a href="https://www.data-to-viz.com/caveats.html">této galerie</a> je i přehled principů vizualizace</li>
+</ol>
+</section>
+<section id="odkazovaná-literatura-a-další-zdroje" class="level2 smaller">
+<h2 class="smaller anchored" data-anchor-id="odkazovaná-literatura-a-další-zdroje">Odkazovaná literatura a další zdroje</h2>
+<p>Pokud zdroje odkazované v prezentaci nejsou interaktivní (neobahují rozklik přímo na své umístění), najdete je v seznamu zde:</p>
+
+
+
+</section>
+</section>
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography"><h2 class="anchored quarto-appendix-heading">Reference</h2><div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography">
+<div id="ref-harford2021" class="csl-entry" role="doc-biblioentry">
+Harford, Tim. 2021. <em>How to Make the World Add Up: Ten Rules for Thinking Differently About Numbers</em>. 1st edition. London: The Bridge Street Press.
+</div>
+<div id="ref-medina2014" class="csl-entry" role="doc-biblioentry">
+Medina, John. 2014. <em>Brain Rules (Updated and Expanded): 12 Principles for Surviving and Thriving at Work, Home, and School</em>. Second edition. Seattle, WA: Pear Press.
+</div>
+<div id="ref-ware2012" class="csl-entry" role="doc-biblioentry">
+Ware, Colin. 2012. <em>Information Visualization: Perception for Design</em>. 3rd edition. Waltham, MA: Morgan Kaufmann.
+</div>
+</div></section></div></main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Zkopírováno!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Zkopírováno!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left"><a href="https://ksoc.ff.cuni.cz/"><img src="../media/ksoc-logo.svg" width="224" height="80"></a></div>   
+    <div class="nav-footer-right">Sponzorem výuky je <a href="https://nms.global/cz/">NMS Market Research</a></div>
+  </div>
+</footer>
+
+
+
+</body></html>

@@ -1,0 +1,1078 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="cs" xml:lang="cs"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.2.280">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Jaromír Mazák, Dpt. Sociology, Faculty of Art, CU, jaromir.mazak@ff.cuni.cz">
+
+<title>Kvantitativní výzkum v sociologii - Principles and practice of data visualisation</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "Žádný výsledek",
+    "search-matching-documents-text": "Nalezené výsledky",
+    "search-copy-link-title": "Zkopírovat odkaz pro vyhledávání",
+    "search-hide-matches-text": "Skrýt další výsledky",
+    "search-more-match-text": "další výsledek v tomto dokumentu",
+    "search-more-matches-text": "dalších výsledků v tomto dokumentu",
+    "search-clear-button-title": "Vymazat",
+    "search-detached-cancel-button-title": "Zrušit",
+    "search-submit-button-title": "Odeslat"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../styles.css">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">Kvantitativní výzkum v sociologii</span>
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../index.html">
+ <span class="menu-text">Úvod</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../courses.html">
+ <span class="menu-text">Vyučovaná kurzy</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../resources.html">
+ <span class="menu-text">Samostudium</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../speakings.html">
+ <span class="menu-text">Samostatné přednášky</span></a>
+  </li>  
+</ul>
+              <div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Na této stránce</h2>
+   
+  <ul>
+  <li><a href="#what-to-expect" id="toc-what-to-expect" class="nav-link active" data-scroll-target="#what-to-expect">What to expect</a></li>
+  <li><a href="#why-visualizations-rather-than-text" id="toc-why-visualizations-rather-than-text" class="nav-link" data-scroll-target="#why-visualizations-rather-than-text">Why visualizations rather than text</a>
+  <ul class="collapse">
+  <li><a href="#florence-nightingale-and-the-crimean-war-1850s" id="toc-florence-nightingale-and-the-crimean-war-1850s" class="nav-link" data-scroll-target="#florence-nightingale-and-the-crimean-war-1850s">Florence Nightingale and the Crimean War (1850s)</a></li>
+  <li><a href="#john-snow-and-the-cholera-epidemy-on-london" id="toc-john-snow-and-the-cholera-epidemy-on-london" class="nav-link" data-scroll-target="#john-snow-and-the-cholera-epidemy-on-london">John Snow and the cholera epidemy on London</a></li>
+  <li><a href="#count-all-the-threes" id="toc-count-all-the-threes" class="nav-link" data-scroll-target="#count-all-the-threes">Count all the threes</a></li>
+  <li><a href="#count-all-the-threes-now" id="toc-count-all-the-threes-now" class="nav-link" data-scroll-target="#count-all-the-threes-now">Count all the threes now</a></li>
+  <li><a href="#we-remember-better-visually" id="toc-we-remember-better-visually" class="nav-link" data-scroll-target="#we-remember-better-visually">We remember better visually</a></li>
+  </ul></li>
+  <li><a href="#general-principles-of-visualization" id="toc-general-principles-of-visualization" class="nav-link" data-scroll-target="#general-principles-of-visualization">General principles of visualization</a>
+  <ul class="collapse">
+  <li><a href="#eduard-tufte" id="toc-eduard-tufte" class="nav-link" data-scroll-target="#eduard-tufte">Eduard Tufte</a></li>
+  <li><a href="#general-principles-of-visualization-1" id="toc-general-principles-of-visualization-1" class="nav-link" data-scroll-target="#general-principles-of-visualization-1">General principles of visualization</a></li>
+  </ul></li>
+  <li><a href="#principle-1-emphasis-on-data" id="toc-principle-1-emphasis-on-data" class="nav-link" data-scroll-target="#principle-1-emphasis-on-data">PRINCIPLE 1: Emphasis on data</a>
+  <ul class="collapse">
+  <li><a href="#principle-1-emphasis-on-data-1" id="toc-principle-1-emphasis-on-data-1" class="nav-link" data-scroll-target="#principle-1-emphasis-on-data-1">PRINCIPLE 1: Emphasis on data</a></li>
+  <li><a href="#data-ink-ratio" id="toc-data-ink-ratio" class="nav-link" data-scroll-target="#data-ink-ratio">DATA : INK ratio</a></li>
+  <li><a href="#more-is-less" id="toc-more-is-less" class="nav-link" data-scroll-target="#more-is-less">More is less</a></li>
+  <li><a href="#sometimes-a-little-extra-ink-is-worth-it" id="toc-sometimes-a-little-extra-ink-is-worth-it" class="nav-link" data-scroll-target="#sometimes-a-little-extra-ink-is-worth-it">Sometimes a little extra ink is worth it…</a></li>
+  <li><a href="#do-not-use-3d-charts" id="toc-do-not-use-3d-charts" class="nav-link" data-scroll-target="#do-not-use-3d-charts">Do not use 3D charts</a></li>
+  <li><a href="#this-is-not-just-an-unnecessary-effect-but-it-actively-harms" id="toc-this-is-not-just-an-unnecessary-effect-but-it-actively-harms" class="nav-link" data-scroll-target="#this-is-not-just-an-unnecessary-effect-but-it-actively-harms">This is not just an unnecessary effect, but it actively harms</a></li>
+  </ul></li>
+  <li><a href="#do-not-rely-on-default" id="toc-do-not-rely-on-default" class="nav-link" data-scroll-target="#do-not-rely-on-default">Do not rely on default</a>
+  <ul class="collapse">
+  <li><a href="#excel-pie-chart" id="toc-excel-pie-chart" class="nav-link" data-scroll-target="#excel-pie-chart">Excel pie chart</a></li>
+  <li><a href="#excel-pie-chart---emphasis" id="toc-excel-pie-chart---emphasis" class="nav-link" data-scroll-target="#excel-pie-chart---emphasis">Excel pie chart - emphasis</a></li>
+  <li><a href="#excel-bar-chart" id="toc-excel-bar-chart" class="nav-link" data-scroll-target="#excel-bar-chart">Excel bar chart</a></li>
+  <li><a href="#excel-bar-chart---time-series" id="toc-excel-bar-chart---time-series" class="nav-link" data-scroll-target="#excel-bar-chart---time-series">Excel bar chart - time series</a></li>
+  <li><a href="#excel-line-chart" id="toc-excel-line-chart" class="nav-link" data-scroll-target="#excel-line-chart">Excel Line Chart</a></li>
+  <li><a href="#excel-likert-scale-diverging-chart" id="toc-excel-likert-scale-diverging-chart" class="nav-link" data-scroll-target="#excel-likert-scale-diverging-chart">Excel Likert scale (diverging chart)</a></li>
+  <li><a href="#excel-likert-scale---alternative-version-diverging-chart" id="toc-excel-likert-scale---alternative-version-diverging-chart" class="nav-link" data-scroll-target="#excel-likert-scale---alternative-version-diverging-chart">Excel Likert scale - alternative version (diverging chart)</a></li>
+  </ul></li>
+  <li><a href="#principle-2-readability" id="toc-principle-2-readability" class="nav-link" data-scroll-target="#principle-2-readability">PRINCIPLE 2: Readability</a>
+  <ul class="collapse">
+  <li><a href="#principle-2-readability-1" id="toc-principle-2-readability-1" class="nav-link" data-scroll-target="#principle-2-readability-1">PRINCIPLE 2: Readability</a></li>
+  <li><a href="#pie-charts-are-not-suitable-for-making-comparisons" id="toc-pie-charts-are-not-suitable-for-making-comparisons" class="nav-link" data-scroll-target="#pie-charts-are-not-suitable-for-making-comparisons">Pie charts are not suitable for making comparisons</a></li>
+  <li><a href="#university-educated-in-new-eu-members" id="toc-university-educated-in-new-eu-members" class="nav-link" data-scroll-target="#university-educated-in-new-eu-members">% university-educated in new EU members</a></li>
+  <li><a href="#example-of-improved-readability-and-emphasis" id="toc-example-of-improved-readability-and-emphasis" class="nav-link" data-scroll-target="#example-of-improved-readability-and-emphasis">Example of improved readability and emphasis</a></li>
+  <li><a href="#small-multiples-improve-readability-of-time-series" id="toc-small-multiples-improve-readability-of-time-series" class="nav-link" data-scroll-target="#small-multiples-improve-readability-of-time-series">“Small multiples” improve readability of time series</a></li>
+  <li><a href="#if-you-have-a-flexible-tool-you-can-be-creative" id="toc-if-you-have-a-flexible-tool-you-can-be-creative" class="nav-link" data-scroll-target="#if-you-have-a-flexible-tool-you-can-be-creative">If you have a flexible tool, you can be creative…</a></li>
+  <li><a href="#careful-with-this-one" id="toc-careful-with-this-one" class="nav-link" data-scroll-target="#careful-with-this-one">Careful with this one…</a></li>
+  <li><a href="#well-managed-data-density" id="toc-well-managed-data-density" class="nav-link" data-scroll-target="#well-managed-data-density">Well-managed data density</a></li>
+  </ul></li>
+  <li><a href="#principle-3-integrity" id="toc-principle-3-integrity" class="nav-link" data-scroll-target="#principle-3-integrity">PRINCIPLE 3: Integrity</a>
+  <ul class="collapse">
+  <li><a href="#principle-3-integrity-1" id="toc-principle-3-integrity-1" class="nav-link" data-scroll-target="#principle-3-integrity-1">PRINCIPLE 3: Integrity</a></li>
+  <li><a href="#how-much-are-the-prices-of-flats-rising" id="toc-how-much-are-the-prices-of-flats-rising" class="nav-link" data-scroll-target="#how-much-are-the-prices-of-flats-rising">How much are the prices of flats rising?</a></li>
+  <li><a href="#the-big-problem-with-the-y-axis" id="toc-the-big-problem-with-the-y-axis" class="nav-link" data-scroll-target="#the-big-problem-with-the-y-axis">The big problem with the y axis</a></li>
+  <li><a href="#sometimes-the-y-axis-is-arbitrary" id="toc-sometimes-the-y-axis-is-arbitrary" class="nav-link" data-scroll-target="#sometimes-the-y-axis-is-arbitrary">Sometimes the y-axis is arbitrary</a></li>
+  <li><a href="#sometimes-we-just-need-to-zoom" id="toc-sometimes-we-just-need-to-zoom" class="nav-link" data-scroll-target="#sometimes-we-just-need-to-zoom">Sometimes, we just need to “zoom”</a></li>
+  <li><a href="#so-if-the-y-axis-does-not-start-at-0" id="toc-so-if-the-y-axis-does-not-start-at-0" class="nav-link" data-scroll-target="#so-if-the-y-axis-does-not-start-at-0">SO if the y-axis does not start at 0 …</a></li>
+  <li><a href="#should-we-be-the-least-worried-about-poverty-of-all-european-countries" id="toc-should-we-be-the-least-worried-about-poverty-of-all-european-countries" class="nav-link" data-scroll-target="#should-we-be-the-least-worried-about-poverty-of-all-european-countries">Should we be the least worried about poverty of all European countries?</a></li>
+  <li><a href="#visualizing-uncertainty" id="toc-visualizing-uncertainty" class="nav-link" data-scroll-target="#visualizing-uncertainty">Visualizing uncertainty</a></li>
+  <li><a href="#uncertainty-can-also-be-visualized-in-model-estimates" id="toc-uncertainty-can-also-be-visualized-in-model-estimates" class="nav-link" data-scroll-target="#uncertainty-can-also-be-visualized-in-model-estimates">Uncertainty can also be visualized in model estimates</a></li>
+  <li><a href="#a-true-visualization-but" id="toc-a-true-visualization-but" class="nav-link" data-scroll-target="#a-true-visualization-but">A true visualization, BUT…</a></li>
+  <li><a href="#general-principles-of-visualization---summary" id="toc-general-principles-of-visualization---summary" class="nav-link" data-scroll-target="#general-principles-of-visualization---summary">General principles of visualization - SUMMARY</a></li>
+  </ul></li>
+  <li><a href="#visualization-architecture-grammar-of-graphics" id="toc-visualization-architecture-grammar-of-graphics" class="nav-link" data-scroll-target="#visualization-architecture-grammar-of-graphics">Visualization architecture (grammar of graphics)</a>
+  <ul class="collapse">
+  <li><a href="#leland-wilkinson-and-the-grammar-of-graphics-book" id="toc-leland-wilkinson-and-the-grammar-of-graphics-book" class="nav-link" data-scroll-target="#leland-wilkinson-and-the-grammar-of-graphics-book">Leland Wilkinson and ‘The Grammar of Graphics’ (book)</a></li>
+  <li><a href="#hadley-wickham-and-developing-a-software-solution-of-wilkinsons-ideas" id="toc-hadley-wickham-and-developing-a-software-solution-of-wilkinsons-ideas" class="nav-link" data-scroll-target="#hadley-wickham-and-developing-a-software-solution-of-wilkinsons-ideas">Hadley Wickham and developing a software solution of Wilkinson’s ideas</a></li>
+  <li><a href="#ggplot2" id="toc-ggplot2" class="nav-link" data-scroll-target="#ggplot2">ggplot2</a></li>
+  <li><a href="#data" id="toc-data" class="nav-link" data-scroll-target="#data">Data</a></li>
+  <li><a href="#aesthetics" id="toc-aesthetics" class="nav-link" data-scroll-target="#aesthetics">Aesthetics</a></li>
+  <li><a href="#geometry" id="toc-geometry" class="nav-link" data-scroll-target="#geometry">Geometry</a></li>
+  <li><a href="#geometry-2" id="toc-geometry-2" class="nav-link" data-scroll-target="#geometry-2">Geometry 2</a></li>
+  <li><a href="#galery-1" id="toc-galery-1" class="nav-link" data-scroll-target="#galery-1">Galery 1</a></li>
+  <li><a href="#galery-2" id="toc-galery-2" class="nav-link" data-scroll-target="#galery-2">Galery 2</a></li>
+  <li><a href="#galery-3" id="toc-galery-3" class="nav-link" data-scroll-target="#galery-3">Galery 3</a></li>
+  <li><a href="#galery-4" id="toc-galery-4" class="nav-link" data-scroll-target="#galery-4">Galery 4</a></li>
+  <li><a href="#galerie-5" id="toc-galerie-5" class="nav-link" data-scroll-target="#galerie-5">Galerie 5</a></li>
+  <li><a href="#courtesy" id="toc-courtesy" class="nav-link" data-scroll-target="#courtesy">Courtesy</a></li>
+  <li><a href="#additional-resources---principles-and-applications" id="toc-additional-resources---principles-and-applications" class="nav-link" data-scroll-target="#additional-resources---principles-and-applications">Additional resources - principles and applications</a></li>
+  <li><a href="#additional-resources---working-with-ggplot2" id="toc-additional-resources---working-with-ggplot2" class="nav-link" data-scroll-target="#additional-resources---working-with-ggplot2">Additional resources - working with ggplot2</a></li>
+  <li><a href="#referenced-literature-and-other-sources" id="toc-referenced-literature-and-other-sources" class="nav-link" data-scroll-target="#referenced-literature-and-other-sources">Referenced literature and other sources</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Principles and practice of data visualisation</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Autor</div>
+    <div class="quarto-title-meta-contents">
+             <p>Jaromír Mazák, Dpt. Sociology, Faculty of Art, CU, jaromir.mazak@ff.cuni.cz </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Publikováno</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">15. května 2022</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+</header>
+
+<div class="cell">
+
+</div>
+<style>
+.forceBreak { -webkit-column-break-after: always; break-after: column; }
+</style>
+<section id="what-to-expect" class="level2">
+<h2 class="anchored" data-anchor-id="what-to-expect">What to expect</h2>
+<ul>
+<li>Why visualizations rather than text</li>
+<li>General principles of visualization</li>
+<li>Grammar of graphics</li>
+</ul>
+</section>
+<section id="why-visualizations-rather-than-text" class="level1">
+<h1>Why visualizations rather than text</h1>
+<section id="florence-nightingale-and-the-crimean-war-1850s" class="level2">
+<h2 class="anchored" data-anchor-id="florence-nightingale-and-the-crimean-war-1850s">Florence Nightingale and the Crimean War (1850s)</h2>
+<div class="centered">
+<p><img src="figures/nightingale_rose.jpg" class="img-fluid"></p>
+</div>
+<p><font size="2"><a href="https://www.highcharts.com/blog/tutorials/166-nightingale-s-diagram/">Source Highcharts.com</a></font></p>
+<div class="notes">
+<p>Blue diesease from poor hygiene. Red battle wounds, Black other causes. <strong>Nightingale</strong>: first female fellow of the Royal Satistical Society, teamed up with a brilliant statistician of poor parents William Farr who lacked Nightingale’s fame and political connections. About lobbying with Queen Victoria: ‘She may look at it because it has pictures.’ 16 000 of the 18 000 deaths were from preventable disease.</p>
+</div>
+</section>
+<section id="john-snow-and-the-cholera-epidemy-on-london" class="level2">
+<h2 class="anchored" data-anchor-id="john-snow-and-the-cholera-epidemy-on-london">John Snow and the cholera epidemy on London</h2>
+<div class="centered">
+<p><img src="figures/snow_cholera.jpg" class="img-fluid" style="width:55.0%"></p>
+</div>
+<p><font size="2"><a href="https://en.wikipedia.org/wiki/File:Snow-cholera-map-1.jpg">Source Highcharts.com</a></font></p>
+<div class="notes">
+<p>Thanks to Snow’s visualizations, suspicion fell on water sources rather than ‘bad air’ which was the main suspect of causing cholera until then.</p>
+</div>
+</section>
+<section id="count-all-the-threes" class="level2">
+<h2 class="anchored" data-anchor-id="count-all-the-threes">Count all the threes</h2>
+<div class="centered">
+<p><img src="figures/count_3s.png" class="img-fluid"></p>
+</div>
+<p><font size="2">Source <span class="citation" data-cites="ware2012">Ware (<a href="#ref-ware2012" role="doc-biblioref">2012</a>)</span></font></p>
+</section>
+<section id="count-all-the-threes-now" class="level2">
+<h2 class="anchored" data-anchor-id="count-all-the-threes-now">Count all the threes now</h2>
+<div class="centered">
+<p><img src="figures/count_3s_hl.png" class="img-fluid"></p>
+</div>
+<p><font size="2">Source <span class="citation" data-cites="ware2012">Ware (<a href="#ref-ware2012" role="doc-biblioref">2012</a>)</span></font></p>
+</section>
+<section id="we-remember-better-visually" class="level2">
+<h2 class="anchored" data-anchor-id="we-remember-better-visually">We remember better visually</h2>
+<div class="centered">
+<p><img src="figures/remember_pictures.png" class="img-fluid"></p>
+</div>
+<p><font size="2">Source <span class="citation" data-cites="medina2014">Medina (<a href="#ref-medina2014" role="doc-biblioref">2014</a>)</span></font></p>
+<div class="notes">
+<p>Sight is our main sense, we see the world through images. We have to decode the text first and then imagine what it means in the abstract.</p>
+</div>
+</section>
+</section>
+<section id="general-principles-of-visualization" class="level1">
+<h1>General principles of visualization</h1>
+<section id="eduard-tufte" class="level2">
+<h2 class="anchored" data-anchor-id="eduard-tufte">Eduard Tufte</h2>
+<p>A key figure in the modern approach to visualization of information.</p>
+<p>Chartjunk; data : ink ratio; data density; micro - macro reading.</p>
+<div class="notes">
+<p><strong>Chartjunk</strong> unnecessary decorations, <strong>data : ink ratio</strong> - trying to maximize, i.e.&nbsp;capture a lot of data using little ink; <strong>data density</strong> - trying to display as much data as possible while emphasizing the main trends; <strong>micro-macro reading</strong> from the chart are clear trends, but at the same time offers the possibility of detailed inspection.</p>
+</div>
+</section>
+<section id="general-principles-of-visualization-1" class="level2">
+<h2 class="anchored" data-anchor-id="general-principles-of-visualization-1">General principles of visualization</h2>
+<ol type="1">
+<li>Emphasis on data</li>
+<li>Readability</li>
+<li>Integrity</li>
+</ol>
+</section>
+</section>
+<section id="principle-1-emphasis-on-data" class="level1">
+<h1>PRINCIPLE 1: Emphasis on data</h1>
+<section id="principle-1-emphasis-on-data-1" class="level2">
+<h2 class="anchored" data-anchor-id="principle-1-emphasis-on-data-1">PRINCIPLE 1: Emphasis on data</h2>
+<p>Less is more. Graphs are meant to communicate information effectively, design is meant to support that goal, not obscure it.</p>
+<div class="centered">
+<p><img src="figures/diamonds.png" class="img-fluid" style="width:45.0%"></p>
+</div>
+<p><font size="2">Source <span class="citation" data-cites="harford2021">Harford (<a href="#ref-harford2021" role="doc-biblioref">2021</a>)</span></font></p>
+</section>
+<section id="data-ink-ratio" class="level2">
+<h2 class="anchored" data-anchor-id="data-ink-ratio">DATA : INK ratio</h2>
+<p>“Above all else show the data.” (Eduard Tufte)</p>
+<div class="centered">
+<p><img src="figures/data_ink_2.png" class="img-fluid" style="width:75.0%"></p>
+</div>
+<p><font size="2"><a href="https://simplexct.com/data-ink-ratio">Source</a></font></p>
+</section>
+<section id="more-is-less" class="level2">
+<h2 class="anchored" data-anchor-id="more-is-less">More is less</h2>
+<div class="centered">
+<p><img src="figures/data-ink.webp" class="img-fluid"></p>
+</div>
+<p><font size="2"><a href="http://socialmediaguerilla.com/content-marketing/less-is-more-improving-the-data-ink-ratio/">Source</a></font></p>
+</section>
+<section id="sometimes-a-little-extra-ink-is-worth-it" class="level2">
+<h2 class="anchored" data-anchor-id="sometimes-a-little-extra-ink-is-worth-it">Sometimes a little extra ink is worth it…</h2>
+<div class="centered">
+<p><img src="figures/data_ink_3.png" class="img-fluid" style="width:80.0%"></p>
+</div>
+<p><font size="2"><a href="https://visguides.org/t/data-ink-ratio-principle-how-to-use-it/72/5">Source</a></font></p>
+</section>
+<section id="do-not-use-3d-charts" class="level2">
+<h2 class="anchored" data-anchor-id="do-not-use-3d-charts">Do not use 3D charts</h2>
+<div class="centered">
+<p><img src="figures/3d.png" class="img-fluid" style="width:80.0%"></p>
+</div>
+<p><font size="2"><a href="https://www.slideshare.net/vis4/making-data-visualizations-a-survival-guide">Source</a></font></p>
+</section>
+<section id="this-is-not-just-an-unnecessary-effect-but-it-actively-harms" class="level2">
+<h2 class="anchored" data-anchor-id="this-is-not-just-an-unnecessary-effect-but-it-actively-harms">This is not just an unnecessary effect, but it actively harms</h2>
+<div class="centered">
+<p><img src="figures/3D_pie_chart.png" class="img-fluid" style="width:70.0%"></p>
+</div>
+<p><font size="2"><a href="https://www.slideshare.net/vis4/making-data-visualizations-a-survival-guide">Source</a></font></p>
+</section>
+</section>
+<section id="do-not-rely-on-default" class="level1">
+<h1>Do not rely on default</h1>
+<section id="excel-pie-chart" class="level2">
+<h2 class="anchored" data-anchor-id="excel-pie-chart">Excel pie chart</h2>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="visualization_eng_files/figure-html/unnamed-chunk-1-1.png" class="img-fluid figure-img" width="672"></p>
+<p></p><figcaption class="figure-caption">Source of funding [thousands CZK]</figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="excel-pie-chart---emphasis" class="level2">
+<h2 class="anchored" data-anchor-id="excel-pie-chart---emphasis">Excel pie chart - emphasis</h2>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="visualization_eng_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid figure-img" width="672"></p>
+<p></p><figcaption class="figure-caption">Financování dle zdroje, v tisících Kč</figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="excel-bar-chart" class="level2 columns-2">
+<h2 class="columns-2 anchored" data-anchor-id="excel-bar-chart">Excel bar chart</h2>
+<p>BEFORE</p>
+<p><img src="figures/excel_default_bar.png" class="img-fluid" style="width:90.0%"></p>
+<p class="forceBreak">
+</p>
+<p>AFTER</p>
+<p><img src="figures/excel_remake_bar.png" class="img-fluid" style="width:90.0%"></p>
+</section>
+<section id="excel-bar-chart---time-series" class="level2 columns-2">
+<h2 class="columns-2 anchored" data-anchor-id="excel-bar-chart---time-series">Excel bar chart - time series</h2>
+<p>BEFORE</p>
+<p><img src="figures/excel_default_bars.png" class="img-fluid" style="width:90.0%"></p>
+<p class="forceBreak">
+</p>
+<p>AFTER</p>
+<p><img src="figures/excel_remake_bars.png" class="img-fluid" style="width:90.0%"></p>
+</section>
+<section id="excel-line-chart" class="level2 columns-2">
+<h2 class="columns-2 anchored" data-anchor-id="excel-line-chart">Excel Line Chart</h2>
+<p>BEFORE</p>
+<p><img src="figures/excel_default_line.png" class="img-fluid" style="width:90.0%"></p>
+<p class="forceBreak">
+</p>
+<p>AFTER</p>
+<p><img src="figures/excel_remake_line.png" class="img-fluid" style="width:90.0%"></p>
+</section>
+<section id="excel-likert-scale-diverging-chart" class="level2 columns-2">
+<h2 class="columns-2 anchored" data-anchor-id="excel-likert-scale-diverging-chart">Excel Likert scale (diverging chart)</h2>
+<p>BEFORE</p>
+<p><img src="figures/excel_default_likert.png" class="img-fluid" style="width:90.0%"></p>
+<p class="forceBreak">
+</p>
+<p>AFTER</p>
+<p><img src="figures/excel_remake_likert.png" class="img-fluid" style="width:90.0%"></p>
+</section>
+<section id="excel-likert-scale---alternative-version-diverging-chart" class="level2 columns-2">
+<h2 class="columns-2 anchored" data-anchor-id="excel-likert-scale---alternative-version-diverging-chart">Excel Likert scale - alternative version (diverging chart)</h2>
+<p>BEFORE</p>
+<p><img src="figures/excel_default_likert.png" class="img-fluid" style="width:90.0%"></p>
+<p class="forceBreak">
+</p>
+<p>AFTER</p>
+<p><img src="figures/excel_remake_likert2.png" class="img-fluid" style="width:90.0%"></p>
+</section>
+</section>
+<section id="principle-2-readability" class="level1">
+<h1>PRINCIPLE 2: Readability</h1>
+<section id="principle-2-readability-1" class="level2">
+<h2 class="anchored" data-anchor-id="principle-2-readability-1">PRINCIPLE 2: Readability</h2>
+<p>Respect for how human cognition works.</p>
+<div class="centered">
+<p><img src="figures/cognition.png" class="img-fluid"></p>
+</div>
+<p><font size="2"><a href="https://www.csc2.ncsu.edu/faculty/healey/PP/index.html">Source Christopher G. Healey</a></font></p>
+</section>
+<section id="pie-charts-are-not-suitable-for-making-comparisons" class="level2">
+<h2 class="anchored" data-anchor-id="pie-charts-are-not-suitable-for-making-comparisons">Pie charts are not suitable for making comparisons</h2>
+<div class="centered">
+<p><img src="figures/pie_compare.png" class="img-fluid" style="width:70.0%"></p>
+</div>
+<p><font size="2"><a href="https://en.wikipedia.org/wiki/Pie_chart#/media/File:Piecharts.svg">Source Wiki</a></font></p>
+</section>
+<section id="university-educated-in-new-eu-members" class="level2">
+<h2 class="anchored" data-anchor-id="university-educated-in-new-eu-members">% university-educated in new EU members</h2>
+<div class="cell">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="visualization_eng_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="example-of-improved-readability-and-emphasis" class="level2 columns-2">
+<h2 class="columns-2 anchored" data-anchor-id="example-of-improved-readability-and-emphasis">Example of improved readability and emphasis</h2>
+<p>ACTUAL PUBLICATION</p>
+<p><img src="figures/male_female_country_comparison.png" class="img-fluid" style="width:90.0%"></p>
+<p class="forceBreak">
+</p>
+<p>SUGGESTION FOR IMPROVEMENT</p>
+<p><img src="figures/male_female_country_comparison2.png" class="img-fluid" style="width:75.0%"></p>
+<p><font size="2"><a href="https://pubs.aeaweb.org/doi/pdf/10.1257/jep.28.1.209">Schwabish, J. A. (2014) An Economist’s Guide to Visualizing Data</a></font></p>
+</section>
+<section id="small-multiples-improve-readability-of-time-series" class="level2 columns-2">
+<h2 class="columns-2 anchored" data-anchor-id="small-multiples-improve-readability-of-time-series">“Small multiples” improve readability of time series</h2>
+<p>ACTUAL PUBLICATION</p>
+<p><img src="figures/small_multiples_no.png" class="img-fluid" style="width:90.0%"></p>
+<p class="forceBreak">
+</p>
+<p>SUGGESTION FOR IMPROVEMENT</p>
+<p><img src="figures/small_multiples_yes.png" class="img-fluid" style="width:90.0%"></p>
+<p><font size="2"><a href="https://pubs.aeaweb.org/doi/pdf/10.1257/jep.28.1.209">Schwabish, J. A. (2014) An Economist’s Guide to Visualizing Data</a></font></p>
+</section>
+<section id="if-you-have-a-flexible-tool-you-can-be-creative" class="level2">
+<h2 class="anchored" data-anchor-id="if-you-have-a-flexible-tool-you-can-be-creative">If you have a flexible tool, you can be creative…</h2>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="visualization_eng_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p><font size="2"><a href="https://pubs.aeaweb.org/doi/pdf/10.1257/jep.28.1.209">Schwabish, J. A. (2014) An Economist’s Guide to Visualizing Data</a></font></p>
+</section>
+<section id="careful-with-this-one" class="level2">
+<h2 class="anchored" data-anchor-id="careful-with-this-one">Careful with this one…</h2>
+<div class="centered">
+<p><img src="figures/composition_time.png" class="img-fluid" style="width:70.0%"></p>
+</div>
+<p>May be useful for two categories</p>
+</section>
+<section id="well-managed-data-density" class="level2">
+<h2 class="anchored" data-anchor-id="well-managed-data-density">Well-managed data density</h2>
+<div class="centered">
+<p><img src="figures/ft.png" class="img-fluid" style="width:90.0%"></p>
+</div>
+<p><font size="2">Source <a href="blogs.ft.com/ftdata/2015/04/17/eu-unemployment-tracker/">Financial Times</a></font></p>
+</section>
+</section>
+<section id="principle-3-integrity" class="level1">
+<h1>PRINCIPLE 3: Integrity</h1>
+<section id="principle-3-integrity-1" class="level2">
+<h2 class="anchored" data-anchor-id="principle-3-integrity-1">PRINCIPLE 3: Integrity</h2>
+<p>You decide what message visualization brings to the forefront. But you are also responsible for possible distortions or manipulations.</p>
+<div class="centered">
+<p><img src="figures/spider.jfif" class="img-fluid"></p>
+</div>
+</section>
+<section id="how-much-are-the-prices-of-flats-rising" class="level2">
+<h2 class="anchored" data-anchor-id="how-much-are-the-prices-of-flats-rising">How much are the prices of flats rising?</h2>
+<div class="centered">
+<p><img src="figures/byty.jpg" class="img-fluid" style="width:60.0%"></p>
+</div>
+</section>
+<section id="the-big-problem-with-the-y-axis" class="level2 columns-2 smaller">
+<h2 class="columns-2 smaller anchored" data-anchor-id="the-big-problem-with-the-y-axis">The big problem with the y axis</h2>
+<p><img src="figures/byty.jpg" class="img-fluid" style="width:95.0%"></p>
+<p class="forceBreak">
+</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/byty2.jpg" style="width:95.0%;height:20.0%" class="figure-img"></p>
+<p></p><figcaption class="figure-caption">axis y in -20 mil. (top), in 0 (bottom)</figcaption><p></p>
+</figure>
+</div>
+</div>
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/byty3.jpg" style="width:95.0%;height:20.0%" class="figure-img"></p>
+<p></p><figcaption class="figure-caption">axis y in -20 mil. (top), in 0 (bottom)</figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="sometimes-the-y-axis-is-arbitrary" class="level2">
+<h2 class="anchored" data-anchor-id="sometimes-the-y-axis-is-arbitrary">Sometimes the y-axis is arbitrary</h2>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/teplota_a.png" style="width:49.0%;height:20.0%" class="figure-img"></p>
+</figure>
+</div>
+</div>
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/teplota_b.png" style="width:49.0%;height:20.0%" class="figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="sometimes-we-just-need-to-zoom" class="level2">
+<h2 class="anchored" data-anchor-id="sometimes-we-just-need-to-zoom">Sometimes, we just need to “zoom”</h2>
+<div class="centered">
+<p><img src="figures/employ.png" class="img-fluid" style="width:90.0%"></p>
+</div>
+</section>
+<section id="so-if-the-y-axis-does-not-start-at-0" class="level2">
+<h2 class="anchored" data-anchor-id="so-if-the-y-axis-does-not-start-at-0">SO if the y-axis does not start at 0 …</h2>
+<ul>
+<li>… use “line chart” rather than “bar chart”</li>
+<li>… highlight the fact</li>
+</ul>
+<div class="centered">
+<p><img src="figures/y_axis_cut.png" class="img-fluid" style="width:70.0%"></p>
+</div>
+<p><font size="2"><a href="https://medium.economist.com/why-you-sometimes-need-to-break-the-rules-in-data-viz-4d8ece284919">Source Highcharts.com</a></font></p>
+</section>
+<section id="should-we-be-the-least-worried-about-poverty-of-all-european-countries" class="level2">
+<h2 class="anchored" data-anchor-id="should-we-be-the-least-worried-about-poverty-of-all-european-countries">Should we be the least worried about poverty of all European countries?</h2>
+<div class="centered">
+<p><img src="figures/01_risk_of_poverty.png" class="img-fluid" style="width:70.0%"></p>
+</div>
+<p><font size="2"><a href="https://ec.europa.eu/eurostat/web/products-eurostat-news/-/edn-20211015-1#:~:text=In%202020%2C%20there%20were%2096.5,data%20published%20by%20Eurostat%20today.">Source Eurostat</a></font></p>
+</section>
+<section id="visualizing-uncertainty" class="level2">
+<h2 class="anchored" data-anchor-id="visualizing-uncertainty">Visualizing uncertainty</h2>
+<p>Data from July 2021</p>
+<div class="centered">
+<p><img src="figures/volebni_model_cvvm.png" class="img-fluid" style="width:80.0%"></p>
+</div>
+</section>
+<section id="uncertainty-can-also-be-visualized-in-model-estimates" class="level2">
+<h2 class="anchored" data-anchor-id="uncertainty-can-also-be-visualized-in-model-estimates">Uncertainty can also be visualized in model estimates</h2>
+<div class="cell">
+<div class="cell-output-display">
+<p><img src="visualization_eng_files/figure-html/unnamed-chunk-7-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+</section>
+<section id="a-true-visualization-but" class="level2">
+<h2 class="anchored" data-anchor-id="a-true-visualization-but">A true visualization, BUT…</h2>
+<div class="centered">
+<p><img src="figures/cumulative.jpg" class="img-fluid"></p>
+</div>
+<p><font size="2"><a href="https://www.benzinga.com/analyst-ratings/analyst-color/17/06/9675339/celebrating-the-10th-anniversary-of-the-iphone-a-look-ba">Source</a></font></p>
+</section>
+<section id="general-principles-of-visualization---summary" class="level2 smaller">
+<h2 class="smaller anchored" data-anchor-id="general-principles-of-visualization---summary">General principles of visualization - SUMMARY</h2>
+<p>Emphasis on data</p>
+<ul>
+<li>Default settings often need to be changed</li>
+<li>Keep only those chart elements that have an informational value</li>
+<li>Do not use 3D charts</li>
+<li>Think about what you want the chart to say</li>
+</ul>
+<p>Readability</p>
+<ul>
+<li>Respect human cognition</li>
+<li>Horizontal chart labels are better than vertical</li>
+<li>Think about the context in which the reader encounters the chart</li>
+<li>Be inspired by creative approaches</li>
+</ul>
+<p>Integrity</p>
+<ul>
+<li>Be careful with the y-axis</li>
+<li>Communicate the meaning of what you visualize</li>
+<li>Take into account the degree of uncertainty</li>
+</ul>
+<div class="notes">
+<p><strong>Emphasis on data</strong> The data does not speak for itself, you decide what you want visualization to highlight (but you must not manipulate); use colors as a carrier of information, not as an ornament; <strong>Readability</strong> If possible, describe the data directly in the chart; minimize the use of pie charts); Customize your visualization to your purpose (easier for presentations, more complex to articles); The figure caption on the slide does not have to just name the displayed topic, it can tell a story. In the article, we mostly tell the story in text.</p>
+</div>
+</section>
+</section>
+<section id="visualization-architecture-grammar-of-graphics" class="level1">
+<h1>Visualization architecture (grammar of graphics)</h1>
+<section id="leland-wilkinson-and-the-grammar-of-graphics-book" class="level2">
+<h2 class="anchored" data-anchor-id="leland-wilkinson-and-the-grammar-of-graphics-book">Leland Wilkinson and ‘The Grammar of Graphics’ (book)</h2>
+<p>What makes a good visualization? Individual components…</p>
+<ol type="1">
+<li>Data</li>
+<li>Variables</li>
+<li>Algebra</li>
+<li>Scale</li>
+<li>Geometry (line chart, bar chart, …)</li>
+<li>“Aesthetics” (colors, shapes, saturation, …)</li>
+<li>…</li>
+</ol>
+</section>
+<section id="hadley-wickham-and-developing-a-software-solution-of-wilkinsons-ideas" class="level2">
+<h2 class="anchored" data-anchor-id="hadley-wickham-and-developing-a-software-solution-of-wilkinsons-ideas">Hadley Wickham and developing a software solution of Wilkinson’s ideas</h2>
+<div class="centered">
+<p><img src="figures/ggplot2_logo.png" class="img-fluid"></p>
+</div>
+</section>
+<section id="ggplot2" class="level2 smaller">
+<h2 class="smaller anchored" data-anchor-id="ggplot2">ggplot2</h2>
+<p>Seven chart layers. Three required:</p>
+<ol>
+<li>
+<p>Data</p>
+</li><li>
+<p>Aesthetics - mapping information to color, shape, saturation, …</p>
+</li><li>
+<p>Geometry - graphic elements that represent data</p>
+</li></ol>
+<p>Four “extra”:</p>
+<ol start="4">
+<li>
+<p>Facets (small multiples)</p>
+</li><li>
+<p>Aggregated statistics (e.g.&nbsp;regression curve)</p>
+</li><li>
+<p>Coordinate editing (e.g.&nbsp;logarithmic scale)</p>
+</li><li>
+<p>Theme (theme) - chart design</p>
+</li></ol>
+</section>
+<section id="data" class="level2 smaller">
+<h2 class="smaller anchored" data-anchor-id="data">Data</h2>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 6 × 8
+  species island    bill_length_mm bill_depth_mm flipper_l…¹ body_…² sex    year
+  &lt;fct&gt;   &lt;fct&gt;              &lt;dbl&gt;         &lt;dbl&gt;       &lt;int&gt;   &lt;int&gt; &lt;fct&gt; &lt;int&gt;
+1 Adelie  Torgersen           39.1          18.7         181    3750 male   2007
+2 Adelie  Torgersen           39.5          17.4         186    3800 fema…  2007
+3 Adelie  Torgersen           40.3          18           195    3250 fema…  2007
+4 Adelie  Torgersen           NA            NA            NA      NA &lt;NA&gt;   2007
+5 Adelie  Torgersen           36.7          19.3         193    3450 fema…  2007
+6 Adelie  Torgersen           39.3          20.6         190    3650 male   2007
+# … with abbreviated variable names ¹​flipper_length_mm, ²​body_mass_g</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> penguins)</span></code><button title="Zkopírovat do schránky" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="visualization_eng_files/figure-html/unnamed-chunk-9-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+</section>
+<section id="aesthetics" class="level2 columns-2 smaller">
+<h2 class="columns-2 smaller anchored" data-anchor-id="aesthetics">Aesthetics</h2>
+<ul>
+<li>Axes</li>
+<li>Outline</li>
+<li>Fill</li>
+<li>Size</li>
+<li>Transparency</li>
+<li>Shape</li>
+<li>…</li>
+</ul>
+<p class="forceBreak">
+</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> penguins, </span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>       <span class="fu">aes</span>(<span class="at">x =</span> sex))</span></code><button title="Zkopírovat do schránky" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="visualization_eng_files/figure-html/unnamed-chunk-10-1.png" class="img-fluid" width="384"></p>
+</div>
+</div>
+</section>
+<section id="geometry" class="level2 columns-2 smaller">
+<h2 class="columns-2 smaller anchored" data-anchor-id="geometry">Geometry</h2>
+<ul>
+<li>lines</li>
+<li>points</li>
+<li>columns</li>
+<li>histogram</li>
+<li>boxplot</li>
+<li>…</li>
+</ul>
+<p class="forceBreak">
+</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> penguins, </span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>       <span class="fu">aes</span>(<span class="at">x =</span> sex)) <span class="sc">+</span> </span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>()</span></code><button title="Zkopírovat do schránky" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="visualization_eng_files/figure-html/unnamed-chunk-11-1.png" class="img-fluid" width="384"></p>
+</div>
+</div>
+</section>
+<section id="geometry-2" class="level2 columns-2 smaller">
+<h2 class="columns-2 smaller anchored" data-anchor-id="geometry-2">Geometry 2</h2>
+<ul>
+<li>lines</li>
+<li>points</li>
+<li>columns</li>
+<li>histogram</li>
+<li>boxplot</li>
+<li>…</li>
+</ul>
+<p class="forceBreak">
+</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> penguins <span class="sc">%&gt;%</span> </span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>         <span class="fu">filter</span>(<span class="sc">!</span><span class="fu">is.na</span>(sex)), </span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>       <span class="fu">aes</span>(<span class="at">x =</span> sex,</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>           <span class="at">y =</span> bill_length_mm)) <span class="sc">+</span> </span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>() <span class="sc">+</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_classic</span>()</span></code><button title="Zkopírovat do schránky" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="visualization_eng_files/figure-html/unnamed-chunk-12-1.png" class="img-fluid" width="384"></p>
+</div>
+</div>
+</section>
+<section id="galery-1" class="level2">
+<h2 class="anchored" data-anchor-id="galery-1">Galery 1</h2>
+<div class="centered">
+<p><img src="figures/violin.png" class="img-fluid" style="width:75.0%"></p>
+</div>
+<p><font size="2"><a href="https://r-graph-gallery.com/">Galerie ggplot2</a></font></p>
+</section>
+<section id="galery-2" class="level2">
+<h2 class="anchored" data-anchor-id="galery-2">Galery 2</h2>
+<div class="centered">
+<p><img src="figures/violin_box.png" class="img-fluid" style="width:75.0%"></p>
+</div>
+<p><font size="2"><a href="https://r-graph-gallery.com/">Galerie ggplot2</a></font></p>
+</section>
+<section id="galery-3" class="level2">
+<h2 class="anchored" data-anchor-id="galery-3">Galery 3</h2>
+<div class="centered">
+<p><img src="figures/box_jitter.png" class="img-fluid" style="width:55.0%"></p>
+</div>
+<p><font size="2"><a href="https://r-graph-gallery.com/">Galerie ggplot2</a></font></p>
+</section>
+<section id="galery-4" class="level2">
+<h2 class="anchored" data-anchor-id="galery-4">Galery 4</h2>
+<div class="centered">
+<p><img src="figures/marginal.png" class="img-fluid" style="width:99.0%"></p>
+</div>
+<p><font size="2"><a href="https://r-graph-gallery.com/">Galerie ggplot2</a></font></p>
+</section>
+<section id="galerie-5" class="level2">
+<h2 class="anchored" data-anchor-id="galerie-5">Galerie 5</h2>
+<div class="centered">
+<p><img src="figures/lol.png" class="img-fluid" style="width:50.0%"></p>
+</div>
+<p><font size="2"><a href="https://r-graph-gallery.com/">Galerie ggplot2</a></font></p>
+</section>
+<section id="courtesy" class="level2">
+<h2 class="anchored" data-anchor-id="courtesy">Courtesy</h2>
+<p>This presentation naturally draws on a hard-to-imagine volume of work of a hard-to-imagine number of people.</p>
+<p>Nevertheless, I would especially like to thank <a href="https://petrbouchal.xyz/">Petr Bouchal</a>. With him, in 2016, we prepared a course on the methodology of science at the summer academy for high school students <a href="https://discover.sk/cs/">Discover</a>, where we devoted a lot of space to visualization. Petr was also a guest lecturer in my courses at Faculty of Arts, CU, and it was only during his lectures that I fully appreciated the value of seeing visualization as a full-fledged auxiliary scientific discipline. I became acquainted with a number of examples in this presentation thanks to Petr</p>
+</section>
+<section id="additional-resources---principles-and-applications" class="level2 smaller">
+<h2 class="smaller anchored" data-anchor-id="additional-resources---principles-and-applications">Additional resources - principles and applications</h2>
+<ol type="1">
+<li><a href="https://policyviz.com/">Jonathan Schwabish - blog</a></li>
+<li><a href="https://www.economist.com/graphic-detail">The Economist and the daily charts</a></li>
+<li><a href="https://www.gapminder.org/">Hans Rosling’s Gapminder</a></li>
+<li><a href="https://www.gapminder.org/">Office for National Statistics</a> - Presenting data</li>
+<li>(CZ language) Six tips for good visualizations by <a href="https://www.dotaceeu.cz/getmedia/3ce5f6b9-24cc-4ac1-80d9-9eb769203f5a/Pruvodce-evaluatora_final_202007.pdf.aspx">Průvodce evaluátora</a> - Collection of evaluation tips and recommendations</li>
+<li><a href="https://stephanieevergreen.com/updated-data-visualization-checklist/">The Data Visualization Checklist</a></li>
+<li>Selected principles discussed at <a href="https://medium.economist.com/why-you-sometimes-need-to-break-the-rules-in-data-viz-4d8ece284919">the blog by a data journalis at the Economist</a></li>
+<li><a href="https://www.makeovermonday.co.uk/">Makeover Monday</a></li>
+<li><a href="https://excelcharts.com/">Excel charts</a></li>
+<li><a href="https://viz.wtf/">Visualization fuck-ups</a> - for a laugh</li>
+</ol>
+</section>
+<section id="additional-resources---working-with-ggplot2" class="level2 smaller">
+<h2 class="smaller anchored" data-anchor-id="additional-resources---working-with-ggplot2">Additional resources - working with ggplot2</h2>
+<ol type="1">
+<li>Some lectures of the course I co-teach <a href="https://sociology-fa-cu.github.io/Uvod_do_analyzy_dat_v_R/">Introduction to data analysis in R</a></li>
+<li>Chapter <a href="https://r4ds.had.co.nz/graphics-for-communication.html">Graphics for Communication</a> in the book R for Data Science</li>
+<li><a href="https://ggplot2-book.org/">The book ggplot2</a> by Hadleyho Wickhama</li>
+<li>Big <a href="https://r-graph-gallery.com/">galery of charts in ggplot2</a> including the code how they were created</li>
+<li>As part of the <a href="https://www.data-to-viz.com/caveats.html">galery website</a> mentioned in the bullet above, you can also find an interesting overview of theoretical visualizations tips</li>
+</ol>
+</section>
+<section id="referenced-literature-and-other-sources" class="level2 smaller">
+<h2 class="smaller anchored" data-anchor-id="referenced-literature-and-other-sources">Referenced literature and other sources</h2>
+<p>If the resources referenced in the presentation are not interactive (they do not contain a link directly to their location), you can find them in the list here:</p>
+
+
+
+</section>
+</section>
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography"><h2 class="anchored quarto-appendix-heading">Reference</h2><div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography">
+<div id="ref-harford2021" class="csl-entry" role="doc-biblioentry">
+Harford, Tim. 2021. <em>How to Make the World Add Up: Ten Rules for Thinking Differently About Numbers</em>. 1st edition. London: The Bridge Street Press.
+</div>
+<div id="ref-medina2014" class="csl-entry" role="doc-biblioentry">
+Medina, John. 2014. <em>Brain Rules (Updated and Expanded): 12 Principles for Surviving and Thriving at Work, Home, and School</em>. Second edition. Seattle, WA: Pear Press.
+</div>
+<div id="ref-ware2012" class="csl-entry" role="doc-biblioentry">
+Ware, Colin. 2012. <em>Information Visualization: Perception for Design</em>. 3rd edition. Waltham, MA: Morgan Kaufmann.
+</div>
+</div></section></div></main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Zkopírováno!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Zkopírováno!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left"><a href="https://ksoc.ff.cuni.cz/"><img src="../media/ksoc-logo.svg" width="224" height="80"></a></div>   
+    <div class="nav-footer-right">Sponzorem výuky je <a href="https://nms.global/cz/">NMS Market Research</a></div>
+  </div>
+</footer>
+
+
+
+</body></html>
